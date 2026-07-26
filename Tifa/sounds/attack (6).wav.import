@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cinyb2o2k17ki"
+path="res://.godot/imported/attack (6).wav-b243c1447debdcfe8604d61491e5fea6.sample"
+
+[deps]
+
+source_file="res://Tifa/sounds/attack (6).wav"
+dest_files=["res://.godot/imported/attack (6).wav-b243c1447debdcfe8604d61491e5fea6.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

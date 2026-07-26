@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://ln1d4ejvegqs"
+path="res://.godot/imported/gameover (2).wav-39c37a0efe6721fc1599ddd204f009d7.sample"
+
+[deps]
+
+source_file="res://Tifa/sounds/gameover (2).wav"
+dest_files=["res://.godot/imported/gameover (2).wav-39c37a0efe6721fc1599ddd204f009d7.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

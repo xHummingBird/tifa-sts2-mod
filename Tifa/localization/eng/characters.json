@@ -1,3 +1,16 @@
 {
-  
+  "TIFA-TIFA.aromaPrinciple": "A martial artist who grows stronger through momentum and unwavering determination.",
+  "TIFA-TIFA.banter.alive.endTurnPing": "Come on! Let's keep the pressure on!",
+  "TIFA-TIFA.banter.dead.endTurnPing": "...I'll leave the rest to you.",
+  "TIFA-TIFA.cardsModifierDescription": "Tifa cards will now appear in rewards and shops.",
+  "TIFA-TIFA.cardsModifierTitle": "Tifa Cards",
+  "TIFA-TIFA.description": "A disciplined martial artist from AVALANCHE who builds momentum through relentless attacks, empowering her Chi and unleashing devastating Limit Breaks.",
+  "TIFA-TIFA.eventDeathPrevention": "I'm not letting you go down here!",
+  "TIFA-TIFA.goldMonologue": "Looks like our luck is turning around.",
+  "TIFA-TIFA.possessiveAdjective": "her",
+  "TIFA-TIFA.pronounObject": "her",
+  "TIFA-TIFA.pronounPossessive": "hers",
+  "TIFA-TIFA.pronounSubject": "she",
+  "TIFA-TIFA.title": "Martial Artist Tifa",
+  "TIFA-TIFA.titleObject": "The Martial Artist"
 }

@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://ce24cka0q3frc"
+path="res://.godot/imported/hit_low (3).wav-20d1275982e61bb75cf492e4a50235eb.sample"
+
+[deps]
+
+source_file="res://Tifa/sounds/hit_low (3).wav"
+dest_files=["res://.godot/imported/hit_low (3).wav-20d1275982e61bb75cf492e4a50235eb.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cuvwrox1wm62f"
+path="res://.godot/imported/hit_high (1).wav-a897f9b5bbeaec1da7316832c16bd62e.sample"
+
+[deps]
+
+source_file="res://Tifa/sounds/hit_high (1).wav"
+dest_files=["res://.godot/imported/hit_high (1).wav-a897f9b5bbeaec1da7316832c16bd62e.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2
