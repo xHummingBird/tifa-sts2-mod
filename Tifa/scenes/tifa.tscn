@@ -1,4 +1,4 @@
-[gd_scene load_steps=72 format=3 uid="uid://c32w6nfc2yean"]
+[gd_scene load_steps=83 format=3 uid="uid://c32w6nfc2yean"]
 
 [ext_resource type="Texture2D" uid="uid://crlihd5mrrm03" path="res://Tifa/images/spritesheets/idle/00_idle.png" id="1_cdgx4"]
 [ext_resource type="Texture2D" uid="uid://7vlx3245tq5w" path="res://Tifa/images/spritesheets/idle/01_idle.png" id="2_r8lbl"]
@@ -59,6 +59,16 @@
 [ext_resource type="Texture2D" uid="uid://bj02bcqrbl6dg" path="res://Tifa/images/spritesheets/victory/23_victory.png" id="52_sic1o"]
 [ext_resource type="Texture2D" uid="uid://cvnn082lfvbpk" path="res://Tifa/images/spritesheets/victory/24_victory.png" id="53_85d7w"]
 [ext_resource type="Texture2D" uid="uid://cjona7ng1xtd7" path="res://Tifa/images/spritesheets/victory/25_victory.png" id="54_aerks"]
+[ext_resource type="Texture2D" uid="uid://8xfwvrno6rw" path="res://Tifa/images/spritesheets/attack/normal_2/00_attack_2.png" id="60_jp47r"]
+[ext_resource type="Texture2D" uid="uid://bvbxakvdhsf5l" path="res://Tifa/images/spritesheets/attack/normal_2/01_attack_2.png" id="61_0phsk"]
+[ext_resource type="Texture2D" uid="uid://bu4wekwdo123d" path="res://Tifa/images/spritesheets/attack/normal_2/02_attack_2.png" id="62_xt46g"]
+[ext_resource type="Texture2D" uid="uid://bs1i5bmk1gbg" path="res://Tifa/images/spritesheets/attack/normal_2/03_attack_2.png" id="63_uk12p"]
+[ext_resource type="Texture2D" uid="uid://dq4dnnnrw3hx8" path="res://Tifa/images/spritesheets/attack/normal_2/04_attack_2.png" id="64_ipgr0"]
+[ext_resource type="Texture2D" uid="uid://blombgdsi5c0" path="res://Tifa/images/spritesheets/attack/normal_2/05_attack_2.png" id="65_vo6u5"]
+[ext_resource type="Texture2D" uid="uid://by5sp6h1di5pp" path="res://Tifa/images/spritesheets/attack/normal_2/06_attack_2.png" id="66_p7qaa"]
+[ext_resource type="Texture2D" uid="uid://d01inhdsb6hcx" path="res://Tifa/images/spritesheets/attack/normal_2/07_attack_2.png" id="67_qhwvk"]
+[ext_resource type="Texture2D" uid="uid://0ourruttkxpb" path="res://Tifa/images/spritesheets/attack/normal_2/08_attack_2.png" id="68_sic1o"]
+[ext_resource type="Texture2D" uid="uid://csju5b2mnhbxv" path="res://Tifa/images/spritesheets/attack/normal_2/09_attack_2.png" id="69_85d7w"]
 
 [sub_resource type="Animation" id="Animation_v0jby"]
 length = 0.001
@@ -1110,10 +1120,22 @@ tracks/11/keys = {
 "update": 1,
 "values": [false]
 }
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("Visuals/dead:visible")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
 
 [sub_resource type="Animation" id="Animation_ioihd"]
 resource_name = "hurt"
-length = 0.2
+length = 0.4
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -2085,6 +2107,178 @@ tracks/12/keys = {
 "values": [false]
 }
 
+[sub_resource type="Animation" id="Animation_aerks"]
+resource_name = "divekick"
+length = 0.6
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Visuals/attack:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.06666666, 0.13333333, 0.19999999, 0.26666665, 0.3333333, 0.39999998, 0.46666667, 0.5333333, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("60_jp47r"), ExtResource("61_0phsk"), ExtResource("62_xt46g"), ExtResource("63_uk12p"), ExtResource("64_ipgr0"), ExtResource("65_vo6u5"), ExtResource("66_p7qaa"), ExtResource("67_qhwvk"), ExtResource("68_sic1o"), ExtResource("69_85d7w")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Visuals/attack:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [Vector2(213, -286)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Visuals/attack:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Visuals/attack:z_index")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Visuals/idle:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Visuals/cast:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Visuals/limit:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Visuals/block:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Visuals/dead:visible")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("Visuals/victory:visible")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("Visuals/dash:visible")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("Visuals/vfx:visible")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("Visuals/vfx2:visible")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("Visuals/attack:visible")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_bkif8"]
 _data = {
 &"RESET": SubResource("Animation_v0jby"),
@@ -2093,6 +2287,7 @@ _data = {
 &"chi": SubResource("Animation_yceg2"),
 &"dash": SubResource("Animation_omiu4"),
 &"die": SubResource("Animation_f2rma"),
+&"divekick": SubResource("Animation_aerks"),
 &"hurt": SubResource("Animation_ioihd"),
 &"idle": SubResource("Animation_6sbx2"),
 &"retreat": SubResource("Animation_yjcuw"),

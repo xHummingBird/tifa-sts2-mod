@@ -3,9 +3,9 @@
   "TIFA-SONIC_STRIKERS.flavor": "",
   "TIFA-SONIC_STRIKERS.title": "Sonic Strikers",
 
-  "TIFA-LEATHER_GLOVE.description": "Gain 1 [gold]Combo[/gold] for each hit dealt by your attacks.",
+  "TIFA-LEATHER_GLOVE.description": "Gain 1 [gold]Combo[/gold] for each attack hit. Enables up to Level 6 [gold]Chi[/gold].",
   "TIFA-LEATHER_GLOVE.flavor": "",
-  "TIFA-LEATHER_GLOVE.title": "Leather Glove",
+  "TIFA-LEATHER_GLOVE.title": "Leather Gloves",
   
   "TIFA-PREMIUM_HEART.description": "Attacks gain [gold]Combo[/gold] equal to their hit count and gain an additional +1 [gold]Combo[/gold]. You can now reach [gold]Chi[/gold] Level 8.",
   "TIFA-PREMIUM_HEART.flavor": "",

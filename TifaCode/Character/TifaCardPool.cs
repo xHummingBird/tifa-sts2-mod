@@ -17,9 +17,9 @@ public class TifaCardPool : CustomCardPoolModel
     so it may take some experimentation to find a color you like.
     Generally they should be values between 0 and 1. */
     
-    public override float H => 0.97f;
-    public override float S => 0.65f;
-    public override float V => 0.50f;
+    public override float H => 0.99f;
+    public override float S => 0.82f;
+    public override float V => 0.88f;
 
     //Alternatively, leave these values at 1 and provide a custom frame image.
     /*public override Texture2D CustomFrame(CustomCardModel card)

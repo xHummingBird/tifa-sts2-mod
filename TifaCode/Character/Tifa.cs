@@ -18,6 +18,8 @@ using MegaCrit.Sts2.Core.Nodes.Rooms;
 using MegaCrit.Sts2.Core.Nodes.Vfx.Utilities;
 using MegaCrit.Sts2.Core.Runs;
 using MegaCrit.Sts2.Core.ValueProps;
+using Tifa.TifaCode.Cards.Basic;
+using Tifa.TifaCode.Relics;
 
 namespace Tifa.TifaCode.Character;
 
@@ -30,25 +32,26 @@ public class Tifa : PlaceholderCharacterModel
     private Vector2? _originalPosition;
     public override Color NameColor => Color;
     public override CharacterGender Gender => CharacterGender.Feminine;
-    public override int StartingHp => 65;
+    public override int StartingHp => 70;
 
     public override IEnumerable<CardModel> StartingDeck =>
     [
-        ModelDb.Card<StrikeIronclad>(),
-        ModelDb.Card<StrikeIronclad>(),
-        ModelDb.Card<StrikeIronclad>(),
-        ModelDb.Card<StrikeIronclad>(),
-        ModelDb.Card<StrikeIronclad>(),
-        ModelDb.Card<DefendIronclad>(),
-        ModelDb.Card<DefendIronclad>(),
-        ModelDb.Card<DefendIronclad>(),
-        ModelDb.Card<DefendIronclad>(),
-        ModelDb.Card<DefendIronclad>()
+        ModelDb.Card<StrikeTifa>(),
+        ModelDb.Card<StrikeTifa>(),
+        ModelDb.Card<StrikeTifa>(),
+        ModelDb.Card<StrikeTifa>(),
+        ModelDb.Card<StrikeTifa>(),
+        ModelDb.Card<Divekick>(),
+        ModelDb.Card<DefendTifa>(),
+        ModelDb.Card<DefendTifa>(),
+        ModelDb.Card<DefendTifa>(),
+        ModelDb.Card<DefendTifa>(),
+        ModelDb.Card<DefendTifa>(),
     ];
 
     public override IReadOnlyList<RelicModel> StartingRelics =>
     [
-        ModelDb.Relic<BurningBlood>()
+        ModelDb.Relic<LeatherGlove>()
     ];
 
     public override CardPoolModel CardPool => ModelDb.CardPool<TifaCardPool>();
@@ -81,17 +84,17 @@ public class Tifa : PlaceholderCharacterModel
         };
     }
 
-    public override string CustomIconTexturePath => "character_icon_char_name.png".CharacterUiPath();
+    public override string CustomIconTexturePath => "character_icon_tifa.png".CharacterUiPath();
     public override string CustomCharacterSelectIconPath => "char_select_tifa.png".CharacterUiPath();
     public override string CustomCharacterSelectLockedIconPath => "char_select_char_name_locked.png".CharacterUiPath();
-    public override string CustomMapMarkerPath => "map_marker_char_name.png".CharacterUiPath();
+    public override string CustomMapMarkerPath => "map_marker_tifa.png".CharacterUiPath();
     
     private const string CustomVisualScenePath = "res://Tifa/scenes/tifa.tscn";
     public override string CustomRestSiteAnimPath => "res://Tifa/scenes/tifa_rest_site.tscn";
     
     public override string CustomCharacterSelectBg => "res://Tifa/images/charui/char_selection_bg_tifa.tscn";
     public override string CustomMerchantAnimPath => "res://Tifa/scenes/tifa_merchant.tscn";
-    //public override string CharacterSelectSfx => "res://Tifa/sounds/run_start.wav";
+    public override string CharacterSelectSfx => "res://Tifa/sounds/run_start.wav";
     //public override string CharacterTransitionSfx => "res://Tifa/sfx/gunblade_effect.wav";
     
     public override NCreatureVisuals? CreateCustomVisuals()

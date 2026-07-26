@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cs5peeh358rg6"
-path="res://.godot/imported/leather_glove.png-8a1036bc06143632512fbeab6751bac4.ctex"
+uid="uid://c48mqnfgivaqv"
+path="res://.godot/imported/character_icon_tifa.png-f7866929768adf222e851b8805dc9f90.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Tifa/images/relics/big/leather_glove.png"
-dest_files=["res://.godot/imported/leather_glove.png-8a1036bc06143632512fbeab6751bac4.ctex"]
+source_file="res://Tifa/images/charui/character_icon_tifa.png"
+dest_files=["res://.godot/imported/character_icon_tifa.png-f7866929768adf222e851b8805dc9f90.ctex"]
 
 [params]
 

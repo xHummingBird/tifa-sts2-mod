@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cs5peeh358rg6"
-path="res://.godot/imported/leather_glove.png-8a1036bc06143632512fbeab6751bac4.ctex"
+uid="uid://c8qxvu1mkookb"
+path="res://.godot/imported/divekick.png-7f25ae6c28e95729e39ac50f24d5c4f6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Tifa/images/relics/big/leather_glove.png"
-dest_files=["res://.godot/imported/leather_glove.png-8a1036bc06143632512fbeab6751bac4.ctex"]
+source_file="res://Tifa/images/card_portraits/big/divekick.png"
+dest_files=["res://.godot/imported/divekick.png-7f25ae6c28e95729e39ac50f24d5c4f6.ctex"]
 
 [params]
 

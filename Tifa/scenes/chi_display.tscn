@@ -1,0 +1,61 @@
+[gd_scene load_steps=2 format=3 uid="uid://trhhwrd42glx"]
+
+[ext_resource type="Texture2D" uid="uid://csqnjhi3ckvb4" path="res://Tifa/images/display/chi.png" id="1_25yhj"]
+
+[node name="ChiDisplay" type="Control"]
+layout_mode = 3
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -100.0
+offset_right = 216.0
+offset_bottom = -4.0
+grow_vertical = 0
+mouse_filter = 1
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_25yhj")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="ChiLabel" type="RichTextLabel" parent="."]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.076000005
+anchor_top = 0.141
+anchor_right = 0.36100003
+anchor_bottom = 0.81200004
+offset_left = 0.055999756
+offset_top = -0.024000168
+offset_right = 0.015995026
+offset_bottom = 0.03199768
+grow_horizontal = 2
+grow_vertical = 2
+bbcode_enabled = true
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ComboLabel" type="RichTextLabel" parent="."]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.41700003
+anchor_top = 0.109000005
+anchor_right = 0.98600006
+anchor_bottom = 0.82800007
+offset_left = -14.072006
+offset_top = 0.024000168
+offset_right = 0.015991211
+offset_bottom = 0.0079956055
+grow_horizontal = 2
+grow_vertical = 2
+bbcode_enabled = true
+horizontal_alignment = 1
+vertical_alignment = 1

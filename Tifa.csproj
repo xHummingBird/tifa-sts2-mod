@@ -60,7 +60,6 @@
     </ItemGroup>
 
     <ItemGroup>
-        <Folder Include="TifaCode\Mechanics\Chi\" />
         <Folder Include="Tifa\images\card_portraits\big\"/>
         <Folder Include="Tifa\images\powers\big\"/>
         <Folder Include="Tifa\images\relics\big\"/>

@@ -1,4 +1,10 @@
 {
   "TIFA-STRIKE_TIFA.description": "Deal {Damage:diff()} damage {Repeat:diff()} times.",
-  "TIFA-STRIKE_TIFA.title": "Strike"
+  "TIFA-STRIKE_TIFA.title": "Strike",
+
+  "TIFA-DEFEND_TIFA.description": "Gain {Block:diff()} [gold]Block[/gold].",
+  "TIFA-DEFEND_TIFA.title": "Defend",
+
+  "TIFA-DIVEKICK.description": "Deal {Damage:diff()} damage. \nIf you have at least 1 [gold]Chi[/gold], apply {VulnerablePower:diff()} [gold]Vulnerable[/gold].",
+  "TIFA-DIVEKICK.title": "Divekick"
 }

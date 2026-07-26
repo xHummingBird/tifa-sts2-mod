@@ -1,4 +1,4 @@
-﻿namespace Tifa.TifaCode.Mechanics.Limit;
+﻿namespace Cloud.CloudCode.Mechanics.Limit;
 
 public interface ILimitCard
 {

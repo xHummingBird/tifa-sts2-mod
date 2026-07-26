@@ -16,6 +16,7 @@ using MegaCrit.Sts2.Core.Nodes.Rooms;
 using MegaCrit.Sts2.Core.Nodes.Vfx;
 using MegaCrit.Sts2.Core.Rooms;
 using MegaCrit.Sts2.Core.ValueProps;
+using Tifa.TifaCode.Mechanics.Limit;
 using Tifa.TifaCode.Powers;
 
 namespace Tifa.TifaCode.Relics;
@@ -24,6 +25,7 @@ public abstract class ComboRelicBase : TifaRelic
 {
     private int _combo;
     private bool _comboIncreasedThisTurn;
+    public int StoredLimit { get; set; }
 
     public override RelicRarity Rarity => RelicRarity.Starter;
 
@@ -109,11 +111,27 @@ public abstract class ComboRelicBase : TifaRelic
 
     public override Task AfterCombatEnd(CombatRoom _)
     {
+        LimitManager.SetLimit(
+            base.Owner,
+            Combo);
+
         ComboInternal = 0;
         _comboIncreasedThisTurn = false;
         base.Status = RelicStatus.Normal;
 
         return Task.CompletedTask;
+    }
+    
+    private bool HasLivingEnemies()
+    
+    {
+        var state = CombatManager.Instance?.DebugOnlyGetState();
+        
+        if (state == null)
+            return false;
+        
+        return state.Creatures.Any(c =>
+        c.Side != base.Owner.Creature.Side && !c.IsDead);
     }
 
     public override async Task AfterCardPlayed(
@@ -127,6 +145,13 @@ public abstract class ComboRelicBase : TifaRelic
 
         if (card.Owner != base.Owner)
             return;
+        
+        if (card.Type == CardType.Attack)
+        {
+            LimitManager.GainLimit(
+                base.Owner,
+                3);
+        }
 
         int comboGain = GetComboGainFromCard(card);
 
@@ -140,10 +165,13 @@ public abstract class ComboRelicBase : TifaRelic
             GainCombo(comboGain);
         }
 
-        await SyncChiPower(
-            choiceContext,
-            base.Owner.Creature,
-            card);
+        if (HasLivingEnemies())
+        {
+            await SyncChiPower(
+                choiceContext,
+                base.Owner.Creature,
+                card);
+        }
     }
 
     public override async Task AfterSideTurnStart(
@@ -155,11 +183,18 @@ public abstract class ComboRelicBase : TifaRelic
             return;
 
         _comboIncreasedThisTurn = false;
+        
+        LimitManager.GainLimit(
+        base.Owner,
+        5);
+        
 
         await SyncChiPower(
             null,
             base.Owner.Creature,
             null);
+        
+        
     }
 
     public override async Task AfterSideTurnEnd(
@@ -251,15 +286,22 @@ public abstract class ComboRelicBase : TifaRelic
         object instance,
         string propertyName)
     {
-        PropertyInfo? property = instance
-            .GetType()
-            .GetProperty(
-                propertyName,
-                BindingFlags.Instance |
-                BindingFlags.Public |
-                BindingFlags.NonPublic);
+        try
+        {
+            PropertyInfo? property = instance
+                .GetType()
+                .GetProperty(
+                    propertyName,
+                    BindingFlags.Instance |
+                    BindingFlags.Public |
+                    BindingFlags.NonPublic);
 
-        return property?.GetValue(instance);
+            return property?.GetValue(instance);
+        }
+        catch
+        {
+            return null;
+        }
     }
 
     private async Task SyncChiPower(
@@ -277,7 +319,7 @@ public abstract class ComboRelicBase : TifaRelic
             if (Owner.Character is Character.Tifa tifa)
             {
                 float duration = tifa.PlayAnimation(creature, "chi").total;
-                await Task.Delay((int)duration);
+                await Task.Delay(500);
             }
             NCombatRoom.Instance?.CombatVfxContainer.AddChildSafely(NGroundFireVfx.Create(base.Owner.Creature));
             await PowerCmd.Apply<ChiPower>(
@@ -286,6 +328,15 @@ public abstract class ComboRelicBase : TifaRelic
                 targetChi - currentChi,
                 source,
                 card);
+            
+            int chiGained = targetChi - currentChi;
+
+            if (chiGained > 0)
+            {
+                LimitManager.GainLimit(
+                    base.Owner,
+                    chiGained * 5);
+            }
         }
         else if (targetChi < currentChi)
         {
