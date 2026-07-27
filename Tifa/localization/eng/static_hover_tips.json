@@ -1,6 +1,6 @@
 {
   "TIFA_CHI.title": "Chi Level",
-  "TIFA_CHI.description": "Gain 1 [gold]Chi[/gold] whenever you reach 5 [gold]Combo[/gold]. \nCombo is primarily gained by playing Attacks.\n\nLevel 1: Gain 1 Strength.\nLevel 2: Attacks gain 1 additional Combo.\nLevel 3: Gain 1 Dexterity.\nLevel 4: Gain double Limit from attacks.\nLevel 5: Draw 1 additional card at the start of your turn.\nLevel 6: Gain 1 Strength and 1 Dexterity.\nLevel 7: Gain 1 additional Energy each turn.\nLevel 8: Gain 1 Strength and 1 Dexterity.",
+  "TIFA_CHI.description": "Gain 1 [gold]Chi[/gold] whenever you reach 5 [gold]Combo[/gold]. \n\n1: Gain 1 Strength.\n2: Attacks gain 1 additional Combo.\n3: Gain 1 Dexterity.\n4: Gain double Limit from attacks.\n5: Draw 1 additional card at the start of your turn.\n6: Gain 1 Strength and 1 Dexterity.\n7: Gain 1 additional Energy each turn.\n8: Gain 1 Strength and 1 Dexterity. \n9+: Gain 1 Strength and Dexterity per level.",
 
   "TIFA_LIMIT.title": "Limit Break",
   "TIFA_LIMIT.description": "At 100 [gold]Limit[/gold], Tifa can perform [gold]Limit Break[/gold]. \n\nGain 5 Limit at the start of each turn, and whenever your Chi level increases. \nGain 3 Limit whenever you play an Attack. \n\nAny remaining Combo at the end of combat is converted into Limit.",

@@ -112,7 +112,7 @@ public partial class ChiDisplayOverlay : Control
         _comboLabel = _chiDisplay.GetNodeOrNull<RichTextLabel>("%ComboLabel");
         
         _chiLabel.Position += new Vector2(0, 0);
-        _comboLabel.Position += new Vector2(-10, 0);
+        _comboLabel.Position += new Vector2(-17, 0);
 
         if (_chiLabel == null)
         {

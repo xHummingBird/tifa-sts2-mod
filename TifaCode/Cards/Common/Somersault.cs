@@ -1,6 +1,6 @@
 ﻿namespace Tifa.TifaCode.Cards.Common;
 
-public class Sommersault
+public class Somersault
 {
     
 }

@@ -1,6 +1,6 @@
 ﻿namespace Tifa.TifaCode.Cards.Rare;
 
-public class MeteorStrike
+public class Meteodrive
 {
     
 }

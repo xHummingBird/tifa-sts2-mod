@@ -128,7 +128,7 @@ public partial class LimitDisplayOverlay : Control
         }
 
         _label.AddThemeColorOverride("default_color", Colors.White);
-        _label.Position += new Vector2(0, 10);
+        _label.Position += new Vector2(0, 26);
         _label.AddThemeColorOverride("font_outline_color", new Color(0.2f, 0.2f, 0.2f));
         _label.AddThemeConstantOverride("outline_size", 10);
         _label.AddThemeFontSizeOverride("normal_font_size", 26);
@@ -199,7 +199,7 @@ public partial class LimitDisplayOverlay : Control
         NHoverTipSet.Clear();
 
         var tip = NHoverTipSet.CreateAndShow(this, _hoverTip);
-        tip.GlobalPosition = GlobalPosition + new Vector2(-75f, -550f);
+        tip.GlobalPosition = GlobalPosition + new Vector2(-75f, -450f);
         tip.MouseFilter = MouseFilterEnum.Ignore;
     }
 
