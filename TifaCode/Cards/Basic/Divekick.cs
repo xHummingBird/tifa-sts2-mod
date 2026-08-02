@@ -14,7 +14,7 @@ using Tifa.TifaCode.Powers;
 namespace Tifa.TifaCode.Cards.Basic;
 
 public class Divekick() : TifaCard(1, CardType.Attack,
-    CardRarity.Common, TargetType.AnyEnemy)
+    CardRarity.Basic, TargetType.AnyEnemy)
 {
     protected override bool ShouldGlowGoldInternal => base.Owner.HasPower<ChiPower>();
     

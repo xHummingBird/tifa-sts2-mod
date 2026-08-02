@@ -8,8 +8,8 @@ namespace Tifa.TifaCode.Relics;
 public sealed class PremiumHeart : ComboRelicBase
 {
     public override RelicRarity Rarity => RelicRarity.Ancient;
-
-    public override int MaxCombo => 40;
+    
+    protected override int BaseMaxChiLevel => 8;
 
     protected override int ModifyComboGain(CardModel card, int amount)
     {

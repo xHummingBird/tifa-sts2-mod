@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Reflection;
 using System.Threading.Tasks;
 using BaseLib.Extensions;
+using Cloud.CloudCode.Mechanics.Limit;
 using MegaCrit.Sts2.Core.Combat;
 using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Cards;
@@ -40,7 +41,9 @@ public abstract class ComboRelicBase : TifaRelic
         0,
         MaxChiLevel);
 
-    public abstract int MaxCombo { get; }
+    public virtual int MaxCombo => 100;
+
+    protected virtual int BaseMaxChiLevel => 6;
 
     protected virtual int StartingCombo => 0;
 
@@ -50,15 +53,37 @@ public abstract class ComboRelicBase : TifaRelic
 
     protected virtual int ComboDecayDivisor => 5; // 20%
 
-    public int MaxChiLevel => MaxCombo / ComboPerChiLevel;
+    public int MaxChiLevel => Math.Clamp(
+        BaseMaxChiLevel + GetBonusMaxChiLevel(),
+        0,
+        MaxCombo / ComboPerChiLevel);
 
     protected override IEnumerable<DynamicVar> CanonicalVars =>
     [
         new DynamicVar("MaxCombo", MaxCombo),
+        new DynamicVar("BaseMaxChiLevel", BaseMaxChiLevel),
         new DynamicVar("MaxChiLevel", MaxChiLevel),
         new DynamicVar("ComboPerChiLevel", ComboPerChiLevel),
         new DynamicVar("ComboLossFromUnblockedDamage", ComboLossFromUnblockedDamage)
     ];
+    
+    protected virtual int GetBonusMaxChiLevel()
+    {
+        int bonus = 0;
+
+        /*
+         * Add future max Chi bonuses here.
+         *
+         * Examples:
+         *
+         * if (base.Owner.GetRelic<SomeMaxChiRelic>() != null)
+         *     bonus += 1;
+         *
+         * bonus += base.Owner.Creature.GetPowerAmount<SomeMaxChiPower>();
+         */
+
+        return bonus;
+    }
 
     private int ComboInternal
     {
@@ -145,12 +170,10 @@ public abstract class ComboRelicBase : TifaRelic
 
         if (card.Owner != base.Owner)
             return;
-        
+
         if (card.Type == CardType.Attack)
         {
-            LimitManager.GainLimit(
-                base.Owner,
-                3);
+            GainLimitFromAttackHits(card);
         }
 
         int comboGain = GetComboGainFromCard(card);
@@ -173,6 +196,29 @@ public abstract class ComboRelicBase : TifaRelic
                 card);
         }
     }
+    
+    private void GainLimitFromAttackHits(CardModel card)
+    {
+        if (card.Type != CardType.Attack)
+            return;
+
+        int hits = TryGetRepeatVarFromCard(card) ?? 1;
+        hits = Math.Max(1, hits);
+
+        int limitPerHit = 3;
+
+        int wayOfTheFistAmount =
+            base.Owner.Creature.GetPowerAmount<WayOfTheFistPower>();
+
+        if (wayOfTheFistAmount > 0)
+        {
+            limitPerHit += wayOfTheFistAmount;
+        }
+
+        LimitManager.GainLimit(
+            base.Owner,
+            hits * limitPerHit);
+    }
 
     public override async Task AfterSideTurnStart(
         CombatSide side,
@@ -182,13 +228,17 @@ public abstract class ComboRelicBase : TifaRelic
         if (side != base.Owner.Creature.Side)
             return;
 
+        int limitGain = 5;
+
+        if (ChiLevel >= 4)
+        {
+            limitGain += 2;
+        }
+            
         _comboIncreasedThisTurn = false;
         
-        LimitManager.GainLimit(
-        base.Owner,
-        5);
+        LimitManager.GainLimit(base.Owner, limitGain);
         
-
         await SyncChiPower(
             null,
             base.Owner.Creature,
@@ -259,6 +309,12 @@ public abstract class ComboRelicBase : TifaRelic
      */
     protected virtual int ModifyComboGain(CardModel card, int amount)
     {
+        if (card.Type == CardType.Attack &&
+            ChiLevel >= 2 && card is not ILimitCard)
+        {
+            amount += 1;
+        }
+
         return amount;
     }
 
@@ -328,15 +384,6 @@ public abstract class ComboRelicBase : TifaRelic
                 targetChi - currentChi,
                 source,
                 card);
-            
-            int chiGained = targetChi - currentChi;
-
-            if (chiGained > 0)
-            {
-                LimitManager.GainLimit(
-                    base.Owner,
-                    chiGained * 5);
-            }
         }
         else if (targetChi < currentChi)
         {

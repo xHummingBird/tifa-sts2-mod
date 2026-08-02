@@ -6,5 +6,47 @@
   "TIFA-DEFEND_TIFA.title": "Defend",
 
   "TIFA-DIVEKICK.description": "Deal {Damage:diff()} damage. \nIf you have at least 1 [gold]Chi[/gold], apply {VulnerablePower:diff()} [gold]Vulnerable[/gold].",
-  "TIFA-DIVEKICK.title": "Divekick"
+  "TIFA-DIVEKICK.title": "Divekick",
+
+  "TIFA-BRACE.description": "Gain {Block:diff()} [gold]Block[/gold]. \nGain {VigorPower:diff()} [gold]Vigor[/gold] and [gold]Combo[/gold].",
+  "TIFA-BRACE.title": "Brace",
+
+  "TIFA-BATTLE_CRY.description": "Gain {Energy:energyIcons()}. \nGain {Combo:diff()} [gold]Combo[/gold].",
+  "TIFA-BATTLE_CRY.title": "Battle Cry",
+
+  "TIFA-CONCENTRATION.description": "Gain {Combo:diff()} [gold]Combo[/gold]. \nGain {VigorPower:diff()} [gold]Vigor[/gold].",
+  "TIFA-CONCENTRATION.title": "Concentration",
+
+  "TIFA-FOOTWORK.description": "Gain {Block:diff()} [gold]Block[/gold]. \nApply {VulnerablePower:diff()} [gold]Vulnerable[/gold].",
+  "TIFA-FOOTWORK.title": "Footwork",
+
+  "TIFA-KICK.description": "Deal {Damage:diff()} damage to ALL enemies. \nGain [gold]Combo[/gold] equal to number of enemies hit.",
+  "TIFA-KICK.title": "Kick",
+
+  "TIFA-OVERPOWER.description": "Deal {Damage:diff()} damage {Repeat:diff()} times. \nIf you have at least 2 [gold]Chi[/gold], your next attack costs 0 {Energy:energyIcons()}.",
+  "TIFA-OVERPOWER.title": "Overpower",
+
+  "TIFA-PLASMA_KICK.description": "Deal {Damage:diff()} damage. \nIf you have at least 1 [gold]Chi[/gold], draw {Cards:diff()} {Cards:plural:card|cards}.",
+  "TIFA-PLASMA_KICK.title": "Plasma Kick",
+
+  "TIFA-SOMERSAULT.description": "Deal {Damage:diff()} damage. \nif you have at least 1 [gold]Chi[/gold], gain {Combo:diff()} [gold]Combo[/gold].",
+  "TIFA-SOMERSAULT.title": "Somersault",
+
+  "TIFA-WATERKICK.description": "Deal {Damage:diff()} damage. \nIf you have at least 1 [gold]Chi[/gold], apply {WeakPower:diff()} [gold]Weak[/gold].",
+  "TIFA-WATERKICK.title": "Waterkick",
+
+  "TIFA-WHIRLING_UPPERCUT.description": "Deal {Damage:diff()} damage. \nIf this is the first card you play, draw 1 card.",
+  "TIFA-WHIRLING_UPPERCUT.title": "Whirling Uppercut",
+
+  "TIFA-COUNTER.description": "Gain {ThornsPower:diff()} [gold]Thorns[/gold]. \nGain {Combo:diff()} [gold]Combo[/gold].",
+  "TIFA-COUNTER.title": "Counter",
+
+  "TIFA-FOCUSED_STRIKE.description": "Deal {CalculatedDamage:diff()} damage. \nIf you have at least 2 [gold]Chi[/gold], deal {ExtraDamage:diff()} additional damage.",
+  "TIFA-FOCUSED_STRIKE.title": "Focused Strike",
+
+  "TIFA-SONIC_COMBO.description": "Deal {Damage:diff()} damage {Repeat:diff()} times.",
+  "TIFA-SONIC_COMBO.title": "Sonic Combo",
+
+  "TIFA-ZANGAN_COMBO.description": "Deal {Damage:diff()} damage {Repeat:diff()} times. \nCost 1 less {Energy:energyIcons()} for each Attack played this turn.",
+  "TIFA-ZANGAN_COMBO.title": "Zangan Combo"
 }

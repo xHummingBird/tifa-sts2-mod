@@ -1,10 +1,10 @@
 {
   "TIFA_CHI.title": "Chi Level",
-  "TIFA_CHI.description": "Gain 1 [gold]Chi[/gold] whenever you reach 5 [gold]Combo[/gold]. \n\n1: Gain 1 Strength.\n2: Attacks gain 1 additional Combo.\n3: Gain 1 Dexterity.\n4: Gain double Limit from attacks.\n5: Draw 1 additional card at the start of your turn.\n6: Gain 1 Strength and 1 Dexterity.\n7: Gain 1 additional Energy each turn.\n8: Gain 1 Strength and 1 Dexterity. \n9+: Gain 1 Strength and Dexterity per level.",
+  "TIFA_CHI.description": "Gain 1 [gold]Chi[/gold] whenever you reach 5 [gold]Combo[/gold]. \n\n1: Gain 1 Strength.\n2: Attacks gain 1 additional Combo.\n3: Gain 1 Dexterity.\n4: Gain 2 [gold]Limit[/gold] at the start of your turn. \n5: Draw 1 additional card at the start of your turn.\n6: Gain 1 Strength and 1 Dexterity.\n7: Gain 1 additional Energy each turn.\n8: Gain 1 Strength and 1 Dexterity. \n9+: Gain 1 Strength and Dexterity per level.",
 
   "TIFA_LIMIT.title": "Limit Break",
-  "TIFA_LIMIT.description": "At 100 [gold]Limit[/gold], Tifa can perform [gold]Limit Break[/gold]. \n\nGain 5 Limit at the start of each turn, and whenever your Chi level increases. \nGain 3 Limit whenever you play an Attack. \n\nAny remaining Combo at the end of combat is converted into Limit.",
+  "TIFA_LIMIT.description": "At 100 [gold]Limit[/gold], Tifa can perform [gold]Limit Break[/gold]. \n\nGain 5 Limit at the start of each turn. \nGain 3 Limit per attack hit. \n\nAny remaining Combo at the end of combat is converted into Limit.",
 
   "TIFA_COMBO.title": "Combo Counter",
-  "TIFA_COMBO.description": "Gain Combo from Attacks. Every 5 Combo increases your [gold]Chi[/gold] Level by 1. \nIf Combo is not increased during your turn, [gold]20%[/gold] of it decays at the end of the turn. \nRemaining Combo at the end of combat is converted into [gold]Limit[/gold]."
+  "TIFA_COMBO.description": "Gain Combo from Attacks. Every 5 Combo, increases your [gold]Chi[/gold] Level by 1. Lose 1 [gold]Combo[/gold] every time you take unblocked damage. \nIf Combo is not increased during your turn, [gold]20%[/gold] of it decays at the end of the turn. \nRemaining Combo at the end of combat is converted into [gold]Limit[/gold]."
 }

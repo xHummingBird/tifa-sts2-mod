@@ -1,5 +1,9 @@
 {
   "TIFA-CHI_POWER.description": "Gain buffs based on your [gold]Chi[/gold] level.",
   "TIFA-CHI_POWER.smartDescription": "Current [gold]Chi[/gold] level: {Amount}. Gain bonuses at higher [gold]Chi[/gold] levels.",
-  "TIFA-CHI_POWER.title": "Chi"
+  "TIFA-CHI_POWER.title": "Chi",
+
+  "TIFA-WAY_OF_THE_FIST_POWER.description": "Attacks generate 1 additional [gold]Limit[/gold] per hit.",
+  "TIFA-WAY_OF_THE_FIST_POWER.smartDescription": "Attacks generate {Amount} additional [gold]Limit[/gold] per hit.",
+  "TIFA-WAY_OF_THE_FIST_POWER.title": "Way Of The Fist"
 }
