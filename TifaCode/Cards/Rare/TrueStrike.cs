@@ -40,7 +40,7 @@ public class TrueStrike() : TifaCard(2, CardType.Attack,
         if (ownerCreature != null && tifa != null)
         {
             CenterCardCinematic.Start(RunManager.Instance.NetService.NetId);
-            await tifa.DashTo(ownerCreature, play.Target, distance: 250f);
+            await tifa.DashTo(ownerCreature, play.Target, distance: 400f);
             AudioHelper.PlayRandomPhrase();
             tifa.PlayAnimation(ownerCreature, "true_strike");
             await Task.Delay((int)(0.333f * 1000f));

@@ -17,7 +17,7 @@ public class Brace() : TifaCard(1, CardType.Skill,
 {
     protected override IEnumerable<DynamicVar> CanonicalVars => [
         new BlockVar(6, ValueProp.Move),
-        new DynamicVar ("Combo", 2)
+        new DynamicVar ("Combo", 1)
     ];
     
     protected override IEnumerable<IHoverTip> ExtraHoverTips =>

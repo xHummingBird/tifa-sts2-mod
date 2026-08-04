@@ -50,6 +50,7 @@ public class FocusedStrike() : TifaCard(2, CardType.Attack,
                 .WithHitFx(null, "res://Tifa/sfx/punch_critical.wav")
                 .Execute(choiceContext);
             await Task.Delay(380);
+            await tifa.Retreat(ownerCreature);
             CenterCardCinematic.End(RunManager.Instance.NetService.NetId);
         }
         else

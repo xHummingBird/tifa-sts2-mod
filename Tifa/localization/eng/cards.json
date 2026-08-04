@@ -50,7 +50,7 @@
   "TIFA-ZANGAN_COMBO.description": "Deal {Damage:diff()} damage {Repeat:diff()} times. \nCost 1 less {Energy:energyIcons()} for each Attack played this turn.",
   "TIFA-ZANGAN_COMBO.title": "Zangan Combo",
 
-  "TIFA-BATTLE_TRANCE.description": "Temporarily gain 2 maximum and current [gold]Chi[/gold] until the end of the turn.",
+  "TIFA-BATTLE_TRANCE.description": "Temporarily gain 2 [gold]Chi[/gold] and [gold]Maximum Chi[/gold] until the end of the turn.",
   "TIFA-BATTLE_TRANCE.title": "Battle Trance",
 
   "TIFA-DYING_WILL.description": "The next X{IfUpgraded:show:+1} Attacks cost 0 {Energy:energyIcons()}.",
@@ -65,7 +65,7 @@
   "TIFA-UNBRIDLED_STRENGTH.description": "Gain 1 [gold]Chi[/gold].",
   "TIFA-UNBRIDLED_STRENGTH.title": "Unbridled Strength",
 
-  "TIFA-QUICK_JAB.description": "Deal {Damage:diff()} damage {Repeat:diff()} times. \nApply {VulnerablePower:diff()} [gold]Vulnerable[/gold]",
+  "TIFA-QUICK_JAB.description": "Deal {Damage:diff()} damage {Repeat:diff()} times. \nApply {VulnerablePower:diff()} [gold]Vulnerable[/gold].",
   "TIFA-QUICK_JAB.title": "Quick Jab",
 
   "TIFA-CHI_BARRIER.description": "Gain {Block:diff()} [gold]Block[/gold]. \nGain {BlockMultiplier:diff()} additional [gold]Block[/gold] for each [gold]Chi[/gold].",
@@ -80,7 +80,7 @@
   "TIFA-HIGH_JUMP_KICK.description": "Deal {Damage:diff()} damage. \nAdd a copy of this card into your Discard Pile.",
   "TIFA-HIGH_JUMP_KICK.title": "High Jump Kick",
 
-  "TIFA-RISE_AND_FALL.description": "Deal {Damage:diff()} damage.",
+  "TIFA-RISE_AND_FALL.description": "Deal {Damage:diff()} damage. \nApply {VulnerablePower:diff()} [gold]Vulnerable[/gold]. [gold]C",
   "TIFA-RISE_AND_FALL.title": "Rise And Fall",
 
   "TIFA-BLAZE_KICK.description": "Deal {Damage:diff()} damage. \nIf you have at least 1 [gold]Chi[/gold], damage ALL other enemies equal to the damage dealt.",
@@ -129,5 +129,8 @@
   "TIFA-REVITALISE.title": "Revitalise",
 
   "TIFA-CHAKRA.description": "Draw 2 cards. \nGain {Energy:energyIcons()}. \nConsume 1 [gold]Chi[/gold]",
-  "TIFA-CHAKRA.title": "Chakra"
+  "TIFA-CHAKRA.title": "Chakra",
+
+  "TIFA-SYNCHRO_CYCLONE.description": "",
+  "TIFA-SYNCHRO_CYCLONE.title": "Synchro Cyclone"
 }

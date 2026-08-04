@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dyb4vacfnu6ou"
-path="res://.godot/imported/omnistrike.png-631734b46ec09833212f2d233a4458d6.ctex"
+uid="uid://cdixeecpe0c1b"
+path="res://.godot/imported/cover.png-c1a9c8fbb54c4fb8b3917eb2c171491c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Tifa/images/card_portraits/big/omnistrike.png"
-dest_files=["res://.godot/imported/omnistrike.png-631734b46ec09833212f2d233a4458d6.ctex"]
+source_file="res://Tifa/images/card_portraits/big/cover.png"
+dest_files=["res://.godot/imported/cover.png-c1a9c8fbb54c4fb8b3917eb2c171491c.ctex"]
 
 [params]
 

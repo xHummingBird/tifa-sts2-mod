@@ -74,6 +74,5 @@ public class Overpower() : TifaCard(2, CardType.Attack,
     protected override void OnUpgrade()
     {
         DynamicVars.Damage.UpgradeValueBy(1m);
-        DynamicVars["VigorPower"].UpgradeValueBy(1);
     }
 }

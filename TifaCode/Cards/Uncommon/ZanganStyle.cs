@@ -4,12 +4,12 @@ using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.Localization.DynamicVars;
 using Tifa.TifaCode.Powers;
 
-namespace Tifa.TifaCode.Cards.Rare;
+namespace Tifa.TifaCode.Cards.Uncommon;
 
 public class ZanganStyle() : TifaCard(
     1,
     CardType.Power,
-    CardRarity.Rare,
+    CardRarity.Uncommon,
     TargetType.Self)
 {
     protected override IEnumerable<DynamicVar> CanonicalVars =>

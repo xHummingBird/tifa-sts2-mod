@@ -50,7 +50,7 @@ public class DolphinFlurry() : TifaCard(0, CardType.Attack,
             CenterCardCinematic.Start(RunManager.Instance.NetService.NetId);
             SfxCmd.Play("res://Tifa/sounds/limit_break (1).wav");
             SfxCmd.Play("res://Tifa/sfx/limit_break_thunder.wav");
-            await tifa.DashTo(ownerCreature, play.Target, durationSeconds: 0.267f, distance: 200f, overrideAnim: "dolphin_flurry");
+            await tifa.DashTo(ownerCreature, play.Target, durationSeconds: 0.267f, distance: 300f, overrideAnim: "dolphin_flurry");
             AudioHelper.PlayRandomAttackHard();
             await Task.Delay(400);
             TifaExtensions.CombatHelpers.TifaFakeHit(base.Owner.Creature, play.Target,

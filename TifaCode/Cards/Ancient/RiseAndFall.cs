@@ -46,7 +46,7 @@ public class RiseAndFall() : TifaCard(0, CardType.Attack,
             CenterCardCinematic.Start(RunManager.Instance.NetService.NetId);
             SfxCmd.Play("res://Tifa/sounds/limit_break (1).wav");
             SfxCmd.Play("res://Tifa/sfx/limit_break_thunder.wav");
-            await tifa.DashTo(ownerCreature, play.Target, durationSeconds: 0.367f, distance: 300f, overrideAnim: "rise_and_fall");
+            await tifa.DashTo(ownerCreature, play.Target, durationSeconds: 0.367f, distance: 360f, overrideAnim: "rise_and_fall");
             AudioHelper.PlayRandomAttack();
             await Task.Delay(133);
             TifaExtensions.CombatHelpers.TifaFakeHit(base.Owner.Creature, play.Target,

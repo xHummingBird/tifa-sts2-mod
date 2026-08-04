@@ -1,3 +1,61 @@
-[gd_scene format=3 uid="uid://bqglc5swxvlmc"]
+[gd_scene load_steps=9 format=3 uid="uid://6d8u4vco08ol"]
+
+[ext_resource type="Texture2D" uid="uid://oy06dmol8wi" path="res://Tifa/images/spritesheets/merchant/00_merchant.png" id="1_6v7gg"]
+[ext_resource type="Script" uid="uid://dblqscit5b1i3" path="res://TifaCode/Nodes/TifaNMerchantCharacter.cs" id="1_s1ocr"]
+[ext_resource type="Texture2D" uid="uid://bx7w33wplgh4" path="res://Tifa/images/spritesheets/merchant/01_merchant.png" id="2_s1ocr"]
+[ext_resource type="Texture2D" uid="uid://dh7v5kewb5ct4" path="res://Tifa/images/spritesheets/merchant/02_merchant.png" id="3_5majx"]
+[ext_resource type="Texture2D" uid="uid://78lxdxj4vt68" path="res://Tifa/images/spritesheets/merchant/03_merchant.png" id="5_52um3"]
+
+[sub_resource type="Animation" id="Animation_ebjc6"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("1_6v7gg")]
+}
+
+[sub_resource type="Animation" id="Animation_xu5ug"]
+resource_name = "merchant"
+length = 0.8
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("1_6v7gg"), ExtResource("2_s1ocr"), ExtResource("3_5majx"), ExtResource("5_52um3")]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_qe8jq"]
+_data = {
+&"RESET": SubResource("Animation_ebjc6"),
+&"merchant": SubResource("Animation_xu5ug")
+}
 
 [node name="TifaMerchant" type="Node2D"]
+scale = Vector2(1.5, 1.5)
+script = ExtResource("1_s1ocr")
+
+[node name="Visuals" type="Sprite2D" parent="."]
+position = Vector2(-15.333332, -94.28571)
+scale = Vector2(-1.7, 1.7)
+texture = ExtResource("1_6v7gg")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+root_node = NodePath("../Visuals")
+libraries = {
+&"": SubResource("AnimationLibrary_qe8jq")
+}
+autoplay = "merchant"
