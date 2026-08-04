@@ -16,14 +16,14 @@ using Tifa.TifaCode.Relics;
 
 namespace Tifa.TifaCode.Cards.Common;
 
-public class Somersault() : TifaCard(1, CardType.Attack,
+public class Somersault() : TifaCard(2, CardType.Attack,
     CardRarity.Common, TargetType.AnyEnemy)
 {
     protected override bool ShouldGlowGoldInternal => base.Owner.HasPower<ChiPower>();
     
     protected override IEnumerable<DynamicVar> CanonicalVars => [
-        new DamageVar(9, ValueProp.Move),
-        new DynamicVar("Combo", 1)
+        new DamageVar(14, ValueProp.Move),
+        new DynamicVar("Combo", 2)
     ];
     
     protected override IEnumerable<IHoverTip> ExtraHoverTips =>
@@ -42,7 +42,7 @@ public class Somersault() : TifaCard(1, CardType.Attack,
         {
             CenterCardCinematic.Start(RunManager.Instance.NetService.NetId);
             await tifa.DashTo(ownerCreature, play.Target, distance: 290f);
-            AudioHelper.PlayRandomAttackHard();
+            AudioHelper.PlayRandomPhrase();
             tifa.PlayAnimation(ownerCreature, "somersault");
             await Task.Delay((int)(0.267f * 1000f));
             SfxCmd.Play("res://Tifa/sfx/kick_up.wav");
@@ -54,7 +54,7 @@ public class Somersault() : TifaCard(1, CardType.Attack,
             await CommonActions.CardAttack(this, play.Target)
                 .WithHitFx(null, "res://Tifa/sfx/kick_critical_3.wav")
                 .Execute(choiceContext);
-            await Task.Delay(360);
+            await Task.Delay(460);
             await tifa.Retreat(ownerCreature);
             CenterCardCinematic.End(RunManager.Instance.NetService.NetId);
         }

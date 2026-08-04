@@ -15,12 +15,6 @@ public sealed class ChiPower : TifaPower
 
     public override PowerStackType StackType => PowerStackType.Counter;
 
-    protected override IEnumerable<IHoverTip> ExtraHoverTips =>
-    [
-        HoverTipFactory.Static(StaticHoverTip.Block),
-        HoverTipFactory.ForEnergy(this)
-    ];
-
     private int StrengthBonus
     {
         get

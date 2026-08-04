@@ -1,8 +1,8 @@
 ﻿//
 // using System;
 // using System.Collections.Generic;
-// using Cloud.CloudCode.Cards.Ancient;
-// using Cloud.CloudCode.Relics;
+// using Tifa.TifaCode.Cards.Ancient;
+// using Tifa.TifaCode.Relics;
 // using Godot;
 // using HarmonyLib;
 // using MegaCrit.Sts2.Core.HoverTips;
@@ -10,7 +10,7 @@
 // using MegaCrit.Sts2.Core.Nodes.Cards.Holders;
 // using MegaCrit.Sts2.Core.Nodes.HoverTips;
 //
-// namespace Cloud.CloudCode.Mechanics.Limit;
+// namespace Tifa.TifaCode.Mechanics.Limit;
 //
 // public static class LimitCardPatch
 // {
@@ -43,7 +43,7 @@
 //     {
 //         new(
 //             "CrossSlashKaiIconContainer",
-//             "res://Cloud/scenes/LimitCardDisplay_CrossSlash.tscn",
+//             "res://Tifa/scenes/LimitCardDisplay_CrossSlash.tscn",
 //             new Vector2(225f, 8f),
 //             model => model.IsUpgraded
 //                 ? HoverTipFactory.FromCard<CrossSlashKai>(true)
@@ -52,7 +52,7 @@
 //
 //         new(
 //             "MeteorainIconContainer",
-//             "res://Cloud/scenes/LimitCardDisplay_Meteorain.tscn",
+//             "res://Tifa/scenes/LimitCardDisplay_Meteorain.tscn",
 //             new Vector2(225f, 48f),
 //             model => model.IsUpgraded
 //                 ? HoverTipFactory.FromCard<Meteorain>(true)
@@ -61,7 +61,7 @@
 //
 //         new(
 //             "AscensionIconContainer",
-//             "res://Cloud/scenes/LimitCardDisplay_Ascension.tscn",
+//             "res://Tifa/scenes/LimitCardDisplay_Ascension.tscn",
 //             new Vector2(225f, 88f),
 //             model => model.IsUpgraded
 //                 ? HoverTipFactory.FromCard<Ascension>(true)
@@ -71,7 +71,7 @@
 //         
 //         new(
 //             "OmnislashIconContainer",
-//             "res://Cloud/scenes/LimitCardDisplay_Omnislash.tscn",
+//             "res://Tifa/scenes/LimitCardDisplay_Omnislash.tscn",
 //             new Vector2(225f, 128f),
 //             model => model.IsUpgraded
 //                 ? HoverTipFactory.FromCard<Omnislash>(true)

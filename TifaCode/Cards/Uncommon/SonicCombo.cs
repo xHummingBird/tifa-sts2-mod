@@ -15,7 +15,7 @@ public class SonicCombo() : TifaCard(2, CardType.Attack,
 {
     protected override IEnumerable<DynamicVar> CanonicalVars =>
     [
-        new DamageVar(5m, ValueProp.Move),
+        new DamageVar(6m, ValueProp.Move),
         new RepeatVar(3)
     ];
 
@@ -55,10 +55,9 @@ public class SonicCombo() : TifaCard(2, CardType.Attack,
                 .WithValueProp(ValueProp.Unpowered)
                 .WithHitFx(null, "res://Tifa/sfx/punch_hit_2.wav")
                 .Execute(choiceContext);
-            
+            AudioHelper.PlayRandomLastHit();
             await Task.Delay((int)(0.234f * 1000f));
             SfxCmd.Play("res://Tifa/sfx/kick_up.wav");
-            AudioHelper.PlayRandomAttackHard();
             tifa.PlayVfxOnTarget(
                 play.Target,
                 "res://Tifa/scenes/vfx/hit_yellow.tscn",

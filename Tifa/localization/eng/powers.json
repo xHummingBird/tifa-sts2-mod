@@ -5,5 +5,21 @@
 
   "TIFA-WAY_OF_THE_FIST_POWER.description": "Attacks generate 1 additional [gold]Limit[/gold] per hit.",
   "TIFA-WAY_OF_THE_FIST_POWER.smartDescription": "Attacks generate {Amount} additional [gold]Limit[/gold] per hit.",
-  "TIFA-WAY_OF_THE_FIST_POWER.title": "Way Of The Fist"
+  "TIFA-WAY_OF_THE_FIST_POWER.title": "Way Of The Fist",
+
+  "TIFA-BATTLE_TRANCE_POWER.description": "Temporarily gain 2 max and current [gold]Chi[/gold].",
+  "TIFA-BATTLE_TRANCE_POWER.smartDescription": "Gaining {Amount} [gold]Chi[/gold] and max [gold]Chi[/gold] until the end of the turn.",
+  "TIFA-BATTLE_TRANCE_POWER.title": "Battle Trance",
+
+  "TIFA-FIGHTING_SPIRIT_POWER.description": "The first time you gain [gold]Chi[/gold] during your turn, gain {Energy:energyIcons()}.",
+  "TIFA-FIGHTING_SPIRIT_POWER.smartDescription": "Gain {Amount} {Energy:energyIcons()} the first time you gain [gold]Chi[/gold] during your turn.",
+  "TIFA-FIGHTING_SPIRIT_POWER.title": "Fighting Spirit",
+
+  "TIFA-ZANGAN_STYLE_POWER.description": "Increase your max [gold]Chi[/gold].",
+  "TIFA-ZANGAN_STYLE_POWER.smartDescription": "Increasing your max [gold]Chi[/gold] by {Amount}.",
+  "TIFA-ZANGAN_STYLE_POWER.title": "Zangan Style",
+
+  "TIFA-LIMIT_BREAK_POWER.description": "Gain [gold]Limit Break[/gold] when limit reaches [blue]100[/blue].",
+  "TIFA-LIMIT_BREAK_POWER.smartDescription": "Limit is full. You can use Limit Breaks.",
+  "TIFA-LIMIT_BREAK_POWER.title": "Limit Break"
 }

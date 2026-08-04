@@ -1,6 +1,10 @@
-﻿namespace Tifa.TifaCode.Powers;
+﻿using MegaCrit.Sts2.Core.Entities.Powers;
 
-public class ZanganStylePower
+namespace Tifa.TifaCode.Powers;
+
+public class ZanganStylePower : TifaPower
 {
-    
+    public override PowerType Type => PowerType.Buff;
+
+    public override PowerStackType StackType => PowerStackType.Counter;
 }

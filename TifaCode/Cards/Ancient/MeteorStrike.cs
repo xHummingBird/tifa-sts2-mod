@@ -1,6 +1,10 @@
-﻿namespace Tifa.TifaCode.Cards.Ancient;
+﻿using MegaCrit.Sts2.Core.Entities.Cards;
+using Tifa.TifaCode.Mechanics.Limit;
 
-public class MeteorStrike
+namespace Tifa.TifaCode.Cards.Ancient;
+
+public class MeteorStrike() : TifaCard(0, CardType.Attack,
+    CardRarity.Ancient, TargetType.AnyEnemy), ILimitCard
 {
     
 }

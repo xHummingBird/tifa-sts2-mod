@@ -56,7 +56,7 @@ public class StrikeTifa() : TifaCard(1, CardType.Attack,
         }
         else
             await CommonActions.CardAttack(this, play.Target, hitCount: DynamicVars.Repeat.IntValue)
-                .WithHitFx("null", "res://Tifa/sfx/punch_hit_1.wav")
+                .WithHitFx(null, "res://Tifa/sfx/punch_hit_1.wav")
                 .Execute(choiceContext);
     }
 

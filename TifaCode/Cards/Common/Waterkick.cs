@@ -35,7 +35,7 @@ public class Waterkick() : TifaCard(1, CardType.Attack,
         
         if (ownerCreature != null && tifa != null)
         { 
-            AudioHelper.PlayRandomAttackHard();
+            AudioHelper.PlayRandomPhrase();
             tifa.PlayAnimation(ownerCreature, "divekick");
             await Task.Delay((int)(0.133f * 1000f));
             tifa.PlayVfxOnTarget(

@@ -73,6 +73,7 @@ public class ZanganCombo() : TifaCard(3, CardType.Attack,
                 .WithValueProp(ValueProp.Unpowered)
                 .WithHitFx(null, "res://Tifa/sfx/kick_hit_1.wav")
                 .Execute(choiceContext);
+            AudioHelper.PlayRandomLastHit();
             await Task.Delay((int)(0.333f * 1000f));
             SfxCmd.Play("res://Tifa/sfx/kick_up.wav");
             await DamageCmd.Attack(damage).FromCard(this, play).Targeting(play.Target)

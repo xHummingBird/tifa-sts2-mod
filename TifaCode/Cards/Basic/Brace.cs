@@ -17,7 +17,7 @@ public class Brace() : TifaCard(1, CardType.Skill,
 {
     protected override IEnumerable<DynamicVar> CanonicalVars => [
         new BlockVar(6, ValueProp.Move),
-        new PowerVar<VigorPower> (2)
+        new DynamicVar ("Combo", 2)
     ];
     
     protected override IEnumerable<IHoverTip> ExtraHoverTips =>
@@ -32,13 +32,12 @@ public class Brace() : TifaCard(1, CardType.Skill,
             Owner.GetRelic<ComboRelicBase>();
         AudioHelper.PlayRandomDefend();
         await CommonActions.CardBlock(this, play);
-        await PowerCmd.Apply<VigorPower>(choiceContext, base.Owner.Creature, DynamicVars["VigorPower"].BaseValue, base.Owner.Creature, this);
-        comboRelic?.GainCombo(DynamicVars["VigorPower"].IntValue);
+        comboRelic?.GainCombo(DynamicVars["Combo"].IntValue);
     }
 
     protected override void OnUpgrade()
     {
         DynamicVars["Block"].UpgradeValueBy(1m);
-        DynamicVars["VigorPower"].UpgradeValueBy(1m);
+        DynamicVars["Combo"].UpgradeValueBy(1m);
     }
 }

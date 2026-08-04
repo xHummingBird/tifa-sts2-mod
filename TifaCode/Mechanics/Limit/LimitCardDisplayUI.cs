@@ -22,32 +22,32 @@
 //     {
 //         new()
 //         {
-//             Name = "CrossSlash_UI",
-//             Scene = "res://Cloud/scenes/LimitCardDisplay_CrossSlash.tscn",
+//             Name = "RiseAndFall_UI",
+//             Scene = "res://Tifa/scenes/LimitCardDisplay_RiseAndFall.tscn",
 //             Position = new Vector2(75f, -205f),
 //             ShouldShow = _ => true
 //         },
 //
 //         new()
 //         {
-//             Name = "Meteor_UI",
-//             Scene = "res://Cloud/scenes/LimitCardDisplay_Meteorain.tscn",
+//             Name = "DolphinFlurry_UI",
+//             Scene = "res://Tifa/scenes/LimitCardDisplay_DolphinFlurry.tscn",
 //             Position = new Vector2(75f, -165f),
 //             ShouldShow = _ => true
 //         },
 //
 //         new()
 //         {
-//             Name = "Ascension_UI",
-//             Scene = "res://Cloud/scenes/LimitCardDisplay_Ascension.tscn",
+//             Name = "MeteorStrike_UI",
+//             Scene = "res://Tifa/scenes/LimitCardDisplay_MeteorStrike.tscn",
 //             Position = new Vector2(75f, -125f),
 //             ShouldShow = _ => true
 //         },
 //
 //         new()
 //         {
-//             Name = "Omnislash_UI",
-//             Scene = "res://Cloud/scenes/LimitCardDisplay_Omnislash.tscn",
+//             Name = "FinalHeaven_UI",
+//             Scene = "res://Tifa/scenes/LimitCardDisplay_FinalHeaven.tscn",
 //             Position = new Vector2(75f, -85f),
 //
 //             // IMPORTANT:
@@ -101,7 +101,7 @@
 //         }
 //         catch (Exception ex)
 //         {
-//             GD.PushWarning($"[Cloud Limit Card UI] ShouldShow failed for {config.Name}: {ex}");
+//             GD.PushWarning($"[Tifa Limit Card UI] ShouldShow failed for {config.Name}: {ex}");
 //             shouldShow = false;
 //         }
 //
@@ -119,7 +119,7 @@
 //
 //             if (scene == null)
 //             {
-//                 GD.PushError($"[Cloud Limit Card UI] Failed to load {config.Scene}");
+//                 GD.PushError($"[Tifa Limit Card UI] Failed to load {config.Scene}");
 //                 return;
 //             }
 //
@@ -166,7 +166,7 @@
 //         }
 //         else
 //         {
-//             GD.PushError($"[Cloud Limit Card UI] Could not load scene: {path}");
+//             GD.PushError($"[Tifa Limit Card UI] Could not load scene: {path}");
 //         }
 //
 //         return loaded;
@@ -214,7 +214,7 @@
 //                 }
 //                 catch (Exception ex)
 //                 {
-//                     GD.PushWarning($"[Cloud Limit Card UI] Deferred refresh failed: {ex}");
+//                     GD.PushWarning($"[Tifa Limit Card UI] Deferred refresh failed: {ex}");
 //                 }
 //             }).CallDeferred();
 //         };
@@ -227,7 +227,7 @@
 //             }
 //             catch (Exception ex)
 //             {
-//                 GD.PushWarning($"[Cloud Limit Card UI] Initial refresh failed: {ex}");
+//                 GD.PushWarning($"[Tifa Limit Card UI] Initial refresh failed: {ex}");
 //             }
 //         }).CallDeferred();
 //     }
@@ -247,7 +247,7 @@
 //         }
 //         catch (Exception ex)
 //         {
-//             GD.PushWarning($"[Cloud Limit Card UI] UpdateVisuals refresh failed: {ex}");
+//             GD.PushWarning($"[Tifa Limit Card UI] UpdateVisuals refresh failed: {ex}");
 //         }
 //     }
 // }

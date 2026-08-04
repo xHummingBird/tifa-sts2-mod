@@ -63,5 +63,6 @@ public class Divekick() : TifaCard(1, CardType.Attack,
     protected override void OnUpgrade()
     {
         DynamicVars.Damage.UpgradeValueBy(3);
+        DynamicVars.Vulnerable.UpgradeValueBy(1);
     }
 }

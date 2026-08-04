@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Reflection;
 using System.Threading.Tasks;
 using BaseLib.Extensions;
-using Cloud.CloudCode.Mechanics.Limit;
 using MegaCrit.Sts2.Core.Combat;
 using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Cards;
@@ -26,6 +25,7 @@ public abstract class ComboRelicBase : TifaRelic
 {
     private int _combo;
     private bool _comboIncreasedThisTurn;
+    private bool _fightingSpiritEnergy;
     public int StoredLimit { get; set; }
 
     public override RelicRarity Rarity => RelicRarity.Starter;
@@ -69,18 +69,18 @@ public abstract class ComboRelicBase : TifaRelic
     
     protected virtual int GetBonusMaxChiLevel()
     {
+        if (!IsMutable)
+            return 0;
+
+        var creature = Owner?.Creature;
+
+        if (creature == null)
+            return 0;
+
         int bonus = 0;
 
-        /*
-         * Add future max Chi bonuses here.
-         *
-         * Examples:
-         *
-         * if (base.Owner.GetRelic<SomeMaxChiRelic>() != null)
-         *     bonus += 1;
-         *
-         * bonus += base.Owner.Creature.GetPowerAmount<SomeMaxChiPower>();
-         */
+        bonus += creature.GetPowerAmount<BattleTrancePower>();
+        bonus += creature.GetPowerAmount<ZanganStylePower>();
 
         return bonus;
     }
@@ -126,7 +126,7 @@ public abstract class ComboRelicBase : TifaRelic
     {
         int startingCombo = 0;
 
-        if (base.Owner.GetRelic<SonicStrikers>() != null)
+        if (base.Owner.GetRelic<Powersoul>() != null)
         {
             startingCombo += ComboPerChiLevel; // +5 Combo = Chi 1
         }
@@ -176,6 +176,12 @@ public abstract class ComboRelicBase : TifaRelic
             GainLimitFromAttackHits(card);
         }
 
+        await CheckLimitReady(
+            base.Owner.Creature,
+            choiceContext,
+            base.Owner.Creature,
+            card);
+
         int comboGain = GetComboGainFromCard(card);
 
         if (comboGain > 0)
@@ -202,6 +208,9 @@ public abstract class ComboRelicBase : TifaRelic
         if (card.Type != CardType.Attack)
             return;
 
+        if (card is ILimitCard)
+            return;
+
         int hits = TryGetRepeatVarFromCard(card) ?? 1;
         hits = Math.Max(1, hits);
 
@@ -225,6 +234,8 @@ public abstract class ComboRelicBase : TifaRelic
         IReadOnlyList<Creature> participants,
         ICombatState combatState)
     {
+        _fightingSpiritEnergy = false;
+        
         if (side != base.Owner.Creature.Side)
             return;
 
@@ -244,7 +255,12 @@ public abstract class ComboRelicBase : TifaRelic
             base.Owner.Creature,
             null);
         
-        
+
+        await CheckLimitReady(
+            base.Owner.Creature,
+            null,
+            base.Owner.Creature,
+            null);
     }
 
     public override async Task AfterSideTurnEnd(
@@ -293,6 +309,9 @@ public abstract class ComboRelicBase : TifaRelic
     private int GetComboGainFromCard(CardModel card)
     {
         if (card.Type != CardType.Attack)
+            return 0;
+        
+        if (card is ILimitCard)
             return 0;
 
         int repeat = TryGetRepeatVarFromCard(card) ?? 1;
@@ -384,6 +403,11 @@ public abstract class ComboRelicBase : TifaRelic
                 targetChi - currentChi,
                 source,
                 card);
+            if (creature.HasPower<FightingSpiritPower>())
+            {
+                PlayerCmd.GainEnergy(creature.GetPowerAmount<FightingSpiritPower>(), base.Owner);
+                _fightingSpiritEnergy = true;
+            }
         }
         else if (targetChi < currentChi)
         {
@@ -523,5 +547,38 @@ public abstract class ComboRelicBase : TifaRelic
             : RelicStatus.Normal;
 
         InvokeDisplayAmountChanged();
+    }
+    
+    public static async Task CheckLimitReady(Creature creature,
+        PlayerChoiceContext? context,
+        Creature source,
+        CardModel? card)
+    {
+        var player = creature.Player;
+        if (player == null)
+            return;
+
+        if (LimitManager.IsFull(player) &&
+            !creature.HasPower<LimitBreakPower>())
+        {
+            if (context != null)
+                await PowerCmd.Apply<LimitBreakPower>(
+                    context,
+                    creature,
+                    1,
+                    creature,
+                    null
+                );
+            else
+            {
+                await PowerCmd.Apply<LimitBreakPower>(
+                    new ThrowingPlayerChoiceContext(),
+                    creature,
+                    1,
+                    creature,
+                    null
+                );
+            }
+        }
     }
 }

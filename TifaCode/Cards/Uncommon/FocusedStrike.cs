@@ -15,7 +15,7 @@ using Tifa.TifaCode.Powers;
 namespace Tifa.TifaCode.Cards.Common;
 
 public class FocusedStrike() : TifaCard(2, CardType.Attack,
-    CardRarity.Common, TargetType.AnyEnemy)
+    CardRarity.Uncommon, TargetType.AnyEnemy)
 {
     protected override bool ShouldGlowGoldInternal => base.Owner.Creature.GetPowerAmount<ChiPower>() >= 2;
     
@@ -42,7 +42,7 @@ public class FocusedStrike() : TifaCard(2, CardType.Attack,
         if (ownerCreature != null && tifa != null)
         {
             await tifa.DashTo(ownerCreature, play.Target, distance: 270f);
-            AudioHelper.PlayRandomAttackHard();
+            AudioHelper.PlayRandomPhrase();
             tifa.PlayAnimation(ownerCreature, "uppercut");
             await Task.Delay((int)(0.267f * 1000f));
             SfxCmd.Play("res://Tifa/sfx/punch_swing_1.wav");

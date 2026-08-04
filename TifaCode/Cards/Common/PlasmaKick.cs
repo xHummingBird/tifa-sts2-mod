@@ -35,7 +35,7 @@ public class PlasmaKick() : TifaCard(1, CardType.Attack,
         
         if (ownerCreature != null && tifa != null)
         {
-            AudioHelper.PlayRandomAttack();
+            AudioHelper.PlayRandomPhrase();
             tifa.PlayAnimation(ownerCreature, "kick");
             await Task.Delay((int)(0.067f * 1000f));
             SfxCmd.Play("res://Tifa/sfx/kick_up.wav");
