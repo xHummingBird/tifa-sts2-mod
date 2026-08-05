@@ -53,7 +53,7 @@ public class WhirlingUppercut() : TifaCard(0, CardType.Attack,
                 .WithHitFx(null, "res://Tifa/sfx/punch_hit_1.wav")
                 .Execute(choiceContext);
         
-        if (PlayCountThisTurn == 1)
+        if (PlayCountThisTurn == 0)
         {
             await CardPileCmd.Draw(
                 choiceContext,

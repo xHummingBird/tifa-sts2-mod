@@ -46,7 +46,7 @@ public class HighJumpKick() : TifaCard(0, CardType.Attack,
                 .WithHitFx(null, "res://Tifa/sfx/kick_hit_1.wav")
                 .Execute(choiceContext);
         CardModel card = CreateClone();
-        CardCmd.PreviewCardPileAdd(await CardPileCmd.AddGeneratedCardToCombat(card, PileType.Discard, base.Owner), 2.2f);
+        CardCmd.PreviewCardPileAdd(await CardPileCmd.AddGeneratedCardToCombat(card, PileType.Discard, base.Owner), 1.0f);
     }
     
     protected override void OnUpgrade()

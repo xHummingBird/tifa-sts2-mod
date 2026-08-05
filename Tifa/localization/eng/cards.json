@@ -92,7 +92,7 @@
   "TIFA-METEOR_STRIKE.description": "",
   "TIFA-METEOR_STRIKE.title": "Meteor Strike",
 
-  "TIFA-DOLPHIN_FLURRY.description": "Deal {CalculatedDamage:diff()} damage. \nApply {WeakPower:diff()} [gold]Weak[/gold]. \n{ChiIcon} [gold]1[/gold]: Deal {ExtraDamage:diff()} additional damage.",
+  "TIFA-DOLPHIN_FLURRY.description": "Deal {CalculatedDamage:diff()} damage. \nApply {WeakPower:diff()} [gold]Weak[/gold]. \n{ChiIcon} [gold]5[/gold]: Deal {ExtraDamage:diff()} additional damage.",
   "TIFA-DOLPHIN_FLURRY.title": "Dolphin Flurry",
 
   "TIFA-LIMIT_BREAK.title": "Limit Break",

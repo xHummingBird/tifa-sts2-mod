@@ -16,6 +16,7 @@ using MegaCrit.Sts2.Core.Nodes.Rooms;
 using MegaCrit.Sts2.Core.Nodes.Vfx;
 using MegaCrit.Sts2.Core.Rooms;
 using MegaCrit.Sts2.Core.ValueProps;
+using Tifa.TifaCode.Extensions;
 using Tifa.TifaCode.Mechanics.Limit;
 using Tifa.TifaCode.Powers;
 
@@ -175,13 +176,7 @@ public abstract class ComboRelicBase : TifaRelic
         {
             GainLimitFromAttackHits(card);
         }
-
-        await CheckLimitReady(
-            base.Owner.Creature,
-            choiceContext,
-            base.Owner.Creature,
-            card);
-
+        
         int comboGain = GetComboGainFromCard(card);
 
         if (comboGain > 0)
@@ -199,8 +194,17 @@ public abstract class ComboRelicBase : TifaRelic
             await SyncChiPower(
                 choiceContext,
                 base.Owner.Creature,
-                card);
+                null);
         }
+        
+        await CheckLimitReady(
+            base.Owner.Creature,
+            choiceContext,
+            base.Owner.Creature,
+            null);
+        
+        if (base.Owner.Creature.HasPower<LimitBreakPower>())
+            await TifaExtensions.AddLimitBreakToHand(base.Owner);
     }
     
     private void GainLimitFromAttackHits(CardModel card)
@@ -241,7 +245,7 @@ public abstract class ComboRelicBase : TifaRelic
 
         int limitGain = 5;
 
-        if (ChiLevel >= 4)
+        if (ChiLevel >= 2)
         {
             limitGain += 2;
         }
@@ -255,12 +259,18 @@ public abstract class ComboRelicBase : TifaRelic
             base.Owner.Creature,
             null);
         
+    }
 
+    public override async Task AfterSideTurnStartLate(CombatSide side, IReadOnlyList<Creature> participants, ICombatState combatState)
+    {
         await CheckLimitReady(
             base.Owner.Creature,
             null,
             base.Owner.Creature,
             null);
+        
+        if (base.Owner.Creature.HasPower<LimitBreakPower>())
+            await TifaExtensions.AddLimitBreakToHand(base.Owner);
     }
 
     public override async Task AfterSideTurnEnd(
@@ -329,7 +339,7 @@ public abstract class ComboRelicBase : TifaRelic
     protected virtual int ModifyComboGain(CardModel card, int amount)
     {
         if (card.Type == CardType.Attack &&
-            ChiLevel >= 2 && card is not ILimitCard)
+            ChiLevel >= 1 && card is not ILimitCard)
         {
             amount += 1;
         }

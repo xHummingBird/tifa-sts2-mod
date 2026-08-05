@@ -1,6 +1,9 @@
-﻿using MegaCrit.Sts2.Core.Commands;
+﻿using MegaCrit.Sts2.Core.Combat;
+using MegaCrit.Sts2.Core.Commands;
+using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.Entities.Creatures;
 using MegaCrit.Sts2.Core.Entities.Players;
+using Tifa.TifaCode.Cards.Ancient;
 using Tifa.TifaCode.Relics;
 
 namespace Tifa.TifaCode.Extensions;
@@ -113,4 +116,41 @@ public static class TifaExtensions
         return player.GetComboRelic()?.MaxChiLevel ?? 0;
     }
     
+    public static async Task AddLimitBreakToHand(Player player)
+    {
+        if (CombatManager.Instance.IsOverOrEnding)
+        {
+            return;
+        }
+
+        var playerState = player.PlayerCombatState;
+
+        // Already in hand, do nothing.
+        if (playerState.AllCards
+            .OfType<LimitBreak>()
+            .Any(c => c.Pile?.Type == PileType.Hand))
+        {
+            return;
+        }
+
+        // Find an existing Limit Break anywhere (draw/discard/exhaust/etc.)
+        var limitBreak = playerState.AllCards
+            .OfType<LimitBreak>()
+            .FirstOrDefault();
+
+        if (limitBreak != null)
+        {
+            await CardPileCmd.Add(limitBreak, PileType.Hand);
+        }
+        else
+        {
+            limitBreak = player.Creature.CombatState
+                .CreateCard<LimitBreak>(player);
+
+            await CardPileCmd.AddGeneratedCardToCombat(
+                limitBreak,
+                PileType.Hand,
+                player);
+        }
+    }
 }

@@ -65,7 +65,7 @@ public class RiseAndFall() : TifaCard(0, CardType.Attack,
                 TifaExtensions.TifaAttackSfx.KickUp, "res://Tifa/sfx/kick_critical_3.wav",
                 TifaExtensions.TifaHitEffects.BlueHit);
             await Task.Delay(667);
-            AudioHelper.PlayRandomAttackHard();
+            AudioHelper.PlayRandomLastHit();
             await Task.Delay(233);
             tifa.PlayVfxOnTarget(
                 play.Target,
@@ -93,7 +93,7 @@ public class RiseAndFall() : TifaCard(0, CardType.Attack,
     }
     protected override void OnUpgrade()
     {
-        DynamicVars.CalculationBase.UpgradeValueBy(6);
+        DynamicVars.Damage.UpgradeValueBy(6);
         DynamicVars.Vulnerable.UpgradeValueBy(1);
     }
 }

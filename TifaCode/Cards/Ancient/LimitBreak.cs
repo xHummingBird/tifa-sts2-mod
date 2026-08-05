@@ -18,6 +18,11 @@ public class LimitBreak() : TifaCard(0, CardType.Skill,
     protected override IEnumerable<DynamicVar> CanonicalVars => [
     ];
     
+    private IEnumerable<CardModel> GetLimitBreakCards()
+    {
+        var pile = PileType.Hand.GetPile(base.Owner);
+        return pile.Cards.OfType<LimitBreak>();
+    }
     public override IEnumerable<CardKeyword> CanonicalKeywords =>
     [
         CardKeyword.Retain,
@@ -50,6 +55,12 @@ public class LimitBreak() : TifaCard(0, CardType.Skill,
         //     cards.Add(ms);
         // if (premiumHeart != null && base.Owner.Creature.GetPowerAmount<ChiPower>() >= 7)
         //     cards.Add(fh);
+        
+        foreach (var card in GetLimitBreakCards().ToList())
+        {
+            await CardCmd.Exhaust(choiceContext, card);
+        }
+        
         if (base.Owner.Creature.GetPowerAmount<ChiPower>() >= 3)
         {
             CardModel? cardModel = await CardSelectCmd.FromChooseACardScreen(choiceContext, cards.ToList(), base.Owner, canSkip: false);
@@ -61,6 +72,7 @@ public class LimitBreak() : TifaCard(0, CardType.Skill,
         else if (base.Owner.Creature.GetPowerAmount<ChiPower>() < 3)
         {
             LimitManager.SetLimit(base.Owner, 0);
+            await PowerCmd.Remove<LimitBreakPower>(base.Owner.Creature);
             await CardCmd.AutoPlay(choiceContext, rf, play.Target);
         }
         // if (cardModel is MeteorStrike meteorStrike)

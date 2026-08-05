@@ -9,7 +9,7 @@ using Tifa.TifaCode.Relics;
 
 namespace Tifa.TifaCode.Cards.Rare;
 
-public class BattleTrance() : TifaCard(1, CardType.Skill, //Gain 1 Chi level. Exhaust. 0 cost. Innate for upgrade
+public class BattleTrance() : TifaCard(1, CardType.Skill,
     CardRarity.Rare, TargetType.Self)
 {
     protected override IEnumerable<DynamicVar> CanonicalVars => [

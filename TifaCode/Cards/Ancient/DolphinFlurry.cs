@@ -96,7 +96,7 @@ public class DolphinFlurry() : TifaCard(0, CardType.Attack,
                 TifaExtensions.TifaHitEffects.BlueHit);
             await Task.Delay(567);
             SfxCmd.Play("res://Tifa/sfx/dolphin_charge.wav");
-            AudioHelper.PlayRandomPhrase();
+            AudioHelper.PlayRandomLastHit();
             await Task.Delay(333);
             SfxCmd.Play("res://Tifa/sfx/dolphin_blow_2.wav");
             await Task.Delay(67);

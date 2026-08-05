@@ -22,7 +22,7 @@ public sealed class ChiPower : TifaPower
             int bonus = 0;
 
             // Chi 1: +1 Strength
-            if (base.Amount >= 1)
+            if (base.Amount >= 3)
                 bonus += 1;
 
             // Chi 6: +1 Strength
@@ -48,7 +48,7 @@ public sealed class ChiPower : TifaPower
             int bonus = 0;
 
             // Chi 3: +1 Dexterity
-            if (base.Amount >= 3)
+            if (base.Amount >= 4)
                 bonus += 1;
 
             // Chi 6: +1 Dexterity

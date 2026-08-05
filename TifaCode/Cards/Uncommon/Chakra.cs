@@ -22,7 +22,7 @@ public class Chakra() : TifaCard(
     protected override IEnumerable<DynamicVar> CanonicalVars =>
     [
         new CardsVar(2),
-        new EnergyVar(2)
+        new EnergyVar(1)
     ];
     
     protected override IEnumerable<IHoverTip> ExtraHoverTips =>
