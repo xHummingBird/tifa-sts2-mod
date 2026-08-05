@@ -4,6 +4,8 @@ using BaseLib.Utils;
 using Tifa.TifaCode.Character;
 using Tifa.TifaCode.Extensions;
 using MegaCrit.Sts2.Core.Entities.Cards;
+using MegaCrit.Sts2.Core.Entities.Players;
+using MegaCrit.Sts2.Core.Localization;
 
 namespace Tifa.TifaCode.Cards;
 
@@ -23,4 +25,32 @@ public abstract class TifaCard(int cost, CardType type, CardRarity rarity, Targe
     //Uses card_portraits/card_name.png as image path. These should be smaller images.
     public override string PortraitPath => $"{Id.Entry.RemovePrefix().ToLowerInvariant()}.png".CardImagePath();
     public override string BetaPortraitPath => $"beta/{Id.Entry.RemovePrefix().ToLowerInvariant()}.png".CardImagePath();
+    
+    private bool TryGetOwner(out Player? owner)
+    {
+        owner = null;
+
+        if (!IsMutable)
+            return false;
+
+        try
+        {
+            owner = Owner;
+            return owner != null;
+        }
+        catch
+        {
+            return false;
+        }
+    }
+    
+    protected override void AddExtraArgsToDescription(
+        LocString description)
+    {
+        base.AddExtraArgsToDescription(description);
+
+        description.Add(
+            "ChiIcon",
+            "[img]res://Tifa/images/charui/chi_text.png[/img]");
+    }
 }

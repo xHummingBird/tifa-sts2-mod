@@ -403,7 +403,7 @@ public abstract class ComboRelicBase : TifaRelic
                 targetChi - currentChi,
                 source,
                 card);
-            if (creature.HasPower<FightingSpiritPower>())
+            if (creature.HasPower<FightingSpiritPower>() && _fightingSpiritEnergy == false)
             {
                 PlayerCmd.GainEnergy(creature.GetPowerAmount<FightingSpiritPower>(), base.Owner);
                 _fightingSpiritEnergy = true;

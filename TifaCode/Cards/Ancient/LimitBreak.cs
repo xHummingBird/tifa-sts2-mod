@@ -34,9 +34,7 @@ public class LimitBreak() : TifaCard(0, CardType.Skill,
         //var fh = CombatState.CreateCard<FinalHeaven>(base.Owner);
         
         PremiumHeart? premiumHeart = base.Owner?.GetRelic<PremiumHeart>();
-        
-        List<CardModel> cards;
-        
+
         if (base.IsUpgraded)
         {
             CardCmd.Upgrade(rf);
@@ -45,29 +43,30 @@ public class LimitBreak() : TifaCard(0, CardType.Skill,
             //CardCmd.Upgrade(fh);
             
         }
-
         
-        cards = new()
-        {
-            rf,
-        };
+        List<CardModel> cards = [rf, df];
 
-        if (base.Owner.Creature.GetPowerAmount<ChiPower>() >= 3)
-            cards.Add(df);
-        
         // if (base.Owner.Creature.GetPowerAmount<ChiPower>() >= 5)
         //     cards.Add(ms);
-        
         // if (premiumHeart != null && base.Owner.Creature.GetPowerAmount<ChiPower>() >= 7)
         //     cards.Add(fh);
+        if (base.Owner.Creature.GetPowerAmount<ChiPower>() >= 3)
+        {
+            CardModel? cardModel = await CardSelectCmd.FromChooseACardScreen(choiceContext, cards.ToList(), base.Owner, canSkip: false);
+            LimitManager.SetLimit(base.Owner, 0);
+            await PowerCmd.Remove<LimitBreakPower>(base.Owner.Creature);
+            await CardCmd.AutoPlay(choiceContext, cardModel, play.Target);
+        }
+
+        else if (base.Owner.Creature.GetPowerAmount<ChiPower>() < 3)
+        {
+            LimitManager.SetLimit(base.Owner, 0);
+            await CardCmd.AutoPlay(choiceContext, rf, play.Target);
+        }
+        // if (cardModel is MeteorStrike meteorStrike)
+        //     await CardCmd.AutoPlay(choiceContext, cardModel, null);
+        // else 
         
-        CardModel cardModel = await CardSelectCmd.FromChooseACardScreen(choiceContext, cards.ToList(), base.Owner, canSkip: false);
-        LimitManager.SetLimit(base.Owner, 0);
-        await PowerCmd.Remove<LimitBreakPower>(base.Owner.Creature);
-        if (cardModel is MeteorStrike meteorStrike)
-            await CardCmd.AutoPlay(choiceContext, cardModel, null);
-        
-        else await CardCmd.AutoPlay(choiceContext, cardModel, play.Target);
     }
 
     protected override void OnUpgrade()

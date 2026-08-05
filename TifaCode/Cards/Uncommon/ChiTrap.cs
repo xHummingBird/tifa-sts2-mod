@@ -34,7 +34,6 @@ public class ChiTrap() : TifaCard(0, CardType.Attack,
 
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {
-        ArgumentNullException.ThrowIfNull(cardPlay.Target, "cardPlay.Target");
         var ownerCreature = Owner?.Creature;
         CenterCardCinematic.Start(RunManager.Instance.NetService.NetId);
         if (ownerCreature != null && Owner?.Character is Character.Tifa tifa)

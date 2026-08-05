@@ -5,7 +5,7 @@
   "TIFA-DEFEND_TIFA.description": "Gain {Block:diff()} [gold]Block[/gold].",
   "TIFA-DEFEND_TIFA.title": "Defend",
 
-  "TIFA-DIVEKICK.description": "Deal {Damage:diff()} damage. \nIf you have at least 1 [gold]Chi[/gold], apply {VulnerablePower:diff()} [gold]Vulnerable[/gold].",
+  "TIFA-DIVEKICK.description": "Deal {Damage:diff()} damage. \n{ChiIcon} [gold]1[/gold]: Apply {VulnerablePower:diff()} [gold]Vulnerable[/gold].",
   "TIFA-DIVEKICK.title": "Divekick",
 
   "TIFA-BRACE.description": "Gain {Block:diff()} [gold]Block[/gold]. \nGain {Combo:diff()} [gold]Combo[/gold].",
@@ -23,16 +23,16 @@
   "TIFA-KICK.description": "Deal {Damage:diff()} damage to ALL enemies. \nGain [gold]Combo[/gold] equal to number of enemies hit.",
   "TIFA-KICK.title": "Kick",
 
-  "TIFA-OVERPOWER.description": "Deal {Damage:diff()} damage {Repeat:diff()} times. \nIf you have at least 2 [gold]Chi[/gold], your next attack costs 0 {Energy:energyIcons()}.",
+  "TIFA-OVERPOWER.description": "Deal {Damage:diff()} damage {Repeat:diff()} times. \n{ChiIcon} [gold]2[/gold]: Your next attack costs 0 {Energy:energyIcons()}.",
   "TIFA-OVERPOWER.title": "Overpower",
 
-  "TIFA-PLASMA_KICK.description": "Deal {Damage:diff()} damage. \nIf you have at least 1 [gold]Chi[/gold], draw {Cards:diff()} {Cards:plural:card|cards}.",
+  "TIFA-PLASMA_KICK.description": "Deal {Damage:diff()} damage. \n{ChiIcon} [gold]1[/gold]: Draw {Cards:diff()} {Cards:plural:card|cards}.",
   "TIFA-PLASMA_KICK.title": "Plasma Kick",
 
-  "TIFA-SOMERSAULT.description": "Deal {Damage:diff()} damage. \nif you have at least 1 [gold]Chi[/gold], gain {Combo:diff()} [gold]Combo[/gold].",
+  "TIFA-SOMERSAULT.description": "Deal {Damage:diff()} damage. \n{ChiIcon} [gold]1[/gold]: Gain {Combo:diff()} [gold]Combo[/gold].",
   "TIFA-SOMERSAULT.title": "Somersault",
 
-  "TIFA-WATERKICK.description": "Deal {Damage:diff()} damage. \nIf you have at least 1 [gold]Chi[/gold], apply {WeakPower:diff()} [gold]Weak[/gold].",
+  "TIFA-WATERKICK.description": "Deal {Damage:diff()} damage. \n{ChiIcon} [gold]1[/gold]: Apply {WeakPower:diff()} [gold]Weak[/gold].",
   "TIFA-WATERKICK.title": "Waterkick",
 
   "TIFA-WHIRLING_UPPERCUT.description": "Deal {Damage:diff()} damage. \nIf this is the first card you play, draw 1 card.",
@@ -41,7 +41,7 @@
   "TIFA-COUNTER.description": "Gain {ThornsPower:diff()} [gold]Thorns[/gold]. \nGain {Combo:diff()} [gold]Combo[/gold].",
   "TIFA-COUNTER.title": "Counter",
 
-  "TIFA-FOCUSED_STRIKE.description": "Deal {CalculatedDamage:diff()} damage. \nIf you have at least 2 [gold]Chi[/gold], deal {ExtraDamage:diff()} additional damage.",
+  "TIFA-FOCUSED_STRIKE.description": "Deal {CalculatedDamage:diff()} damage. \n{ChiIcon} [gold]2[/gold]: Deal {ExtraDamage:diff()} additional damage.",
   "TIFA-FOCUSED_STRIKE.title": "Focused Strike",
 
   "TIFA-SONIC_COMBO.description": "Deal {Damage:diff()} damage {Repeat:diff()} times.",
@@ -50,7 +50,7 @@
   "TIFA-ZANGAN_COMBO.description": "Deal {Damage:diff()} damage {Repeat:diff()} times. \nCost 1 less {Energy:energyIcons()} for each Attack played this turn.",
   "TIFA-ZANGAN_COMBO.title": "Zangan Combo",
 
-  "TIFA-BATTLE_TRANCE.description": "Temporarily gain 2 [gold]Chi[/gold] and [gold]Maximum Chi[/gold] until the end of the turn.",
+  "TIFA-BATTLE_TRANCE.description": "Temporarily gain 2 {ChiIcon} and [gold]Maximum[/gold] {ChiIcon} until the end of the turn.",
   "TIFA-BATTLE_TRANCE.title": "Battle Trance",
 
   "TIFA-DYING_WILL.description": "The next X{IfUpgraded:show:+1} Attacks cost 0 {Energy:energyIcons()}.",
@@ -59,31 +59,31 @@
   "TIFA-WAY_OF_THE_FIST.description": "Gain {WayOfTheFistPower:diff()} additional [gold]Limit[/gold] per attack hit.",
   "TIFA-WAY_OF_THE_FIST.title": "Way Of The Fist",
 
-  "TIFA-ZANGAN_STYLE.description": "Increase your maximum [gold]Chi[/gold] by {ZanganStylePower:diff()}.",
+  "TIFA-ZANGAN_STYLE.description": "Increase your maximum {ChiIcon} by {ZanganStylePower:diff()}.",
   "TIFA-ZANGAN_STYLE.title": "Zangan Style",
 
-  "TIFA-UNBRIDLED_STRENGTH.description": "Gain 1 [gold]Chi[/gold].",
+  "TIFA-UNBRIDLED_STRENGTH.description": "Gain 1 {ChiIcon}.",
   "TIFA-UNBRIDLED_STRENGTH.title": "Unbridled Strength",
 
   "TIFA-QUICK_JAB.description": "Deal {Damage:diff()} damage {Repeat:diff()} times. \nApply {VulnerablePower:diff()} [gold]Vulnerable[/gold].",
   "TIFA-QUICK_JAB.title": "Quick Jab",
 
-  "TIFA-CHI_BARRIER.description": "Gain {Block:diff()} [gold]Block[/gold]. \nGain {BlockMultiplier:diff()} additional [gold]Block[/gold] for each [gold]Chi[/gold].",
+  "TIFA-CHI_BARRIER.description": "Gain {Block:diff()} [gold]Block[/gold]. \nGain {BlockMultiplier:diff()} additional [gold]Block[/gold] for each {ChiIcon}.",
   "TIFA-CHI_BARRIER.title": "Chi Barrier",
 
-  "TIFA-FIGHTING_SPIRIT.description": "The first time you gain [gold]Chi[/gold] during your turn, gain {Energy:energyIcons()}.",
+  "TIFA-FIGHTING_SPIRIT.description": "The first time you gain {ChiIcon} during your turn, gain {Energy:energyIcons()}.",
   "TIFA-FIGHTING_SPIRIT.title": "Fighting Spirit",
 
-  "TIFA-GLACIER_KICK.description": "Deal {Damage:diff()} damage. \nIf you have at least 1 [gold]Chi[/gold], gain block equal to damage dealt.",
+  "TIFA-GLACIER_KICK.description": "Deal {Damage:diff()} damage. \n{ChiIcon} [gold]1[/gold]: Gain block equal to damage dealt.",
   "TIFA-GLACIER_KICK.title": "Glacier Kick",
 
   "TIFA-HIGH_JUMP_KICK.description": "Deal {Damage:diff()} damage. \nAdd a copy of this card into your Discard Pile.",
   "TIFA-HIGH_JUMP_KICK.title": "High Jump Kick",
 
-  "TIFA-RISE_AND_FALL.description": "Deal {Damage:diff()} damage. \nApply {VulnerablePower:diff()} [gold]Vulnerable[/gold]. [gold]C",
+  "TIFA-RISE_AND_FALL.description": "Deal {Damage:diff()} damage. \nApply {VulnerablePower:diff()} [gold]Vulnerable[/gold]. \n{ChiIcon} [gold]3[/gold]: Retain 20 [gold]Limit[/gold]. \n{ChiIcon} [gold]5[/gold]: Retain 50 [gold]Limit[/gold].",
   "TIFA-RISE_AND_FALL.title": "Rise And Fall",
 
-  "TIFA-BLAZE_KICK.description": "Deal {Damage:diff()} damage. \nIf you have at least 1 [gold]Chi[/gold], damage ALL other enemies equal to the damage dealt.",
+  "TIFA-BLAZE_KICK.description": "Deal {Damage:diff()} damage. \n{ChiIcon} [gold]1[/gold]: Deal damage to ALL other enemies equal to the damage dealt.",
   "TIFA-BLAZE_KICK.title": "Blaze Kick",
 
   "TIFA-FINAL_HEAVEN.description": "",
@@ -92,25 +92,25 @@
   "TIFA-METEOR_STRIKE.description": "",
   "TIFA-METEOR_STRIKE.title": "Meteor Strike",
 
-  "TIFA-DOLPHIN_FLURRY.description": "Deal {CalculatedDamage:diff()} damage. \nApply {WeakPower:diff()} [gold]Weak[/gold]. \nIf you have at least 5 [gold]Chi[/gold], deal {ExtraDamage:diff()} additional damage.",
+  "TIFA-DOLPHIN_FLURRY.description": "Deal {CalculatedDamage:diff()} damage. \nApply {WeakPower:diff()} [gold]Weak[/gold]. \n{ChiIcon} [gold]1[/gold]: Deal {ExtraDamage:diff()} additional damage.",
   "TIFA-DOLPHIN_FLURRY.title": "Dolphin Flurry",
 
   "TIFA-LIMIT_BREAK.title": "Limit Break",
-  "TIFA-LIMIT_BREAK.description": "Perform a [gold]Limit Break[/gold]. \nUnlock additional Limit Breaks at higher [gold]Chi[/gold] Levels.",
+  "TIFA-LIMIT_BREAK.description": "Perform a [gold]Limit Break[/gold]. \nUnlock additional Limit Breaks at higher {ChiIcon}.",
 
   "TIFA-MEDITATION.description": "Gain {Block:diff()} [gold]Block[/gold]. \nNext turn, gain {Energy:energyIcons()}",
   "TIFA-MEDITATION.title": "Meditation",
 
-  "TIFA-LIMIT_BREAKTHROUGH.description": "Gain 20 [gold]Limit[/gold]. Gain [gold]Limit[/gold] equal to [blue]{ComboMultiplier:diff()}%[/blue] of your [gold]Combo[/gold] count.",
+  "TIFA-LIMIT_BREAKTHROUGH.description": "Gain 20 [gold]Limit[/gold]. \nGain [gold]Limit[/gold] equal to [blue]{ComboMultiplier:diff()}%[/blue] of your [gold]Combo[/gold] count.",
   "TIFA-LIMIT_BREAKTHROUGH.title": "Limit Breakthrough",
 
-  "TIFA-INNER_STRENGTH.description": "Gain [gold]Strength[/gold] equal to current [gold]Chi[/gold].",
+  "TIFA-INNER_STRENGTH.description": "Gain [gold]Strength[/gold] equal to {ChiIcon}.",
   "TIFA-INNER_STRENGTH.title": "Inner Strength",
 
-  "TIFA-METEODRIVE.description": "Deal {Damage:diff()} damage. \nApply [gold]Vulnerable[/gold] equal to current [gold]Chi[/gold].",
+  "TIFA-METEODRIVE.description": "Deal {Damage:diff()} damage. \nApply [gold]Vulnerable[/gold] equal to {ChiIcon}.",
   "TIFA-METEODRIVE.title": "Meteodrive",
 
-  "TIFA-TRUE_STRIKE.description": "Deal {Damage:diff()} damage. \nIf you have at least 4 [gold]Chi[/gold], deal [gold]double[/gold] damage.",
+  "TIFA-TRUE_STRIKE.description": "Deal {Damage:diff()} damage. \n{ChiIcon} [gold]4[/gold]: Deal [gold]double[/gold] damage.",
   "TIFA-TRUE_STRIKE.title": "True Strike",
 
   "TIFA-COVER.description": "Gain {Block:diff()} [gold]Block[/gold].",
@@ -119,16 +119,16 @@
   "TIFA-TRIPLE_STRIKE.description": "Deal {Damage:diff()} damage {Repeat:diff()} times.",
   "TIFA-TRIPLE_STRIKE.title": "Triple Strike",
 
-  "TIFA-CHI_TRAP.description": "Deal {CalculatedDamage:diff()} damage to ALL enemies. \nDeal {ExtraDamage:diff()} additional damage for each [gold]Chi[/gold] you have.",
+  "TIFA-CHI_TRAP.description": "Deal {CalculatedDamage:diff()} damage to ALL enemies. \nDeal {ExtraDamage:diff()} additional damage for each {ChiIcon} you have.",
   "TIFA-CHI_TRAP.title": "Chi Trap",
 
-  "TIFA-PUSH_THE_ADVANTAGE.description": "Draw 2 cards. \nIf you have at least 2 [gold]Chi[/gold], draw {Cards:diff()} additional {Cards:plural:card|cards}",
+  "TIFA-PUSH_THE_ADVANTAGE.description": "Draw 2 cards. \n{ChiIcon} [gold]2[/gold]: Draw {Cards:diff()} additional {Cards:plural:card|cards}",
   "TIFA-PUSH_THE_ADVANTAGE.title": "Push The Advantage",
 
-  "TIFA-REVITALISE.description": "Heal {HealVar:diff()} [gold]HP[/gold]. \nConsume 1 [gold]Chi[/gold]",
+  "TIFA-REVITALISE.description": "Heal {Heal:diff()} [gold]HP[/gold]. \nConsume 1 {ChiIcon}.",
   "TIFA-REVITALISE.title": "Revitalise",
 
-  "TIFA-CHAKRA.description": "Draw 2 cards. \nGain {Energy:energyIcons()}. \nConsume 1 [gold]Chi[/gold]",
+  "TIFA-CHAKRA.description": "Draw 2 cards. \nGain {Energy:energyIcons()}. \nConsume 1 {ChiIcon}.",
   "TIFA-CHAKRA.title": "Chakra",
 
   "TIFA-SYNCHRO_CYCLONE.description": "",

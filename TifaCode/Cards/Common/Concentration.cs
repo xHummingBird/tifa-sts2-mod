@@ -17,17 +17,12 @@ public class Concentration() : TifaCard(1, CardType.Skill,
 {
     protected override IEnumerable<DynamicVar> CanonicalVars => [
         new PowerVar<VigorPower> (3),
-        new DynamicVar("Combo", 3)
+        new DynamicVar("Combo", 1)
     ];
     
     protected override IEnumerable<IHoverTip> ExtraHoverTips =>
     [
         HoverTipFactory.FromPower<VigorPower>(),
-    ];
-    
-    public override IEnumerable<CardKeyword> CanonicalKeywords =>
-    [
-        CardKeyword.Exhaust
     ];
 
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay play)
