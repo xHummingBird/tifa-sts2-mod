@@ -15,6 +15,7 @@ using MegaCrit.Sts2.Core.Models;
 using MegaCrit.Sts2.Core.Nodes.Rooms;
 using MegaCrit.Sts2.Core.Nodes.Vfx;
 using MegaCrit.Sts2.Core.Rooms;
+using MegaCrit.Sts2.Core.Saves.Runs;
 using MegaCrit.Sts2.Core.ValueProps;
 using Tifa.TifaCode.Extensions;
 using Tifa.TifaCode.Mechanics.Limit;
@@ -27,6 +28,8 @@ public abstract class ComboRelicBase : TifaRelic
     private int _combo;
     private bool _comboIncreasedThisTurn;
     private bool _fightingSpiritEnergy;
+    
+    [SavedProperty]
     public int StoredLimit { get; set; }
 
     public override RelicRarity Rarity => RelicRarity.Starter;
@@ -202,6 +205,14 @@ public abstract class ComboRelicBase : TifaRelic
             choiceContext,
             base.Owner.Creature,
             null);
+    }
+
+    public override async Task AfterCardPlayedLate(PlayerChoiceContext choiceContext, CardPlay cardPlay)
+    {
+        CardModel card = cardPlay.Card;
+        
+        if (card.Owner != base.Owner)
+            return;
         
         if (base.Owner.Creature.HasPower<LimitBreakPower>())
             await TifaExtensions.AddLimitBreakToHand(base.Owner);
@@ -263,6 +274,10 @@ public abstract class ComboRelicBase : TifaRelic
 
     public override async Task AfterSideTurnStartLate(CombatSide side, IReadOnlyList<Creature> participants, ICombatState combatState)
     {
+        if (side != Owner.Creature.Side)
+            return;
+
+        
         await CheckLimitReady(
             base.Owner.Creature,
             null,

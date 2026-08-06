@@ -15,18 +15,18 @@ public class LimitBreakPower : TifaPower
 
     public override PowerStackType StackType => PowerStackType.Single;
     
-    // public override async Task AfterApplied(Creature? applier, CardModel? cardSource)
-    // {
-    //     CardModel card = CombatState.CreateCard<LimitBreak>(base.Owner.Player);
-    //     SonicStrikers? sonicStrikers = base.Owner?.Player.GetRelic<SonicStrikers>();
-    //     if (sonicStrikers != null)
-    //     {
-    //         CardCmd.Upgrade(card);
-    //     }
-    //     await Task.Delay((int)(0.50f * 1000f));
-    //     await CardPileCmd.AddGeneratedCardToCombat(card, PileType.Hand, base.Owner.Player);
-    //     Flash();
-    // }
+    public override async Task AfterApplied(Creature? applier, CardModel? cardSource)
+    {
+        // CardModel card = CombatState.CreateCard<LimitBreak>(base.Owner.Player);
+        // SonicStrikers? sonicStrikers = base.Owner?.Player.GetRelic<SonicStrikers>();
+        // if (sonicStrikers != null)
+        // {
+        //     CardCmd.Upgrade(card);
+        // }
+        await Task.Delay((int)(0.50f * 1000f));
+        // await CardPileCmd.AddGeneratedCardToCombat(card, PileType.Hand, base.Owner.Player);
+        Flash();
+    }
     // public override async Task AfterSideTurnStart(CombatSide side, IReadOnlyList<Creature> participants,
     //     ICombatState combatState)
     // {

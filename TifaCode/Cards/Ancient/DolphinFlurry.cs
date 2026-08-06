@@ -101,16 +101,16 @@ public class DolphinFlurry() : TifaCard(0, CardType.Attack,
             SfxCmd.Play("res://Tifa/sfx/dolphin_blow_2.wav");
             await Task.Delay(67);
             SfxCmd.Play("res://Tifa/sfx/punch_swing_1.wav");
-            CommonActions.CardAttack(this, play.Target)
+            await CommonActions.CardAttack(this, play.Target)
                 .WithHitFx(null, "res://Tifa/sfx/punch_hit_hard.wav")
                 .Execute(choiceContext);
             await Task.Delay(267);
             SfxCmd.Play("res://Tifa/sfx/dolphin_blow_3.wav");
-            await Task.Delay(667);
+            await Task.Delay(637);
             await tifa.Retreat(ownerCreature);
             CenterCardCinematic.End(RunManager.Instance.NetService.NetId);
         }
-        else  await CommonActions.CardAttack(this, play.Target)
+        else await CommonActions.CardAttack(this, play.Target)
             .WithHitFx(null, "res://Tifa/sfx/punch_hit_hard.wav")
             .Execute(choiceContext);
         await PowerCmd.Apply<WeakPower>(choiceContext, play.Target, DynamicVars.Weak.BaseValue, base.Owner.Creature, this);

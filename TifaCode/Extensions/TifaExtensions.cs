@@ -137,16 +137,26 @@ public static class TifaExtensions
         var limitBreak = playerState.AllCards
             .OfType<LimitBreak>()
             .FirstOrDefault();
-
+        SonicStrikers? sonicStrikers = player.GetRelic<SonicStrikers>();
         if (limitBreak != null)
         {
+            if (sonicStrikers != null)
+            {
+                CardCmd.Upgrade(limitBreak);
+            }
+
+            await Task.Delay(500);
             await CardPileCmd.Add(limitBreak, PileType.Hand);
         }
         else
         {
             limitBreak = player.Creature.CombatState
                 .CreateCard<LimitBreak>(player);
-
+            if (sonicStrikers != null)
+            {
+                CardCmd.Upgrade(limitBreak);
+            }
+            await Task.Delay(500);
             await CardPileCmd.AddGeneratedCardToCombat(
                 limitBreak,
                 PileType.Hand,

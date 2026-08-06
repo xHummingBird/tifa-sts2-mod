@@ -54,16 +54,6 @@ public static class LimitManager
         GetData(player).OnLimitChanged?.Invoke(value);
     }
 
-    public static void HalfLimit(Player player)
-    {
-        int current = GetLimit(player);
-
-        if (current <= 0)
-            return;
-
-        SetLimit(player, current / 2);
-    }
-
     public static void GainLimit(Player player, int amount)
     {
         SetLimit(player, GetLimit(player) + amount);
