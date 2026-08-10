@@ -149,7 +149,7 @@
   "TIFA-PUNISHING_STRIKE.description": "Deal {Damage:diff()} damage. \nIf the enemy is [gold]Vulnerable[/gold], deal double damage.",
   "TIFA-PUNISHING_STRIKE.title": "Punishing Strike",
 
-  "TIFA-FAKEOUT_PUNCH.description": "Deal {Damage:diff()} damage. \nApply {VulnerablePower:diff()} [gold]Vulnerable[/gold].",
+  "TIFA-FAKEOUT_PUNCH.description": "Deal {Damage:diff()} damage {Repeat:diff()} times. \nApply {VulnerablePower:diff()} [gold]Vulnerable[/gold].",
   "TIFA-FAKEOUT_PUNCH.title": "Fakeout Punch",
 
   "TIFA-DEFENSIVE_STANCE.description": "Gain {Block:diff()} [gold]Block[/gold]. \n{ChiIcon} [gold]2[/gold]: Next turn, gain {Block:diff()} [gold]Block[/gold].",

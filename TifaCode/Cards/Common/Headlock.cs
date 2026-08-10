@@ -10,7 +10,7 @@ using Tifa.TifaCode.Relics;
 
 namespace Tifa.TifaCode.Cards.Common;
 
-public class Headlock() : TifaCard(0, CardType.Attack,
+public class Headlock() : TifaCard(0, CardType.Skill,
     CardRarity.Common, TargetType.AnyEnemy)
 {
     protected override bool ShouldGlowGoldInternal => base.Owner.Creature.GetPowerAmount<ChiPower>() >= 2;
