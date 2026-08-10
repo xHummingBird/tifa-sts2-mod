@@ -28,6 +28,12 @@ public class UnbridledStrength() : TifaCard(1, CardType.Power, //Gain 1 Chi leve
             Owner.GetRelic<ComboRelicBase>();
         AudioHelper.PlayRandomAttackHard();
         comboRelic?.GainCombo(DynamicVars["Combo"].IntValue);
+        await PowerCmd.Apply<UnbridledStrengthPower>(
+            choiceContext,
+            base.Owner.Creature,
+            1,
+            base.Owner.Creature,
+            this);
     }
 
     protected override void OnUpgrade()

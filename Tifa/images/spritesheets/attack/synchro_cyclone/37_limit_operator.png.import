@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://beevdpef7uoyd"
-path="res://.godot/imported/sucker_punch.png-64daa8af75fd478fa6f6e09c72b0de2b.ctex"
+uid="uid://cgpr6jcyx5bri"
+path="res://.godot/imported/37_limit_operator.png-30fb6eb4053acdd4f24c983cedc56c96.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Tifa/images/card_portraits/big/sucker_punch.png"
-dest_files=["res://.godot/imported/sucker_punch.png-64daa8af75fd478fa6f6e09c72b0de2b.ctex"]
+source_file="res://Tifa/images/spritesheets/attack/synchro_cyclone/37_limit_operator.png"
+dest_files=["res://.godot/imported/37_limit_operator.png-30fb6eb4053acdd4f24c983cedc56c96.ctex"]
 
 [params]
 

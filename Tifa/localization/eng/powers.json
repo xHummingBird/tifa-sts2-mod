@@ -15,11 +15,27 @@
   "TIFA-FIGHTING_SPIRIT_POWER.smartDescription": "Gain {Amount} {Energy:energyIcons()} the first time you gain [gold]Chi[/gold] during your turn.",
   "TIFA-FIGHTING_SPIRIT_POWER.title": "Fighting Spirit",
 
-  "TIFA-ZANGAN_STYLE_POWER.description": "Increase your max [gold]Chi[/gold].",
-  "TIFA-ZANGAN_STYLE_POWER.smartDescription": "Increasing your max [gold]Chi[/gold] by {Amount}.",
+  "TIFA-ZANGAN_STYLE_POWER.description": "Whenever you gain [gold]Chi[/gold], deal 5 damage to ALL enemies.",
+  "TIFA-ZANGAN_STYLE_POWER.smartDescription": "Deal {Amount} damage to ALL enemies whenever you gain [gold]Chi[/gold].",
   "TIFA-ZANGAN_STYLE_POWER.title": "Zangan Style",
 
   "TIFA-LIMIT_BREAK_POWER.description": "Gain [gold]Limit Break[/gold] when limit reaches [blue]100[/blue].",
   "TIFA-LIMIT_BREAK_POWER.smartDescription": "Limit is full. You can use Limit Breaks.",
-  "TIFA-LIMIT_BREAK_POWER.title": "Limit Break"
+  "TIFA-LIMIT_BREAK_POWER.title": "Limit Break",
+
+  "TIFA-UNBRIDLED_STRENGTH_POWER.description": "Increase your max [gold]Chi[/gold].",
+  "TIFA-UNBRIDLED_STRENGTH_POWER.smartDescription": "Increasing your max [gold]Chi[/gold] by {Amount}.",
+  "TIFA-UNBRIDLED_STRENGTH_POWER.title": "Unbridled Strength",
+
+  "TIFA-UNFETTERED_FURY_POWER.description": "Next turn, Attacks deal double damage.",
+  "TIFA-UNFETTERED_FURY_POWER.smartDescription": "{Amount:plural:Next turn|For the next [blue]{}[/blue] turns after this one}, Attacks deal double damage.",
+  "TIFA-UNFETTERED_FURY_POWER.title": "Unfettered Fury",
+
+  "TIFA-FIGHTERS_INSTINCT_POWER.description": "Whenever you gain [gold]Chi[/gold], draw 1 card.",
+  "TIFA-FIGHTERS_INSTINCT_POWER.smartDescription": "Whenever you gain [gold]Chi[/gold], draw {Amount} {Amount:plural:card|cards}.",
+  "TIFA-FIGHTERS_INSTINCT_POWER.title": "Fighter's Instinct",
+
+  "TIFA-PERFECT_BALANCE_POWER.description": "Gain [blue]1[/blue] [gold]Energy[/gold] at the start of each turn.",
+  "TIFA-PERFECT_BALANCE_POWER.smartDescription": "Gain {Amount:energyIcons()} at the start of each turn.",
+  "TIFA-PERFECT_BALANCE_POWER.title": "Perfect Balance"
 }

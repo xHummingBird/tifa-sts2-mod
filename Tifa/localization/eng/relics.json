@@ -1,17 +1,30 @@
 {
-  "TIFA-SONIC_STRIKERS.description": "Start combat with 1 [gold]Chi[/gold].",
+  "TIFA-SONIC_STRIKERS.description": "Upgrade your [gold]Limit Break[/gold].",
   "TIFA-SONIC_STRIKERS.flavor": "",
   "TIFA-SONIC_STRIKERS.title": "Sonic Strikers",
 
-  "TIFA-LEATHER_GLOVE.description": "Gain [gold]Combo[/gold] for each attack hit. Enables up to Level 6 [gold]Chi[/gold].",
+  "TIFA-LEATHER_GLOVE.description": "Gain [gold]Combo[/gold] for each attack hit. Enable up to Level 6 [gold]Chi[/gold].",
   "TIFA-LEATHER_GLOVE.flavor": "",
   "TIFA-LEATHER_GLOVE.title": "Leather Gloves",
   
-  "TIFA-PREMIUM_HEART.description": "Gain [gold]Combo[/gold] for each attack hit. Gain [gold]Combo[/gold]. Gain 1 [gold]Combo[/gold] from using attack cards. You can now reach [gold]Chi[/gold] Level 8.",
+  "TIFA-PREMIUM_HEART.description": "Gain [gold]Combo[/gold] for each attack hit and 1 additional [gold]Combo[/gold] from using attack cards. Enable up to level 8 [gold]Chi[/gold].",
   "TIFA-PREMIUM_HEART.flavor": "",
   "TIFA-PREMIUM_HEART.title": "Premium Heart",
 
-  "TIFA-POWERSOUL.description": "Start combat with 1 [gold]Chi[/gold].",
+  "TIFA-POWERSOUL.description": "Start combat with 20 additional [gold]Limit[/gold].",
   "TIFA-POWERSOUL.flavor": "",
-  "TIFA-POWERSOUL.title": "Powersoul"
+  "TIFA-POWERSOUL.title": "Powersoul",
+
+  "TIFA-PURPLE_PAIN.description": "Start combat with 1 [gold]Chi[/gold].",
+  "TIFA-PURPLE_PAIN.flavor": "",
+  "TIFA-PURPLE_PAIN.title": "Purple Pain",
+
+  "TIFA-METAL_KNUCKLE.description": "Whenever you gain [gold]Chi[/gold], gain 3 [gold]Vigor[/gold].",
+  "TIFA-METAL_KNUCKLE.flavor": "",
+  "TIFA-METAL_KNUCKLE.title": "Metal Knuckle",
+
+  "TIFA-MYTHRIL_CLAWS.description": "Whenever you gain [gold]Chi[/gold], gain 3 [gold]Block[/gold].",
+  "TIFA-MYTHRIL_CLAWS.flavor": "",
+  "TIFA-MYTHRIL_CLAWS.title": "Mythril Claws"
+  
 }

@@ -16,7 +16,7 @@ namespace Tifa.TifaCode.Cards.Rare;
 public class TrueStrike() : TifaCard(2, CardType.Attack,
     CardRarity.Rare, TargetType.AnyEnemy)
 {
-    protected override bool ShouldGlowGoldInternal => base.Owner.Creature.GetPowerAmount<ChiPower>() >= 4;
+    protected override bool ShouldGlowGoldInternal => base.Owner.Creature.GetPowerAmount<ChiPower>() >= 3;
     
     protected override IEnumerable<DynamicVar> CanonicalVars => [
         new DamageVar(20, ValueProp.Move),
@@ -34,7 +34,7 @@ public class TrueStrike() : TifaCard(2, CardType.Attack,
         var ownerCreature = Owner?.Creature;
         var tifa = Owner?.Character as Character.Tifa;
         decimal damageAmount = DynamicVars.Damage.BaseValue;
-        if (ownerCreature.GetPowerAmount<ChiPower>() >= 4)
+        if (ownerCreature.GetPowerAmount<ChiPower>() >= 3)
             damageAmount *= 2;
         
         if (ownerCreature != null && tifa != null)

@@ -17,6 +17,7 @@ namespace Tifa.TifaCode.Cards.Common;
 public class FocusedStrike() : TifaCard(2, CardType.Attack,
     CardRarity.Uncommon, TargetType.AnyEnemy)
 {
+    protected override HashSet<CardTag> CanonicalTags => [CardTag.Strike];
     protected override bool ShouldGlowGoldInternal => base.Owner.Creature.GetPowerAmount<ChiPower>() >= 2;
     
     protected override IEnumerable<DynamicVar> CanonicalVars => [

@@ -18,16 +18,16 @@ public static class TifaExtensions
         public static async Task TifaFakeHit(
             Creature attacker,
             Creature target,
-            string? attackSfx,
-            string hitSfx,
+            string? attackSfx = null,
+            string? hitSfx = null,
             string? hitVfx = null)
         {
             if (target == null)
                 return;
 
             // attack sound
-            SfxCmd.Play(attackSfx);
-            SfxCmd.Play(hitSfx);
+            if (attackSfx != null) SfxCmd.Play(attackSfx);
+            if (hitSfx != null) SfxCmd.Play(hitSfx);
             var tifa = attacker.Player.Character as Character.Tifa;
 
             // impact effect
@@ -138,6 +138,7 @@ public static class TifaExtensions
             .OfType<LimitBreak>()
             .FirstOrDefault();
         SonicStrikers? sonicStrikers = player.GetRelic<SonicStrikers>();
+        
         if (limitBreak != null)
         {
             if (sonicStrikers != null)

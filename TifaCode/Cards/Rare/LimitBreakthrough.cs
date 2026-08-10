@@ -15,7 +15,7 @@ public class LimitBreakthrough() : TifaCard(1, CardType.Skill,
     
     protected override IEnumerable<DynamicVar> CanonicalVars => 
     [
-        new PowerVar<LimitBreakPower>(20m),
+        new PowerVar<LimitBreakPower>(25m),
         new DynamicVar("ComboMultiplier", 50m)
     ];
     

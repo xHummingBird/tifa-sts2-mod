@@ -59,10 +59,10 @@
   "TIFA-WAY_OF_THE_FIST.description": "Gain {WayOfTheFistPower:diff()} additional [gold]Limit[/gold] per attack hit.",
   "TIFA-WAY_OF_THE_FIST.title": "Way Of The Fist",
 
-  "TIFA-ZANGAN_STYLE.description": "Increase your maximum {ChiIcon} by {ZanganStylePower:diff()}.",
+  "TIFA-ZANGAN_STYLE.description": "Deal {ZanganStylePower:diff()} damage to all enemies whenever you gain {ChiIcon}.",
   "TIFA-ZANGAN_STYLE.title": "Zangan Style",
 
-  "TIFA-UNBRIDLED_STRENGTH.description": "Gain 1 {ChiIcon}.",
+  "TIFA-UNBRIDLED_STRENGTH.description": "Gain 1 {ChiIcon}. \nIncrease your maximum {ChiIcon} by 1.",
   "TIFA-UNBRIDLED_STRENGTH.title": "Unbridled Strength",
 
   "TIFA-QUICK_JAB.description": "Deal {Damage:diff()} damage {Repeat:diff()} times. \nApply {VulnerablePower:diff()} [gold]Vulnerable[/gold].",
@@ -86,13 +86,13 @@
   "TIFA-BLAZE_KICK.description": "Deal {Damage:diff()} damage. \n{ChiIcon} [gold]1[/gold]: Deal damage to ALL other enemies equal to the damage dealt.",
   "TIFA-BLAZE_KICK.title": "Blaze Kick",
 
-  "TIFA-FINAL_HEAVEN.description": "",
+  "TIFA-FINAL_HEAVEN.description": "Unlocked at {ChiIcon} [gold]7[/gold]. \nDeal {Damage:diff()} damage.",
   "TIFA-FINAL_HEAVEN.title": "Final Heaven",
 
-  "TIFA-METEOR_STRIKE.description": "",
+  "TIFA-METEOR_STRIKE.description": "Unlocked at {ChiIcon} [gold]5[/gold]. \nDeal {Damage:diff()} damage to ALL enemies.",
   "TIFA-METEOR_STRIKE.title": "Meteor Strike",
 
-  "TIFA-DOLPHIN_FLURRY.description": "Deal {CalculatedDamage:diff()} damage. \nApply {WeakPower:diff()} [gold]Weak[/gold]. \n{ChiIcon} [gold]5[/gold]: Deal {ExtraDamage:diff()} additional damage.",
+  "TIFA-DOLPHIN_FLURRY.description": "Unlocked at {ChiIcon} [gold]3[/gold]. \nDeal {CalculatedDamage:diff()} damage. \nApply {WeakPower:diff()} [gold]Weak[/gold]. \n{ChiIcon} [gold]5[/gold]: Deal {ExtraDamage:diff()} additional damage.",
   "TIFA-DOLPHIN_FLURRY.title": "Dolphin Flurry",
 
   "TIFA-LIMIT_BREAK.title": "Limit Break",
@@ -101,7 +101,7 @@
   "TIFA-MEDITATION.description": "Gain {Block:diff()} [gold]Block[/gold]. \nNext turn, gain {Energy:energyIcons()}",
   "TIFA-MEDITATION.title": "Meditation",
 
-  "TIFA-LIMIT_BREAKTHROUGH.description": "Gain 20 [gold]Limit[/gold]. \nGain [gold]Limit[/gold] equal to [blue]{ComboMultiplier:diff()}%[/blue] of your [gold]Combo[/gold] count.",
+  "TIFA-LIMIT_BREAKTHROUGH.description": "Gain 25 [gold]Limit[/gold]. \nGain [gold]Limit[/gold] equal to [blue]{ComboMultiplier:diff()}%[/blue] of your [gold]Combo[/gold] count.",
   "TIFA-LIMIT_BREAKTHROUGH.title": "Limit Breakthrough",
 
   "TIFA-INNER_STRENGTH.description": "Gain [gold]Strength[/gold] equal to {ChiIcon}.",
@@ -110,7 +110,7 @@
   "TIFA-METEODRIVE.description": "Deal {Damage:diff()} damage. \nApply [gold]Vulnerable[/gold] equal to {ChiIcon}.",
   "TIFA-METEODRIVE.title": "Meteodrive",
 
-  "TIFA-TRUE_STRIKE.description": "Deal {Damage:diff()} damage. \n{ChiIcon} [gold]4[/gold]: Deal [gold]double[/gold] damage.",
+  "TIFA-TRUE_STRIKE.description": "Deal {Damage:diff()} damage. \n{ChiIcon} [gold]3[/gold]: Deal [gold]double[/gold] damage.",
   "TIFA-TRUE_STRIKE.title": "True Strike",
 
   "TIFA-COVER.description": "Gain {Block:diff()} [gold]Block[/gold].",
@@ -122,7 +122,7 @@
   "TIFA-CHI_TRAP.description": "Deal {CalculatedDamage:diff()} damage to ALL enemies. \nDeal {ExtraDamage:diff()} additional damage for each {ChiIcon} you have.",
   "TIFA-CHI_TRAP.title": "Chi Trap",
 
-  "TIFA-PUSH_THE_ADVANTAGE.description": "Draw 2 cards. \n{ChiIcon} [gold]2[/gold]: Draw {Cards:diff()} additional {Cards:plural:card|cards}",
+  "TIFA-PUSH_THE_ADVANTAGE.description": "Draw 2 cards. \n{ChiIcon} [gold]2[/gold]: Draw {Cards:diff()} additional {Cards:plural:card|cards}.",
   "TIFA-PUSH_THE_ADVANTAGE.title": "Push The Advantage",
 
   "TIFA-REVITALISE.description": "Heal {Heal:diff()} [gold]HP[/gold]. \nConsume 1 {ChiIcon}.",
@@ -131,6 +131,78 @@
   "TIFA-CHAKRA.description": "Draw 2 cards. \nGain {Energy:energyIcons()}. \nConsume 1 {ChiIcon}.",
   "TIFA-CHAKRA.title": "Chakra",
 
-  "TIFA-SYNCHRO_CYCLONE.description": "",
-  "TIFA-SYNCHRO_CYCLONE.title": "Synchro Cyclone"
+  "TIFA-SYNCHRO_CYCLONE.description": "Deal {Damage:diff()} damage. \nAll [gold]Skills[/gold] in your hand cost 0 {Energy:energyIcons()} this turn.",
+  "TIFA-SYNCHRO_CYCLONE.title": "Synchro Cyclone",
+
+  "TIFA-STARSHOWER.description": "Deal {Damage:diff()} damage {Repeat:diff()} times. \n{ChiIcon} [gold]2[/gold]: Gain {VigorPower:diff()} [gold]Vigor[/gold].",
+  "TIFA-STARSHOWER.title": "Starshower",
+  
+  "TIFA-MOONSAULT_KICK.description": "Deal {Damage:diff()} damage. \nGain {Limit:diff()} [gold]Limit[/gold].",
+  "TIFA-MOONSAULT_KICK.title": "Moonsault Kick",
+
+  "TIFA-FEINT.description": "Deal {Damage:diff()} damage {Repeat:diff()} times. \nIf this is the first card you play, apply {WeakPower:diff()} [gold]Weak[/gold].",
+  "TIFA-FEINT.title": "Feint",
+
+  "TIFA-TRINITY_STRIKE.description": "Deal {Damage:diff()} damage to a random enemy {Repeat:diff()} times.",
+  "TIFA-TRINITY_STRIKE.title": "Trinity Strike",
+
+  "TIFA-PUNISHING_STRIKE.description": "Deal {Damage:diff()} damage. \nIf the enemy is [gold]Vulnerable[/gold], deal double damage.",
+  "TIFA-PUNISHING_STRIKE.title": "Punishing Strike",
+
+  "TIFA-FAKEOUT_PUNCH.description": "Deal {Damage:diff()} damage. \nApply {VulnerablePower:diff()} [gold]Vulnerable[/gold].",
+  "TIFA-FAKEOUT_PUNCH.title": "Fakeout Punch",
+
+  "TIFA-DEFENSIVE_STANCE.description": "Gain {Block:diff()} [gold]Block[/gold]. \n{ChiIcon} [gold]2[/gold]: Next turn, gain {Block:diff()} [gold]Block[/gold].",
+  "TIFA-DEFENSIVE_STANCE.title": "Defensive Stance",
+  
+  "TIFA-OMNISTRIKE.description": "Deal {Damage:diff()} damage. \n{ChiIcon} [gold]2[/gold]: Deal additional damage equal to [blue]{HpPercent:diff()}%[/blue] of the enemy's current [gold]HP[/gold].",
+  "TIFA-OMNISTRIKE.title": "Omnistrike",
+
+  "TIFA-FIGHTERS_INSTINCT.description": "Whenever you gain {ChiIcon}, draw {Cards:diff()} {Cards:plural:card|cards}.",
+  "TIFA-FIGHTERS_INSTINCT.title": "Fighter's Instinct",
+
+  "TIFA-UNFETTERED_FURY.description": "Consume 1 {ChiIcon}. \nNext turn, Attacks deal double damage.",
+  "TIFA-UNFETTERED_FURY.title": "Unfettered Fury",
+
+  "TIFA-ENERGY_WAVE.description": "Deal {Damage:diff()} damage. \nConsume 1 {ChiIcon}.",
+  "TIFA-ENERGY_WAVE.title": "Energy Wave",
+
+  "TIFA-HEEL_CRUSH.description": "Deal {Damage:diff()} damage. \nGain {Block:diff()} [gold]Block[/gold].",
+  "TIFA-HEEL_CRUSH.title": "Heel Crush",
+  
+  "TIFA-ROLLING_BLAZE.description": "Deal {Damage:diff()} damage. \n{ChiIcon} [gold]3[/gold]: Gain [gold]Block[/gold] equal to damage dealt.",
+  "TIFA-ROLLING_BLAZE.title": "Rolling Blaze",
+  
+  "TIFA-FOCUS.description": "Gain {Block:diff()} [gold]Block[/gold]. \nGain 1 {ChiIcon}.",
+  "TIFA-FOCUS.title": "Focus",
+
+  "TIFA-DRAIN_PUNCH.description": "Deal {Damage:diff()} damage. \nHeal [gold]HP[/gold] equal to [blue]20%[/blue] of damage dealt to the enemy.",
+  "TIFA-DRAIN_PUNCH.title": "Drain Punch",
+
+  "TIFA-MUSCLE_MEMORY.description": "Add a random Attack into your Hand. It's free to play this turn.",
+  "TIFA-MUSCLE_MEMORY.title": "Muscle Memory",
+
+  "TIFA-REVERSE_GALE.description": "Deal {Damage:diff()} damage. \n{ChiIcon} [gold]1[/gold]: Play a random Attack from your Draw Pile.",
+  "TIFA-REVERSE_GALE.title": "Reverse Gale",
+
+  "TIFA-DEATHBLOW.description": "Deal {Damage:diff()} damage. \n{ChiIcon} [gold]3[/gold]: Kill the enemy if it has [gold]{hpPercent:diff()}%[/gold] HP or less.",
+  "TIFA-DEATHBLOW.title": "Deathblow",
+  
+  "TIFA-PERFECT_BALANCE.description": "Gain {Energy:energyIcons()} at the start of each turn.",
+  "TIFA-PERFECT_BALANCE.title": "Perfect Balance",
+
+  "TIFA-SHIFT_MOMENTUM.description": "Consume all [gold]Limit[/gold]. \nGain [gold]Combo[/gold] equal to [gold]Limit[/gold] consumed.",
+  "TIFA-SHIFT_MOMENTUM.title": "Shift Momentum",
+
+  "TIFA-HEADLOCK.description": "Apply 1 [gold]Weak[/gold] and [gold]Vulnerable[/gold]. \n{ChiIcon} [gold]2[/gold]: Double the debuff applied.",
+  "TIFA-HEADLOCK.title": "Headlock",
+
+  "TIFA-PRESSURE_POINT.description": "Apply {VulnerablePower:diff()} [gold]Vulnerable[/gold]. \nGain {Combo:diff()} [gold]Combo[/gold].",
+  "TIFA-PRESSURE_POINT.title": "Pressure Point",
+
+  "TIFA-QUICK_REFLEX.description": "Gain {Block:diff()} [gold]Block[/gold]. \nIf this is the first card you play, draw 1 card.",
+  "TIFA-QUICK_REFLEX.title": "Quick Reflex",
+
+  "TIFA-COMBAT_FINESSE.description": "Consume 2 {ChiIcon}. \nGain 2 [gold]Strength[/gold]. \n\nGain 2 [gold]Dexterity[/gold]",
+  "TIFA-COMBAT_FINESSE.title": "Combat Finesse"
 }

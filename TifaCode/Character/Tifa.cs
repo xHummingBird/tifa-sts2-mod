@@ -55,7 +55,7 @@ public class Tifa : PlaceholderCharacterModel
         ModelDb.Card<DefendTifa>(),
         ModelDb.Card<DefendTifa>(),
         ModelDb.Card<DefendTifa>(),
-        ModelDb.Card<DefendTifa>(),
+        ModelDb.Card<Brace>(),
     ];
 
     public override IReadOnlyList<RelicModel> StartingRelics =>

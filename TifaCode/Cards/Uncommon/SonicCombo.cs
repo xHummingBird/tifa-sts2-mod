@@ -39,7 +39,8 @@ public class SonicCombo() : TifaCard(2, CardType.Attack,
                 "res://Tifa/scenes/vfx/hit_yellow.tscn",
                 "hit"
             );
-            CommonActions.CardAttack(this, play.Target)
+            DamageCmd.Attack(damage).FromCard(this, play).Targeting(play.Target)
+                .WithValueProp(ValueProp.Unpowered)
                 .WithHitFx(null, "res://Tifa/sfx/punch_hit_1.wav")
                 .Execute(choiceContext);
             
@@ -63,8 +64,8 @@ public class SonicCombo() : TifaCard(2, CardType.Attack,
                 "res://Tifa/scenes/vfx/hit_yellow.tscn",
                 "hit"
             );
-            await DamageCmd.Attack(damage).FromCard(this, play).Targeting(play.Target)
-                .WithValueProp(ValueProp.Unpowered)
+          
+            await CommonActions.CardAttack(this, play.Target)
                 .WithHitFx(null, "res://Tifa/sfx/kick_critical_3.wav")
                 .Execute(choiceContext);
             await Task.Delay((int)(0.267f * 1000f));

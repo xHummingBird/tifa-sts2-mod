@@ -12,6 +12,7 @@ using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.Helpers;
 using MegaCrit.Sts2.Core.Localization.DynamicVars;
 using MegaCrit.Sts2.Core.Models;
+using MegaCrit.Sts2.Core.Models.Powers;
 using MegaCrit.Sts2.Core.Nodes.Rooms;
 using MegaCrit.Sts2.Core.Nodes.Vfx;
 using MegaCrit.Sts2.Core.Rooms;
@@ -84,7 +85,7 @@ public abstract class ComboRelicBase : TifaRelic
         int bonus = 0;
 
         bonus += creature.GetPowerAmount<BattleTrancePower>();
-        bonus += creature.GetPowerAmount<ZanganStylePower>();
+        bonus += creature.GetPowerAmount<UnbridledStrengthPower>();
 
         return bonus;
     }
@@ -130,7 +131,7 @@ public abstract class ComboRelicBase : TifaRelic
     {
         int startingCombo = 0;
 
-        if (base.Owner.GetRelic<Powersoul>() != null)
+        if (base.Owner.GetRelic<PurplePain>() != null)
         {
             startingCombo += ComboPerChiLevel; // +5 Combo = Chi 1
         }
@@ -255,6 +256,9 @@ public abstract class ComboRelicBase : TifaRelic
             return;
 
         int limitGain = 5;
+
+        if (base.Owner.GetRelic<Powersoul>() != null && combatState.RoundNumber <= 1)
+            limitGain += 20;
 
         if (ChiLevel >= 2)
         {
@@ -432,6 +436,16 @@ public abstract class ComboRelicBase : TifaRelic
             {
                 PlayerCmd.GainEnergy(creature.GetPowerAmount<FightingSpiritPower>(), base.Owner);
                 _fightingSpiritEnergy = true;
+            }
+
+            if (base.Owner.GetRelic<MythrilClaws>() != null)
+            {
+                await CreatureCmd.GainBlock(base.Owner.Creature, 3, ValueProp.Unpowered, null, false);
+            }
+
+            if (base.Owner.GetRelic<MetalKnuckle>() != null)
+            {
+                await PowerCmd.Apply<VigorPower>(choiceContext, base.Owner.Creature, 3m, base.Owner.Creature, null);
             }
         }
         else if (targetChi < currentChi)

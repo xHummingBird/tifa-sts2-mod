@@ -13,6 +13,7 @@ namespace Tifa.TifaCode.Cards.Common;
 public class TripleStrike() : TifaCard(1, CardType.Attack,
     CardRarity.Common, TargetType.AnyEnemy)
 {
+    protected override HashSet<CardTag> CanonicalTags => [CardTag.Strike];
     protected override IEnumerable<DynamicVar> CanonicalVars =>
     [
         new DamageVar(2m, ValueProp.Move),
@@ -38,10 +39,11 @@ public class TripleStrike() : TifaCard(1, CardType.Attack,
                 "res://Tifa/scenes/vfx/hit_yellow.tscn",
                 "hit"
             );
-            CommonActions.CardAttack(this, play.Target)
+            DamageCmd.Attack(damage).FromCard(this, play).Targeting(play.Target)
+                .WithValueProp(ValueProp.Unpowered)
                 .WithHitFx(null, "res://Tifa/sfx/punch_hit_1.wav")
                 .Execute(choiceContext);
-            
+           
             await Task.Delay((int)(0.133f * 1000f));
             SfxCmd.Play("res://Tifa/sfx/punch_swing_2.wav");
             await Task.Delay((int)(0.033f * 1000f));
@@ -62,8 +64,8 @@ public class TripleStrike() : TifaCard(1, CardType.Attack,
                 "res://Tifa/scenes/vfx/hit_yellow.tscn",
                 "hit"
             );
-            await DamageCmd.Attack(damage).FromCard(this, play).Targeting(play.Target)
-                .WithValueProp(ValueProp.Unpowered)
+            
+            CommonActions.CardAttack(this, play.Target)
                 .WithHitFx(null, "res://Tifa/sfx/kick_critical_3.wav")
                 .Execute(choiceContext);
             await Task.Delay((int)(0.267f * 1000f));

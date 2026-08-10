@@ -35,8 +35,8 @@ public class LimitBreak() : TifaCard(0, CardType.Skill,
     {
         var rf = CombatState.CreateCard<RiseAndFall>(base.Owner);
         var df = CombatState.CreateCard<DolphinFlurry>(base.Owner);
-        //var ms = CombatState.CreateCard<MeteorStrike>(base.Owner);
-        //var fh = CombatState.CreateCard<FinalHeaven>(base.Owner);
+        var ms = CombatState.CreateCard<MeteorStrike>(base.Owner);
+        var fh = CombatState.CreateCard<FinalHeaven>(base.Owner);
         
         PremiumHeart? premiumHeart = base.Owner?.GetRelic<PremiumHeart>();
 
@@ -44,17 +44,17 @@ public class LimitBreak() : TifaCard(0, CardType.Skill,
         {
             CardCmd.Upgrade(rf);
             CardCmd.Upgrade(df);
-            //CardCmd.Upgrade(ms);
-            //CardCmd.Upgrade(fh);
+            CardCmd.Upgrade(ms);
+            CardCmd.Upgrade(fh);
             
         }
         
         List<CardModel> cards = [rf, df];
 
-        // if (base.Owner.Creature.GetPowerAmount<ChiPower>() >= 5)
-        //     cards.Add(ms);
-        // if (premiumHeart != null && base.Owner.Creature.GetPowerAmount<ChiPower>() >= 7)
-        //     cards.Add(fh);
+        if (base.Owner.Creature.GetPowerAmount<ChiPower>() >= 5) 
+            cards.Add(ms);
+        if (base.Owner.Creature.GetPowerAmount<ChiPower>() >= 7)
+            cards.Add(fh);
         
         foreach (var card in GetLimitBreakCards().ToList())
         {
@@ -67,6 +67,8 @@ public class LimitBreak() : TifaCard(0, CardType.Skill,
             LimitManager.SetLimit(base.Owner, 0);
             await PowerCmd.Remove<LimitBreakPower>(base.Owner.Creature);
             await CardCmd.AutoPlay(choiceContext, cardModel, play.Target);
+            if (cardModel is MeteorStrike meteorStrike)
+                await CardCmd.AutoPlay(choiceContext, cardModel, null);
         }
 
         else if (base.Owner.Creature.GetPowerAmount<ChiPower>() < 3)
@@ -75,9 +77,6 @@ public class LimitBreak() : TifaCard(0, CardType.Skill,
             await PowerCmd.Remove<LimitBreakPower>(base.Owner.Creature);
             await CardCmd.AutoPlay(choiceContext, rf, play.Target);
         }
-        // if (cardModel is MeteorStrike meteorStrike)
-        //     await CardCmd.AutoPlay(choiceContext, cardModel, null);
-        // else 
         
     }
 

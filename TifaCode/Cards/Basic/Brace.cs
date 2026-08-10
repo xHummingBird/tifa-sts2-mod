@@ -23,7 +23,6 @@ public class Brace() : TifaCard(1, CardType.Skill,
     protected override IEnumerable<IHoverTip> ExtraHoverTips =>
     [
         HoverTipFactory.FromPower<ChiPower>(),
-        HoverTipFactory.FromPower<VigorPower>(),
     ];
 
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay play)

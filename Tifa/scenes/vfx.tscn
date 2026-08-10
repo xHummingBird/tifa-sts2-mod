@@ -1,6 +1,5 @@
-[gd_scene load_steps=31 format=3 uid="uid://03ycdo3ewfal"]
+[gd_scene load_steps=49 format=3 uid="uid://03ycdo3ewfal"]
 
-[ext_resource type="Texture2D" uid="uid://jgltd88df82b" path="res://Tifa/images/spritesheets/vfx/water/00_water.png" id="1_vepsr"]
 [ext_resource type="Texture2D" uid="uid://ccic63b8aijas" path="res://Tifa/images/spritesheets/vfx/water/01_water.png" id="2_3gr6x"]
 [ext_resource type="Texture2D" uid="uid://c3v4b44xurw8v" path="res://Tifa/images/spritesheets/vfx/water/02_water.png" id="3_ncqhv"]
 [ext_resource type="Texture2D" uid="uid://dgso087fxyu5e" path="res://Tifa/images/spritesheets/vfx/water/03_water.png" id="4_tvvbp"]
@@ -25,7 +24,23 @@
 [ext_resource type="Texture2D" uid="uid://cd8hsjiu75l17" path="res://Tifa/images/spritesheets/vfx/chi_trap/chi_tap_05.png" id="23_hqq1o"]
 [ext_resource type="Texture2D" uid="uid://12a4kio84rfk" path="res://Tifa/images/spritesheets/vfx/chi_trap/chi_tap_06.png" id="24_7et0s"]
 [ext_resource type="Texture2D" uid="uid://blgkd3x717b73" path="res://Tifa/images/spritesheets/vfx/chi_trap/chi_tap_07.png" id="25_p2up2"]
+[ext_resource type="Texture2D" uid="uid://6idwd2r64x30" path="res://Tifa/images/spritesheets/vfx/limit_break_hit/33_omnislash_vfx.png" id="26_b2f7v"]
 [ext_resource type="Texture2D" uid="uid://bslwwo05yeyw5" path="res://Tifa/images/spritesheets/vfx/chi_trap/chi_tap_08.png" id="26_nsgy0"]
+[ext_resource type="Texture2D" uid="uid://chqh2gamgrc8h" path="res://Tifa/images/spritesheets/vfx/limit_break_hit/34_omnislash_vfx.png" id="27_x8jfu"]
+[ext_resource type="Texture2D" uid="uid://fanube4i7iol" path="res://Tifa/images/spritesheets/vfx/limit_break_hit/35_omnislash_vfx.png" id="28_ujb4v"]
+[ext_resource type="Texture2D" uid="uid://tmlj48jj2fya" path="res://Tifa/images/spritesheets/vfx/limit_break_hit/36_omnislash_vfx.png" id="29_nd5w7"]
+[ext_resource type="Texture2D" uid="uid://tu6ba25g0wng" path="res://Tifa/images/spritesheets/vfx/limit_break_hit/37_omnislash_vfx.png" id="30_i7dky"]
+[ext_resource type="Texture2D" uid="uid://c8fptdkjrvv1q" path="res://Tifa/images/spritesheets/vfx/limit_break_hit/38_omnislash_vfx.png" id="31_1sq8v"]
+[ext_resource type="Texture2D" uid="uid://dr02dyipirlxr" path="res://Tifa/images/spritesheets/vfx/limit_effects/44_limit_effects.png" id="32_16t2e"]
+[ext_resource type="Texture2D" uid="uid://c2ff1qruurogi" path="res://Tifa/images/spritesheets/vfx/limit_effects/45_limit_effects.png" id="33_h1y7b"]
+[ext_resource type="Texture2D" uid="uid://cv5abjmdm6bbq" path="res://Tifa/images/spritesheets/vfx/limit_effects/46_limit_effects.png" id="34_wk0lj"]
+[ext_resource type="Texture2D" uid="uid://drj1h4rfxpdx" path="res://Tifa/images/spritesheets/vfx/limit_effects/47_limit_effects.png" id="35_8by4h"]
+[ext_resource type="Texture2D" uid="uid://cgcufud2googf" path="res://Tifa/images/spritesheets/vfx/limit_effects/48_limit_effects.png" id="36_6p7vp"]
+[ext_resource type="Texture2D" uid="uid://dp03lm3nvc7oa" path="res://Tifa/images/spritesheets/vfx/limit_effects/49_limit_effects.png" id="37_yv64b"]
+[ext_resource type="Texture2D" uid="uid://bv4g0gvhygyqv" path="res://Tifa/images/spritesheets/vfx/limit_effects/50_limit_effects.png" id="38_35r2m"]
+[ext_resource type="Texture2D" uid="uid://nt1rj5lifclp" path="res://Tifa/images/spritesheets/vfx/limit_effects/51_limit_effects.png" id="39_4qh4k"]
+[ext_resource type="Texture2D" uid="uid://c3ffflbyg7qx2" path="res://Tifa/images/spritesheets/vfx/limit_effects/52_limit_effects.png" id="40_chq24"]
+[ext_resource type="Texture2D" uid="uid://bjdpjtv64pj86" path="res://Tifa/images/spritesheets/vfx/limit_effects/53_limit_effects.png" id="41_y0mbe"]
 
 [sub_resource type="Animation" id="Animation_vuyyc"]
 length = 0.001
@@ -40,70 +55,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [null]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath(".:position")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(120, -223)]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath(".:visible")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [true]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath(".:scale")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(1, 1)]
-}
-tracks/4/type = "value"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath(".:modulate")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 1)]
-}
-
-[sub_resource type="Animation" id="Animation_tv0iw"]
-resource_name = "water"
-length = 0.9
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:texture")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.03333334, 0.06666667, 0.10000001, 0.13333334, 0.16666667, 0.2, 0.26666668, 0.33333334, 0.4, 0.43333334, 0.5, 0.56666666, 0.6333333, 0.7, 0.76666665, 0.8333333),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
-"update": 1,
-"values": [ExtResource("2_3gr6x"), ExtResource("3_ncqhv"), ExtResource("4_tvvbp"), ExtResource("5_hd8es"), ExtResource("6_v40fj"), ExtResource("7_nkmt7"), ExtResource("8_3ea7g"), ExtResource("9_7qmom"), ExtResource("10_q00yh"), ExtResource("11_3q2cu"), ExtResource("11_v40fj"), ExtResource("1_vepsr"), ExtResource("13_nkmt7"), ExtResource("14_3ea7g"), ExtResource("15_7qmom"), ExtResource("16_q00yh"), ExtResource("17_3q2cu")]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -218,10 +169,268 @@ tracks/4/keys = {
 "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
 }
 
+[sub_resource type="Animation" id="Animation_tv0iw"]
+resource_name = "water"
+length = 0.834
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.03333334, 0.06666667, 0.10000001, 0.13333334, 0.16666667, 0.2, 0.26666668, 0.33333334, 0.4, 0.43333334, 0.5, 0.56666666, 0.6333333, 0.7, 0.76666665),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("2_3gr6x"), ExtResource("3_ncqhv"), ExtResource("4_tvvbp"), ExtResource("5_hd8es"), ExtResource("6_v40fj"), ExtResource("7_nkmt7"), ExtResource("8_3ea7g"), ExtResource("9_7qmom"), ExtResource("10_q00yh"), ExtResource("11_3q2cu"), ExtResource("11_v40fj"), ExtResource("13_nkmt7"), ExtResource("14_3ea7g"), ExtResource("15_7qmom"), ExtResource("16_q00yh"), ExtResource("17_3q2cu")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(120, -223)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.8333333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".:scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath(".:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_81jvh"]
+resource_name = "final_heaven_hits"
+length = 0.467
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.13333334, 0.26666668),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [ExtResource("26_b2f7v"), ExtResource("27_x8jfu"), ExtResource("28_ujb4v")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.36666667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath(".:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(232, -274)]
+}
+
+[sub_resource type="Animation" id="Animation_kkauc"]
+resource_name = "final_heaven_hits_2"
+length = 0.367
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.13333334, 0.26666668),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [ExtResource("29_nd5w7"), ExtResource("30_i7dky"), ExtResource("31_1sq8v")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.36666667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath(".:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(232, -274)]
+}
+
+[sub_resource type="Animation" id="Animation_ix6e0"]
+resource_name = "final_heaven_lasthit"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.09999997, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("32_16t2e"), ExtResource("33_h1y7b"), ExtResource("34_wk0lj"), ExtResource("35_8by4h"), ExtResource("36_6p7vp"), ExtResource("37_yv64b"), ExtResource("38_35r2m"), ExtResource("39_4qh4k"), ExtResource("40_chq24"), ExtResource("41_y0mbe")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath(".:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(129, -116)]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_dnl04"]
 _data = {
 &"RESET": SubResource("Animation_vuyyc"),
 &"chi_trap": SubResource("Animation_qw4mg"),
+&"final_heaven_hits": SubResource("Animation_81jvh"),
+&"final_heaven_hits_2": SubResource("Animation_kkauc"),
+&"final_heaven_lasthit": SubResource("Animation_ix6e0"),
 &"water": SubResource("Animation_tv0iw")
 }
 

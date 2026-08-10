@@ -42,7 +42,7 @@ public class Chakra() : TifaCard(
         AudioHelper.PlayRandomChiBuff();
         var comboRelic = Owner.GetRelic<ComboRelicBase>();
         comboRelic?.LoseCombo(5);
-        await PlayerCmd.GainEnergy(2, base.Owner);
+        await PlayerCmd.GainEnergy(1, base.Owner);  
         await CardPileCmd.Draw(
             choiceContext,
             base.DynamicVars.Cards.BaseValue,

@@ -25,7 +25,7 @@ public class ChiBarrier() : TifaCard(1, CardType.Skill,
         AudioHelper.PlayRandomDefend();
         await CommonActions.CardBlock(this, play);
         decimal blockAmount = Owner.Creature.GetPowerAmount<ChiPower>() * DynamicVars["BlockMultiplier"].BaseValue;
-        CreatureCmd.GainBlock(base.Owner.Creature, blockAmount, ValueProp.Unpowered, play, false);
+        await CreatureCmd.GainBlock(base.Owner.Creature, blockAmount, ValueProp.Unpowered, play, false);
     }
 
     protected override void OnUpgrade()

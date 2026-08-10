@@ -18,6 +18,13 @@ public partial class ChiDisplayOverlay : Control
 {
     public static ChiDisplayOverlay? Instance { get; private set; }
 
+    private Control? _activeTip;
+
+    private List<TifaHoverTipText.TextTarget> _tipTextTargets = [];
+
+    private int _renderedChi = int.MinValue;
+    private int _renderedMaxChi = int.MinValue;
+    
     private Control? _chiDisplay;
     private RichTextLabel? _chiLabel;
     private RichTextLabel? _comboLabel;
@@ -172,6 +179,7 @@ public partial class ChiDisplayOverlay : Control
             return;
 
         RefreshDisplay();
+        RenderTipValues();
     }
 
     private void SetupLabel(RichTextLabel label, int fontSize)
@@ -327,12 +335,12 @@ public partial class ChiDisplayOverlay : Control
 
     private void OnChiHovered()
     {
-        ShowHoverTip(_chiHoverTip, new Vector2(-75f, -600f));
+        ShowHoverTip(_chiHoverTip, new Vector2(-75f, -650f));
     }
 
     private void OnComboHovered()
     {
-        ShowHoverTip(_comboHoverTip, new Vector2(-75f, -400f));
+        ShowHoverTip(_comboHoverTip, new Vector2(-75f, -550f));
     }
 
     private void ShowHoverTip(IHoverTip? hoverTip, Vector2 offset)
@@ -348,11 +356,63 @@ public partial class ChiDisplayOverlay : Control
         var tip = NHoverTipSet.CreateAndShow(this, hoverTip);
         tip.GlobalPosition = GlobalPosition + offset;
         tip.MouseFilter = MouseFilterEnum.Ignore;
+        
+        TrackTip(tip);
+    }
+    
+    private void TrackTip(Control tip)
+    {
+        _activeTip = tip;
+
+        _tipTextTargets =
+            TifaHoverTipText.CollectTargets(tip);
+
+        _renderedChi = int.MinValue;
+        _renderedMaxChi = int.MinValue;
+
+        RenderTipValues();
+    }
+    
+    private void RenderTipValues()
+    {
+        if (_activeTip == null)
+            return;
+
+        if (!IsInstanceValid(_activeTip))
+            return;
+
+        if (_tipTextTargets.Count == 0)
+            return;
+
+        var relic = GetComboRelic();
+
+        if (relic == null)
+            return;
+
+        int chi = relic.GetChiLevelForUI();
+        int maxChi = relic.GetMaxChiLevelForUI();
+
+        if (chi == _renderedChi &&
+            maxChi == _renderedMaxChi)
+        {
+            return;
+        }
+
+        _renderedChi = chi;
+        _renderedMaxChi = maxChi;
+
+        TifaHoverTipText.Render(
+            _tipTextTargets,
+            chi,
+            maxChi);
     }
 
     private void OnUnhovered()
     {
         NHoverTipSet.Remove(this);
+
+        _activeTip = null;
+        _tipTextTargets.Clear();
     }
 
     public override void _ExitTree()

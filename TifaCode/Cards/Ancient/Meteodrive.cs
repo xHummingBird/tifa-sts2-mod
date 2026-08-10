@@ -38,7 +38,7 @@ public class Meteodrive() : TifaCard(1, CardType.Attack,
         if (ownerCreature != null && tifa != null)
         {
             CenterCardCinematic.Start(RunManager.Instance.NetService.NetId);
-            await tifa.DashTo(ownerCreature, play.Target, distance: 450f);
+            await tifa.DashTo(ownerCreature, play.Target, distance: 520f);
             AudioHelper.PlayRandomLastHit();
             tifa.PlayAnimation(ownerCreature, "meteodrive");
             await Task.Delay((int)(0.067f * 1000f));

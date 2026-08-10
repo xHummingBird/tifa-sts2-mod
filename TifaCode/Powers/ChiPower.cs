@@ -21,7 +21,7 @@ public sealed class ChiPower : TifaPower
         {
             int bonus = 0;
 
-            // Chi 1: +1 Strength
+            // Chi 3: +1 Strength
             if (base.Amount >= 3)
                 bonus += 1;
 
