@@ -32,20 +32,10 @@ public class TrinityStrike() : TifaCard(2, CardType.Attack,
                 await Task.Delay((int)(0.134f * 1000f));
             SfxCmd.Play("res://Tifa/sfx/punch_swing_1.wav");
             await Task.Delay((int)(0.033f * 1000f));
-            tifa.PlayVfxOnTarget(
-                play.Target,
-                "res://Tifa/scenes/vfx/hit_yellow.tscn",
-                "hit"
-            );
-            await CommonActions.CardAttack(this, play.Target)
-                .WithHitFx(null, "res://Tifa/sfx/punch_hit_2.wav")
-                .Execute(choiceContext);
-           
         }
-        else
-            await CommonActions.CardAttack(this, play.Target, hitCount: DynamicVars.Repeat.IntValue)
-                .WithHitFx(null, "res://Tifa/sfx/punch_hit_1.wav")
-                .Execute(choiceContext);
+        await CommonActions.CardAttack(this, play.Target, hitCount: DynamicVars.Repeat.IntValue)
+            .WithHitFx(null, "res://Tifa/sfx/punch_hit_1.wav")
+            .Execute(choiceContext);
     }
 
     protected override void OnUpgrade()

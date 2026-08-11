@@ -13,7 +13,7 @@ namespace Tifa.TifaCode.Cards.Rare;
 public class PerfectBalance() : TifaCard(
     2,
     CardType.Power,
-    CardRarity.Uncommon,
+    CardRarity.Rare,
     TargetType.Self)
 {
     protected override IEnumerable<DynamicVar> CanonicalVars =>
@@ -21,16 +21,6 @@ public class PerfectBalance() : TifaCard(
         new EnergyVar(1)
     ];
     
-    protected override IEnumerable<IHoverTip> ExtraHoverTips =>
-    [
-        HoverTipFactory.FromPower<ChiPower>(),
-    ];
-    
-    public override IEnumerable<CardKeyword> CanonicalKeywords =>
-    [
-        CardKeyword.Exhaust
-    ];
-
     protected override async Task OnPlay(
         PlayerChoiceContext choiceContext,
         CardPlay cardPlay)

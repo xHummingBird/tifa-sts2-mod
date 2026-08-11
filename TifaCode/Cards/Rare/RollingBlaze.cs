@@ -14,7 +14,7 @@ using Tifa.TifaCode.Powers;
 namespace Tifa.TifaCode.Cards.Rare;
 
 public class RollingBlaze() : TifaCard(1, CardType.Attack,
-    CardRarity.Ancient, TargetType.AnyEnemy)
+    CardRarity.Rare, TargetType.AnyEnemy)
 {
     protected override bool ShouldGlowGoldInternal => base.Owner.Creature.GetPowerAmount<ChiPower>() >= 3;
     

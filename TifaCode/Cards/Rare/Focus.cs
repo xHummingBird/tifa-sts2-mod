@@ -12,7 +12,7 @@ using Tifa.TifaCode.Relics;
 namespace Tifa.TifaCode.Cards.Rare;
 
 public class Focus() : TifaCard(3, CardType.Skill,
-    CardRarity.Uncommon, TargetType.Self)
+    CardRarity.Rare, TargetType.Self)
 {
     protected override IEnumerable<DynamicVar> CanonicalVars => 
     [

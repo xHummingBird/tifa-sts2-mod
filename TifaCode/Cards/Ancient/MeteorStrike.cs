@@ -56,7 +56,7 @@ public class MeteorStrike() : TifaCard(0, CardType.Attack,
             tifa.PlayAnimation(ownerCreature, "limit_break");
             await Task.Delay(700);
             AudioHelper.PlayRandomAttackHard();
-            tifa.DashTo(ownerCreature, targetEnemy, durationSeconds: 0.267f, distance: 360f, overrideAnim: "meteor_strike");
+            tifa.DashTo(ownerCreature, targetEnemy, durationSeconds: 0.267f, distance: 450f, overrideAnim: "meteor_strike");
             await Task.Delay(200);
             SfxCmd.Play("res://Tifa/sfx/kick_hard.wav");
             await Task.Delay(67);

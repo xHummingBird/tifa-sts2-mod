@@ -14,7 +14,7 @@ using Tifa.TifaCode.Relics;
 
 namespace Tifa.TifaCode.Cards.Uncommon;
 
-public class PressurePoint() : TifaCard(0, CardType.Attack,
+public class PressurePoint() : TifaCard(0, CardType.Skill,
     CardRarity.Uncommon, TargetType.AnyEnemy)
 {
     protected override IEnumerable<DynamicVar> CanonicalVars => [

@@ -66,9 +66,10 @@ public class LimitBreak() : TifaCard(0, CardType.Skill,
             CardModel? cardModel = await CardSelectCmd.FromChooseACardScreen(choiceContext, cards.ToList(), base.Owner, canSkip: false);
             LimitManager.SetLimit(base.Owner, 0);
             await PowerCmd.Remove<LimitBreakPower>(base.Owner.Creature);
-            await CardCmd.AutoPlay(choiceContext, cardModel, play.Target);
-            if (cardModel is MeteorStrike meteorStrike)
+            if (cardModel is MeteorStrike)
                 await CardCmd.AutoPlay(choiceContext, cardModel, null);
+            else await CardCmd.AutoPlay(choiceContext, cardModel, play.Target);
+            
         }
 
         else if (base.Owner.Creature.GetPowerAmount<ChiPower>() < 3)

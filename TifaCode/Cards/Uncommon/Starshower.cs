@@ -13,7 +13,7 @@ using Tifa.TifaCode.Powers;
 namespace Tifa.TifaCode.Cards.Uncommon;
 
 public class Starshower() : TifaCard(2, CardType.Attack,
-    CardRarity.Rare, TargetType.AnyEnemy)
+    CardRarity.Uncommon, TargetType.AnyEnemy)
 {
     protected override bool ShouldGlowGoldInternal => Owner.Creature.GetPowerAmount<ChiPower>() >= 2;
     protected override IEnumerable<DynamicVar> CanonicalVars =>

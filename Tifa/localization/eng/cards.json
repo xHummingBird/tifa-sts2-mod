@@ -176,7 +176,7 @@
   "TIFA-FOCUS.description": "Gain {Block:diff()} [gold]Block[/gold]. \nGain 1 {ChiIcon}.",
   "TIFA-FOCUS.title": "Focus",
 
-  "TIFA-DRAIN_PUNCH.description": "Deal {Damage:diff()} damage. \nHeal [gold]HP[/gold] equal to [blue]20%[/blue] of damage dealt to the enemy.",
+  "TIFA-DRAIN_PUNCH.description": "Deal {Damage:diff()} damage. \n{ChiIcon} [gold]2[/gold]: Heal [gold]HP[/gold] equal to [blue]20%[/blue] of damage dealt to the enemy.",
   "TIFA-DRAIN_PUNCH.title": "Drain Punch",
 
   "TIFA-MUSCLE_MEMORY.description": "Add a random Attack into your Hand. It's free to play this turn.",
@@ -203,6 +203,6 @@
   "TIFA-QUICK_REFLEX.description": "Gain {Block:diff()} [gold]Block[/gold]. \nIf this is the first card you play, draw 1 card.",
   "TIFA-QUICK_REFLEX.title": "Quick Reflex",
 
-  "TIFA-COMBAT_FINESSE.description": "Consume 2 {ChiIcon}. \nGain 2 [gold]Strength[/gold]. \n\nGain 2 [gold]Dexterity[/gold]",
+  "TIFA-COMBAT_FINESSE.description": "Consume 2 {ChiIcon}. \nGain 2 [gold]Strength[/gold]. \nGain 2 [gold]Dexterity[/gold]",
   "TIFA-COMBAT_FINESSE.title": "Combat Finesse"
 }

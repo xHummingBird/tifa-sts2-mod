@@ -13,7 +13,7 @@ namespace Tifa.TifaCode.Cards.Rare;
 public class UnfetteredFury() : TifaCard(
     1,
     CardType.Skill,
-    CardRarity.Uncommon,
+    CardRarity.Rare,
     TargetType.Self)
 {
     protected override bool ShouldGlowGoldInternal => IsPlayable;

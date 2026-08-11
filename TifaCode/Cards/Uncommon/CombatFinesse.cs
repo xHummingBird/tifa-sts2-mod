@@ -32,6 +32,8 @@ public class CombatFinesse() : TifaCard(
         CardPlay cardPlay)
     {
         AudioHelper.PlayRandomChiBuff();
+        var comboRelic = Owner.GetRelic<ComboRelicBase>();
+        comboRelic?.LoseCombo(10);
         await PowerCmd.Apply<StrengthPower>(choiceContext, base.Owner.Creature, 2, base.Owner.Creature, this);
         await PowerCmd.Apply<DexterityPower>(choiceContext, base.Owner.Creature, 2, base.Owner.Creature, this);
         

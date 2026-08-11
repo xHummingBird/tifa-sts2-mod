@@ -16,8 +16,6 @@ namespace Tifa.TifaCode.Cards.Rare;
 public class ShiftMomentum() : TifaCard(1, CardType.Skill,
     CardRarity.Rare, TargetType.Self)
 {
-    protected override bool ShouldGlowGoldInternal => base.Owner.Creature.CurrentHp * 2 < base.Owner.Creature.MaxHp;
-    
     public override IEnumerable<CardKeyword> CanonicalKeywords =>
     [
         CardKeyword.Exhaust
