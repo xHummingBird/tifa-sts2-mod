@@ -254,20 +254,8 @@ public abstract class ComboRelicBase : TifaRelic
         
         if (side != base.Owner.Creature.Side)
             return;
-
-        int limitGain = 5;
-
-        if (base.Owner.GetRelic<Powersoul>() != null && combatState.RoundNumber <= 1)
-            limitGain += 20;
-
-        if (ChiLevel >= 2)
-        {
-            limitGain += 2;
-        }
-            
-        _comboIncreasedThisTurn = false;
         
-        LimitManager.GainLimit(base.Owner, limitGain);
+        _comboIncreasedThisTurn = false;
         
         await SyncChiPower(
             null,
@@ -281,7 +269,17 @@ public abstract class ComboRelicBase : TifaRelic
         if (side != Owner.Creature.Side)
             return;
 
+        int limitGain = 5;
+
+        if (base.Owner.GetRelic<Powersoul>() != null && combatState.RoundNumber <= 1)
+            limitGain += 20;
+
+        if (ChiLevel >= 2)
+        {
+            limitGain += 2;
+        }
         
+        LimitManager.GainLimit(base.Owner, limitGain);
         await CheckLimitReady(
             base.Owner.Creature,
             null,

@@ -15,6 +15,9 @@ public class FightersInstinctPower : TifaPower
     public override async Task AfterPowerAmountChanged(PlayerChoiceContext choiceContext, PowerModel power,
         decimal amount, Creature? creature, CardModel? cardSource)
     {
+        if (power.Owner != base.Owner)
+            return;
+        
         if (power is not ChiPower)
             return;
 
