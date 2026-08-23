@@ -32,12 +32,16 @@ public class PushTheAdvantage() : TifaCard(
         PlayerChoiceContext choiceContext,
         CardPlay cardPlay)
     {
+        bool haveChi = false;
+            
+        if (base.Owner.Creature.GetPowerAmount<ChiPower>() >= 2)
+            haveChi = true;
         AudioHelper.PlayRandomChiBuff();
         await CardPileCmd.Draw(
             choiceContext,
             2,
             base.Owner);
-        if (base.Owner.Creature.GetPowerAmount<ChiPower>() >= 2)
+        if (haveChi)
             await CardPileCmd.Draw(
                 choiceContext,
                 base.DynamicVars.Cards.BaseValue,

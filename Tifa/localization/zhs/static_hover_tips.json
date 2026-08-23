@@ -1,0 +1,10 @@
+{
+  "TIFA_CHI.title": "气等级（%CHI%/%MAXCHI%）",
+  "TIFA_CHI.description": "每获得 5 点 [gold]连击[/gold] 获得 1 点 [gold]气[/gold]。根据当前 [gold]气[/gold] 等级获得累积增益。\n\n1：使用攻击牌时获得 1 点 [gold]连击[/gold]。\n2：回合开始时获得 2 点 [gold]极限值[/gold]。\n3：获得 1 点力量。\n4：获得 1 点敏捷。\n5：回合开始时额外抽 1 张牌。\n6：获得 1 点力量和 1 点敏捷。\n7：每回合额外获得 1 点能量。\n8：获得 1 点力量和 1 点敏捷。\n9+：每级获得 1 点力量和敏捷。",
+
+  "TIFA_LIMIT.title": "极限突破",
+  "TIFA_LIMIT.description": "当 [gold]极限值[/gold] 达到 100 时，蒂法可以施展 [gold]极限突破[/gold]。\n通过提高你的 [gold]气[/gold] 等级来解锁更多 [gold]极限突破[/gold]。\n\n每回合开始时获得 5 点极限值。\n每次攻击命中获得 3 点极限值。\n\n战斗结束时剩余的任何连击都将转化为极限值。",
+
+  "TIFA_COMBO.title": "连击计数器",
+  "TIFA_COMBO.description": "攻击获得连击。每 5 点连击使你的 [gold]气[/gold] 等级提高 1 级。每次受到未被格挡的伤害时，失去 1 点 [gold]连击[/gold]。\n\n[gold]极限突破[/gold] 不会增加 [gold]连击[/gold]。\n如果你的回合内连击未增加，回合结束时将衰减 [gold]20%[/gold]。\n\n战斗结束时剩余的连击将转化为 [gold]极限值[/gold]。"
+}

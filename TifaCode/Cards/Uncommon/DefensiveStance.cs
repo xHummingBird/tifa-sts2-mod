@@ -32,9 +32,14 @@ public class DefensiveStance() : TifaCard(2, CardType.Skill,
     
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {
+        bool haveChi = false;
+            
+        if (base.Owner.Creature.GetPowerAmount<ChiPower>() >= 2)
+            haveChi = true;
+        
         AudioHelper.PlayRandomDefend();
         decimal amount = await CreatureCmd.GainBlock(base.Owner.Creature, base.DynamicVars.Block, cardPlay);
-        if (Owner.Creature.GetPowerAmount<ChiPower>() >= 2)
+        if (haveChi)
             await PowerCmd.Apply<BlockNextTurnPower>(choiceContext, base.Owner.Creature, amount, base.Owner.Creature, this);
     }
 

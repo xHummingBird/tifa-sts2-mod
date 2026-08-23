@@ -33,6 +33,11 @@ public class Divekick() : TifaCard(1, CardType.Attack,
         PlayerChoiceContext choiceContext,
         CardPlay play)
     {
+        bool haveChi = false;
+            
+        if (base.Owner.Creature.HasPower<ChiPower>())
+            haveChi = true;
+        
         var ownerCreature = Owner?.Creature;
         var tifa = Owner?.Character as Character.Tifa;
         
@@ -56,7 +61,7 @@ public class Divekick() : TifaCard(1, CardType.Attack,
             await CommonActions.CardAttack(this, play.Target)
                 .WithHitFx(null, "res://Tifa/sfx/kick_hit_1.wav")
                 .Execute(choiceContext);
-        if (base.Owner.HasPower<ChiPower>())
+        if (haveChi)
             await PowerCmd.Apply<VulnerablePower>(choiceContext, play.Target, DynamicVars.Vulnerable.BaseValue, base.Owner.Creature, this);
     }
     

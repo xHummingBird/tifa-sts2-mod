@@ -30,6 +30,11 @@ public class DrainPunch() : TifaCard(1, CardType.Attack,
         PlayerChoiceContext choiceContext,
         CardPlay play)
     {
+        bool haveChi = false;
+            
+        if (base.Owner.Creature.GetPowerAmount<ChiPower>() >= 2)
+            haveChi = true;
+        
         var ownerCreature = Owner?.Creature;
         var tifa = Owner?.Character as Character.Tifa;
         decimal damageAmount = DynamicVars.Damage.PreviewValue;
@@ -57,7 +62,7 @@ public class DrainPunch() : TifaCard(1, CardType.Attack,
                 .WithHitFx(null, "res://Tifa/sfx/kick_hit_1.wav")
                 .Execute(choiceContext);
 
-        if (base.Owner.Creature.GetPowerAmount<ChiPower>() >= 2)
+        if (haveChi)
             await CreatureCmd.Heal(base.Owner.Creature, healAmount);
     }
     

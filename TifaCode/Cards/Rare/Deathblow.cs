@@ -32,6 +32,11 @@ public class Deathblow() : TifaCard(2, CardType.Attack,
         PlayerChoiceContext choiceContext,
         CardPlay play)
     {
+        bool haveChi = false;
+            
+        if (base.Owner.Creature.GetPowerAmount<ChiPower>() >= 3)
+            haveChi = true;
+        
         var ownerCreature = Owner?.Creature;
         var tifa = Owner?.Character as Character.Tifa;
         decimal damageAmount = DynamicVars.Damage.BaseValue;
@@ -58,11 +63,16 @@ public class Deathblow() : TifaCard(2, CardType.Attack,
                 .WithValueProp(ValueProp.Move)
                 .WithHitFx(null, "res://Tifa/sfx/kick_hit_1.wav")
                 .Execute(choiceContext);
-        if (play.Target.CurrentHp * 100 <= play.Target.MaxHp * threshold && play.Target.CurrentHp > 0)
+
+        if (haveChi)
         {
-            await DoomPower.DoomKill(new List<Creature> { play.Target });
-            return;
+            if (play.Target.CurrentHp * 100 <= play.Target.MaxHp * threshold && play.Target.CurrentHp > 0)
+            {
+                await DoomPower.DoomKill(new List<Creature> { play.Target });
+                return;
+            }
         }
+
         CenterCardCinematic.End(RunManager.Instance.NetService.NetId);
     }
     

@@ -15,7 +15,6 @@ namespace Tifa.TifaCode.Cards.Uncommon;
 public class Starshower() : TifaCard(2, CardType.Attack,
     CardRarity.Uncommon, TargetType.AnyEnemy)
 {
-    protected override bool ShouldGlowGoldInternal => Owner.Creature.GetPowerAmount<ChiPower>() >= 2;
     protected override IEnumerable<DynamicVar> CanonicalVars =>
     [
         new DamageVar(3m, ValueProp.Move),
@@ -89,11 +88,6 @@ public class Starshower() : TifaCard(2, CardType.Attack,
                 .Execute(choiceContext);
 
         CenterCardCinematic.End(RunManager.Instance.NetService.NetId);
-        if (base.Owner.Creature.GetPowerAmount<ChiPower>() >= 2)
-        {
-            await PowerCmd.Apply<VigorPower>(choiceContext, base.Owner.Creature, DynamicVars["VigorPower"].BaseValue,
-                base.Owner.Creature, this);
-        }
     }
 
     protected override void OnUpgrade()

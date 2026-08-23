@@ -1,0 +1,41 @@
+{
+  "TIFA-CHI_POWER.description": "根据你的 [gold]气[/gold] 等级获得增益。",
+  "TIFA-CHI_POWER.smartDescription": "当前 [gold]气[/gold] 等级：{Amount}。在更高的 [gold]气[/gold] 等级时获得额外加成。",
+  "TIFA-CHI_POWER.title": "气",
+
+  "TIFA-WAY_OF_THE_FIST_POWER.description": "每次攻击命中时额外获得 1 点 [gold]极限值[/gold]。",
+  "TIFA-WAY_OF_THE_FIST_POWER.smartDescription": "每次攻击命中时额外获得 {Amount} 点 [gold]极限值[/gold]。",
+  "TIFA-WAY_OF_THE_FIST_POWER.title": "拳法之道",
+
+  "TIFA-BATTLE_TRANCE_POWER.description": "临时获得 2 点当前和最大 [gold]气[/gold]。",
+  "TIFA-BATTLE_TRANCE_POWER.smartDescription": "直到回合结束，获得 {Amount} 点 [gold]气[/gold] 和最大 [gold]气[/gold]。",
+  "TIFA-BATTLE_TRANCE_POWER.title": "战斗恍惚",
+
+  "TIFA-FIGHTING_SPIRIT_POWER.description": "在你的回合中首次获得 [gold]气[/gold] 时，获得 {Energy:energyIcons()}。",
+  "TIFA-FIGHTING_SPIRIT_POWER.smartDescription": "在你的回合中首次获得 [gold]气[/gold] 时，获得 {Amount} 点 {Energy:energyIcons()}。",
+  "TIFA-FIGHTING_SPIRIT_POWER.title": "战斗精神",
+
+  "TIFA-ZANGAN_STYLE_POWER.description": "每当你获得 [gold]气[/gold] 时，对 ALL 敌人造成 5 点伤害。",
+  "TIFA-ZANGAN_STYLE_POWER.smartDescription": "每当你获得 [gold]气[/gold] 时，对 ALL 敌人造成 {Amount} 点伤害。",
+  "TIFA-ZANGAN_STYLE_POWER.title": "赞甘流",
+
+  "TIFA-LIMIT_BREAK_POWER.description": "当极限值达到 [blue]100[/blue] 时，获得 [gold]极限突破[/gold]。",
+  "TIFA-LIMIT_BREAK_POWER.smartDescription": "极限值已满。你可以使用极限突破了。",
+  "TIFA-LIMIT_BREAK_POWER.title": "极限突破",
+
+  "TIFA-UNBRIDLED_STRENGTH_POWER.description": "提高你的最大 [gold]气[/gold] 值。",
+  "TIFA-UNBRIDLED_STRENGTH_POWER.smartDescription": "将你的最大 [gold]气[/gold] 值提高 {Amount} 点。",
+  "TIFA-UNBRIDLED_STRENGTH_POWER.title": "无拘力量",
+
+  "TIFA-UNFETTERED_FURY_POWER.description": "下回合，攻击造成双倍伤害。",
+  "TIFA-UNFETTERED_FURY_POWER.smartDescription": "{Amount:plural:下回合|在此之后的接下来 [blue]{}[/blue] 回合中}，攻击造成双倍伤害。",
+  "TIFA-UNFETTERED_FURY_POWER.title": "狂怒释放",
+
+  "TIFA-FIGHTERS_INSTINCT_POWER.description": "每当你获得 [gold]气[/gold] 时，抽 1 张牌。",
+  "TIFA-FIGHTERS_INSTINCT_POWER.smartDescription": "每当你获得 [gold]气[/gold] 时，抽 {Amount} 张牌。",
+  "TIFA-FIGHTERS_INSTINCT_POWER.title": "斗士本能",
+
+  "TIFA-PERFECT_BALANCE_POWER.description": "每回合开始时获得 [blue]1[/blue] 点 [gold]能量[/gold]。",
+  "TIFA-PERFECT_BALANCE_POWER.smartDescription": "每回合开始时获得 {Amount:energyIcons()}。",
+  "TIFA-PERFECT_BALANCE_POWER.title": "完美平衡"
+}

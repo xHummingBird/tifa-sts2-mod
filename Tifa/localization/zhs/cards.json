@@ -1,0 +1,208 @@
+{
+  "TIFA-STRIKE_TIFA.description": "造成 {Damage:diff()} 点伤害，重复 {Repeat:diff()} 次。",
+  "TIFA-STRIKE_TIFA.title": "打击",
+
+  "TIFA-DEFEND_TIFA.description": "获得 {Block:diff()} 点 [gold]格挡[/gold]。",
+  "TIFA-DEFEND_TIFA.title": "防御",
+
+  "TIFA-DIVEKICK.description": "造成 {Damage:diff()} 点伤害。\n{ChiIcon} [gold]1[/gold]：施加 {VulnerablePower:diff()} 层 [gold]易伤[/gold]。",
+  "TIFA-DIVEKICK.title": "飞踢",
+
+  "TIFA-BRACE.description": "获得 {Block:diff()} 点 [gold]格挡[/gold]。\n获得 {Combo:diff()} 点 [gold]连击[/gold]。",
+  "TIFA-BRACE.title": "支撑",
+
+  "TIFA-BATTLE_CRY.description": "获得 {Energy:energyIcons()}。\n获得 {Combo:diff()} 点 [gold]连击[/gold]。",
+  "TIFA-BATTLE_CRY.title": "战吼",
+
+  "TIFA-CONCENTRATION.description": "获得 {Combo:diff()} 点 [gold]连击[/gold]。\n获得 {VigorPower:diff()} 点 [gold]活力[/gold]。",
+  "TIFA-CONCENTRATION.title": "集中",
+
+  "TIFA-FOOTWORK.description": "获得 {Block:diff()} 点 [gold]格挡[/gold]。\n施加 {VulnerablePower:diff()} 层 [gold]易伤[/gold]。",
+  "TIFA-FOOTWORK.title": "步法",
+
+  "TIFA-KICK.description": "对 ALL 敌人造成 {Damage:diff()} 点伤害。\n获得等同于击中敌人数量的 [gold]连击[/gold]。",
+  "TIFA-KICK.title": "踢击",
+
+  "TIFA-OVERPOWER.description": "造成 {Damage:diff()} 点伤害，重复 {Repeat:diff()} 次。\n{ChiIcon} [gold]2[/gold]：你的下一次攻击花费 0 点 {Energy:energyIcons()}。",
+  "TIFA-OVERPOWER.title": "压制",
+
+  "TIFA-PLASMA_KICK.description": "造成 {Damage:diff()} 点伤害。\n{ChiIcon} [gold]1[/gold]：抽 {Cards:diff()} 张牌。",
+  "TIFA-PLASMA_KICK.title": "等离子踢",
+
+  "TIFA-SOMERSAULT.description": "造成 {Damage:diff()} 点伤害。\n{ChiIcon} [gold]1[/gold]：获得 {Combo:diff()} 点 [gold]连击[/gold]。",
+  "TIFA-SOMERSAULT.title": "空翻",
+
+  "TIFA-WATERKICK.description": "造成 {Damage:diff()} 点伤害。\n{ChiIcon} [gold]1[/gold]：施加 {WeakPower:diff()} 层 [gold]虚弱[/gold]。",
+  "TIFA-WATERKICK.title": "水踢",
+
+  "TIFA-WHIRLING_UPPERCUT.description": "造成 {Damage:diff()} 点伤害。\n若这是本回合打出的第一张牌，则抽 1 张牌。",
+  "TIFA-WHIRLING_UPPERCUT.title": "回旋上勾拳",
+
+  "TIFA-COUNTER.description": "获得 {ThornsPower:diff()} 点 [gold]荆棘[/gold]。\n获得 {Combo:diff()} 点 [gold]连击[/gold]。",
+  "TIFA-COUNTER.title": "反击",
+
+  "TIFA-FOCUSED_STRIKE.description": "造成 {CalculatedDamage:diff()} 点伤害。\n{ChiIcon} [gold]2[/gold]：额外造成 {ExtraDamage:diff()} 点伤害。",
+  "TIFA-FOCUSED_STRIKE.title": "专注打击",
+
+  "TIFA-SONIC_COMBO.description": "造成 {Damage:diff()} 点伤害，重复 {Repeat:diff()} 次。",
+  "TIFA-SONIC_COMBO.title": "音速连击",
+
+  "TIFA-ZANGAN_COMBO.description": "造成 {Damage:diff()} 点伤害，重复 {Repeat:diff()} 次。\n本回合每打出一张攻击牌，此牌费用减少 1 点 {Energy:energyIcons()}。",
+  "TIFA-ZANGAN_COMBO.title": "赞甘连击",
+
+  "TIFA-BATTLE_TRANCE.description": "在本回合结束前，临时获得 2 点 {ChiIcon} 和 [gold]最大[/gold] {ChiIcon}。",
+  "TIFA-BATTLE_TRANCE.title": "战斗恍惚",
+
+  "TIFA-DYING_WILL.description": "接下来的 X{IfUpgraded:show:+1} 次攻击花费 0 点 {Energy:energyIcons()}。",
+  "TIFA-DYING_WILL.title": "死志",
+
+  "TIFA-WAY_OF_THE_FIST.description": "每次攻击命中时额外获得 {WayOfTheFistPower:diff()} 点 [gold]极限值[/gold]。",
+  "TIFA-WAY_OF_THE_FIST.title": "拳法之道",
+
+  "TIFA-ZANGAN_STYLE.description": "每当你获得 {ChiIcon} 时，对 ALL 敌人造成 {ZanganStylePower:diff()} 点伤害。",
+  "TIFA-ZANGAN_STYLE.title": "赞甘流",
+
+  "TIFA-UNBRIDLED_STRENGTH.description": "获得 1 点 {ChiIcon}。\n将你的 {ChiIcon} 上限提高 1 点。",
+  "TIFA-UNBRIDLED_STRENGTH.title": "无拘力量",
+
+  "TIFA-QUICK_JAB.description": "造成 {Damage:diff()} 点伤害，重复 {Repeat:diff()} 次。\n施加 {VulnerablePower:diff()} 层 [gold]易伤[/gold]。",
+  "TIFA-QUICK_JAB.title": "快速刺拳",
+
+  "TIFA-CHI_BARRIER.description": "获得 {Block:diff()} 点 [gold]格挡[/gold]。\n每拥有 1 点 {ChiIcon}，额外获得 {BlockMultiplier:diff()} 点 [gold]格挡[/gold]。",
+  "TIFA-CHI_BARRIER.title": "气障",
+
+  "TIFA-FIGHTING_SPIRIT.description": "在你的回合中首次获得 {ChiIcon} 时，获得 {Energy:energyIcons()}。",
+  "TIFA-FIGHTING_SPIRIT.title": "战斗精神",
+
+  "TIFA-GLACIER_KICK.description": "造成 {Damage:diff()} 点伤害。\n{ChiIcon} [gold]1[/gold]：获得等同于所造成伤害的格挡。",
+  "TIFA-GLACIER_KICK.title": "冰川踢",
+
+  "TIFA-HIGH_JUMP_KICK.description": "造成 {Damage:diff()} 点伤害。\n将一张此牌的复制品加入弃牌堆。",
+  "TIFA-HIGH_JUMP_KICK.title": "高跳踢",
+
+  "TIFA-RISE_AND_FALL.description": "造成 {Damage:diff()} 点伤害。\n施加 {VulnerablePower:diff()} 层 [gold]易伤[/gold]。\n{ChiIcon} [gold]3[/gold]：保留 20 点 [gold]极限值[/gold]。\n{ChiIcon} [gold]5[/gold]：保留 50 点 [gold]极限值[/gold]。",
+  "TIFA-RISE_AND_FALL.title": "起落",
+
+  "TIFA-BLAZE_KICK.description": "造成 {Damage:diff()} 点伤害。\n{ChiIcon} [gold]1[/gold]：对 ALL 其他敌人造成等同于所造成伤害的伤害。",
+  "TIFA-BLAZE_KICK.title": "烈焰踢",
+
+  "TIFA-FINAL_HEAVEN.description": "在 {ChiIcon} [gold]7[/gold] 时解锁。\n造成 {Damage:diff()} 点伤害。",
+  "TIFA-FINAL_HEAVEN.title": "最终天堂",
+
+  "TIFA-METEOR_STRIKE.description": "在 {ChiIcon} [gold]5[/gold] 时解锁。\n对 ALL 敌人造成 {Damage:diff()} 点伤害。",
+  "TIFA-METEOR_STRIKE.title": "流星打击",
+
+  "TIFA-DOLPHIN_FLURRY.description": "在 {ChiIcon} [gold]3[/gold] 时解锁。\n造成 {CalculatedDamage:diff()} 点伤害。\n施加 {WeakPower:diff()} 层 [gold]虚弱[/gold]。\n{ChiIcon} [gold]5[/gold]：额外造成 {ExtraDamage:diff()} 点伤害。",
+  "TIFA-DOLPHIN_FLURRY.title": "海豚连击",
+
+  "TIFA-LIMIT_BREAK.title": "极限突破",
+  "TIFA-LIMIT_BREAK.description": "执行一次 [gold]极限突破[/gold]。\n在更高的 {ChiIcon} 时解锁更多极限突破。",
+
+  "TIFA-MEDITATION.description": "获得 {Block:diff()} 点 [gold]格挡[/gold]。\n下回合获得 {Energy:energyIcons()}。",
+  "TIFA-MEDITATION.title": "冥想",
+
+  "TIFA-LIMIT_BREAKTHROUGH.description": "获得 25 点 [gold]极限值[/gold]。\n额外获得等同于 [blue]{ComboMultiplier:diff()}%[/blue] 当前 [gold]连击[/gold] 数的 [gold]极限值[/gold]。",
+  "TIFA-LIMIT_BREAKTHROUGH.title": "极限突破",
+
+  "TIFA-INNER_STRENGTH.description": "获得等同于 {ChiIcon} 点数的 [gold]力量[/gold]。",
+  "TIFA-INNER_STRENGTH.title": "内在力量",
+
+  "TIFA-METEODRIVE.description": "造成 {Damage:diff()} 点伤害。\n施加等同于 {ChiIcon} 点数的 [gold]易伤[/gold]。",
+  "TIFA-METEODRIVE.title": "流星驱动",
+
+  "TIFA-TRUE_STRIKE.description": "造成 {Damage:diff()} 点伤害。\n{ChiIcon} [gold]3[/gold]：造成 [gold]双倍[/gold] 伤害。",
+  "TIFA-TRUE_STRIKE.title": "真实打击",
+
+  "TIFA-COVER.description": "获得 {Block:diff()} 点 [gold]格挡[/gold]。",
+  "TIFA-COVER.title": "掩护",
+  
+  "TIFA-TRIPLE_STRIKE.description": "造成 {Damage:diff()} 点伤害，重复 {Repeat:diff()} 次。",
+  "TIFA-TRIPLE_STRIKE.title": "三重打击",
+
+  "TIFA-CHI_TRAP.description": "对 ALL 敌人造成 {CalculatedDamage:diff()} 点伤害。\n每拥有 1 点 {ChiIcon}，额外造成 {ExtraDamage:diff()} 点伤害。",
+  "TIFA-CHI_TRAP.title": "气阱",
+
+  "TIFA-PUSH_THE_ADVANTAGE.description": "抽 2 张牌。\n{ChiIcon} [gold]2[/gold]：额外抽 {Cards:diff()} 张牌。",
+  "TIFA-PUSH_THE_ADVANTAGE.title": "扩大优势",
+
+  "TIFA-REVITALISE.description": "恢复 {Heal:diff()} 点 [gold]生命值[/gold]。\n消耗 1 点 {ChiIcon}。",
+  "TIFA-REVITALISE.title": "焕发生机",
+
+  "TIFA-CHAKRA.description": "抽 2 张牌。\n获得 {Energy:energyIcons()}。\n消耗 1 点 {ChiIcon}。",
+  "TIFA-CHAKRA.title": "查克拉",
+
+  "TIFA-SYNCHRO_CYCLONE.description": "造成 {Damage:diff()} 点伤害。\n你手牌中的所有 [gold]技能[/gold] 本回合花费 0 点 {Energy:energyIcons()}。",
+  "TIFA-SYNCHRO_CYCLONE.title": "同步旋风",
+
+  "TIFA-STARSHOWER.description": "造成 {Damage:diff()} 点伤害，重复 {Repeat:diff()} 次。\n{ChiIcon} [gold]2[/gold]：获得 {VigorPower:diff()} 点 [gold]活力[/gold]。",
+  "TIFA-STARSHOWER.title": "流星雨",
+  
+  "TIFA-MOONSAULT_KICK.description": "造成 {Damage:diff()} 点伤害。\n获得 {Limit:diff()} 点 [gold]极限值[/gold]。",
+  "TIFA-MOONSAULT_KICK.title": "月面空翻踢",
+
+  "TIFA-FEINT.description": "造成 {Damage:diff()} 点伤害，重复 {Repeat:diff()} 次。\n若这是本回合打出的第一张牌，则施加 {WeakPower:diff()} 层 [gold]虚弱[/gold]。",
+  "TIFA-FEINT.title": "佯攻",
+
+  "TIFA-TRINITY_STRIKE.description": "对随机敌人造成 {Damage:diff()} 点伤害，重复 {Repeat:diff()} 次。",
+  "TIFA-TRINITY_STRIKE.title": "三位一体打击",
+
+  "TIFA-PUNISHING_STRIKE.description": "造成 {Damage:diff()} 点伤害。\n若敌人处于 [gold]易伤[/gold] 状态，则造成双倍伤害。",
+  "TIFA-PUNISHING_STRIKE.title": "惩罚打击",
+
+  "TIFA-FAKEOUT_PUNCH.description": "造成 {Damage:diff()} 点伤害，重复 {Repeat:diff()} 次。\n施加 {VulnerablePower:diff()} 层 [gold]易伤[/gold]。",
+  "TIFA-FAKEOUT_PUNCH.title": "虚晃一拳",
+
+  "TIFA-DEFENSIVE_STANCE.description": "获得 {Block:diff()} 点 [gold]格挡[/gold]。\n{ChiIcon} [gold]2[/gold]：下回合获得 {Block:diff()} 点 [gold]格挡[/gold]。",
+  "TIFA-DEFENSIVE_STANCE.title": "防御姿态",
+  
+  "TIFA-OMNISTRIKE.description": "造成 {Damage:diff()} 点伤害。\n{ChiIcon} [gold]2[/gold]：额外造成等同于敌人当前 [gold]生命值[/gold] [blue]{HpPercent:diff()}%[/blue] 的伤害。",
+  "TIFA-OMNISTRIKE.title": "全向打击",
+
+  "TIFA-FIGHTERS_INSTINCT.description": "每当你获得 {ChiIcon} 时，抽 {Cards:diff()} 张牌。",
+  "TIFA-FIGHTERS_INSTINCT.title": "斗士本能",
+
+  "TIFA-UNFETTERED_FURY.description": "消耗 1 点 {ChiIcon}。\n下回合，攻击造成双倍伤害。",
+  "TIFA-UNFETTERED_FURY.title": "狂怒释放",
+
+  "TIFA-ENERGY_WAVE.description": "造成 {Damage:diff()} 点伤害。\n消耗 1 点 {ChiIcon}。",
+  "TIFA-ENERGY_WAVE.title": "能量波",
+
+  "TIFA-HEEL_CRUSH.description": "造成 {Damage:diff()} 点伤害。\n获得 {Block:diff()} 点 [gold]格挡[/gold]。",
+  "TIFA-HEEL_CRUSH.title": "踵压",
+  
+  "TIFA-ROLLING_BLAZE.description": "造成 {Damage:diff()} 点伤害。\n{ChiIcon} [gold]3[/gold]：获得等同于所造成伤害的 [gold]格挡[/gold]。",
+  "TIFA-ROLLING_BLAZE.title": "翻滚烈焰",
+  
+  "TIFA-FOCUS.description": "获得 {Block:diff()} 点 [gold]格挡[/gold]。\n获得 1 点 {ChiIcon}。",
+  "TIFA-FOCUS.title": "聚焦",
+
+  "TIFA-DRAIN_PUNCH.description": "造成 {Damage:diff()} 点伤害。\n{ChiIcon} [gold]2[/gold]：恢复等同于对敌人造成伤害 [blue]20%[/blue] 的 [gold]生命值[/gold]。",
+  "TIFA-DRAIN_PUNCH.title": "吸收拳",
+
+  "TIFA-MUSCLE_MEMORY.description": "将一张随机攻击牌加入手牌。本回合内其费用为 0。",
+  "TIFA-MUSCLE_MEMORY.title": "肌肉记忆",
+
+  "TIFA-REVERSE_GALE.description": "造成 {Damage:diff()} 点伤害。\n{ChiIcon} [gold]1[/gold]：从抽牌堆中打出一张随机攻击牌。",
+  "TIFA-REVERSE_GALE.title": "逆风",
+
+  "TIFA-DEATHBLOW.description": "造成 {Damage:diff()} 点伤害。\n{ChiIcon} [gold]3[/gold]：若敌人生命值低于或等于 [gold]{hpPercent:diff()}%[/gold]，则将其击杀。",
+  "TIFA-DEATHBLOW.title": "致命一击",
+  
+  "TIFA-PERFECT_BALANCE.description": "每回合开始时获得 {Energy:energyIcons()}。",
+  "TIFA-PERFECT_BALANCE.title": "完美平衡",
+
+  "TIFA-SHIFT_MOMENTUM.description": "消耗所有 [gold]极限值[/gold]。\n获得等同于所消耗 [gold]极限值[/gold] 的 [gold]连击[/gold]。",
+  "TIFA-SHIFT_MOMENTUM.title": "转换势头",
+
+  "TIFA-HEADLOCK.description": "施加 1 层 [gold]虚弱[/gold] 和 [gold]易伤[/gold]。\n{ChiIcon} [gold]2[/gold]：使施加的负面效果翻倍。",
+  "TIFA-HEADLOCK.title": "锁头",
+
+  "TIFA-PRESSURE_POINT.description": "施加 {VulnerablePower:diff()} 层 [gold]易伤[/gold]。\n获得 {Combo:diff()} 点 [gold]连击[/gold]。",
+  "TIFA-PRESSURE_POINT.title": "压力点",
+
+  "TIFA-QUICK_REFLEX.description": "获得 {Block:diff()} 点 [gold]格挡[/gold]。\n若这是本回合打出的第一张牌，则抽 1 张牌。",
+  "TIFA-QUICK_REFLEX.title": "快速反应",
+
+  "TIFA-COMBAT_FINESSE.description": "消耗 2 点 {ChiIcon}。\n获得 2 点 [gold]力量[/gold]。\n获得 2 点 [gold]敏捷[/gold]。",
+  "TIFA-COMBAT_FINESSE.title": "战斗技巧"
+}

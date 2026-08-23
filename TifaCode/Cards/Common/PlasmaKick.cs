@@ -30,6 +30,10 @@ public class PlasmaKick() : TifaCard(1, CardType.Attack,
         PlayerChoiceContext choiceContext,
         CardPlay play)
     {
+        bool haveChi = false;
+            
+        if (base.Owner.Creature.HasPower<ChiPower>())
+            haveChi = true;
         var ownerCreature = Owner?.Creature;
         var tifa = Owner?.Character as Character.Tifa;
         
@@ -54,7 +58,7 @@ public class PlasmaKick() : TifaCard(1, CardType.Attack,
             await CommonActions.CardAttack(this, play.Target)
                 .WithHitFx(null, "vfx/vfx_attack_lightning", "event:/sfx/characters/defect/defect_lightning_passive")
                 .Execute(choiceContext);
-        if (base.Owner.HasPower<ChiPower>())
+        if (haveChi)
             await CardPileCmd.Draw(
                 choiceContext,
                 base.DynamicVars.Cards.BaseValue,

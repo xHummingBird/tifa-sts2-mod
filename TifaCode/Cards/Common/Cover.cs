@@ -10,7 +10,6 @@ namespace Tifa.TifaCode.Cards.Common;
 public class Cover() : TifaCard(2, CardType.Skill,
     CardRarity.Common, TargetType.Self)
 {
-    protected override HashSet<CardTag> CanonicalTags => [CardTag.Defend];
     protected override IEnumerable<DynamicVar> CanonicalVars => [new BlockVar(11, ValueProp.Move)];
 
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay play)

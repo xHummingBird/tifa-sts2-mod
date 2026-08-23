@@ -32,6 +32,11 @@ public class RollingBlaze() : TifaCard(1, CardType.Attack,
         PlayerChoiceContext choiceContext,
         CardPlay play)
     {
+        bool haveChi = false;
+            
+        if (base.Owner.Creature.GetPowerAmount<ChiPower>() >= 3)
+            haveChi = true;
+        
         var ownerCreature = Owner?.Creature;
         var tifa = Owner?.Character as Character.Tifa;
 
@@ -59,7 +64,7 @@ public class RollingBlaze() : TifaCard(1, CardType.Attack,
                 .WithHitFx(null, "res://Tifa/sfx/meteostrike_2.wav")
                 .Execute(choiceContext);
 
-        if (base.Owner.Creature.GetPowerAmount<ChiPower>() >= 3)
+        if (haveChi)
         {
             CreatureCmd.GainBlock(base.Owner.Creature, blockAmount, ValueProp.Unpowered, play, false);
         }

@@ -1,0 +1,29 @@
+{
+  "TIFA-SONIC_STRIKERS.description": "升级你的 [gold]极限突破[/gold]。",
+  "TIFA-SONIC_STRIKERS.flavor": "",
+  "TIFA-SONIC_STRIKERS.title": "音速打击者",
+
+  "TIFA-LEATHER_GLOVE.description": "每次攻击命中时获得 [gold]连击[/gold]。允许达到第 6 级 [gold]气[/gold]。",
+  "TIFA-LEATHER_GLOVE.flavor": "",
+  "TIFA-LEATHER_GLOVE.title": "皮手套",
+  
+  "TIFA-PREMIUM_HEART.description": "每次攻击命中时获得 [gold]连击[/gold]，且使用攻击牌时额外获得 1 点 [gold]连击[/gold]。允许达到第 8 级 [gold]气[/gold]。",
+  "TIFA-PREMIUM_HEART.flavor": "",
+  "TIFA-PREMIUM_HEART.title": "至尊之心",
+
+  "TIFA-POWERSOUL.description": "战斗开始时额外获得 20 点 [gold]极限值[/gold]。",
+  "TIFA-POWERSOUL.flavor": "",
+  "TIFA-POWERSOUL.title": "力量之魂",
+
+  "TIFA-PURPLE_PAIN.description": "战斗开始时获得 1 点 [gold]气[/gold]。",
+  "TIFA-PURPLE_PAIN.flavor": "",
+  "TIFA-PURPLE_PAIN.title": "紫色之痛",
+
+  "TIFA-METAL_KNUCKLE.description": "每当你获得 [gold]气[/gold] 时，获得 3 点 [gold]活力[/gold]。",
+  "TIFA-METAL_KNUCKLE.flavor": "",
+  "TIFA-METAL_KNUCKLE.title": "金属指虎",
+
+  "TIFA-MYTHRIL_CLAWS.description": "每当你获得 [gold]气[/gold] 时，获得 3 点 [gold]格挡[/gold]。",
+  "TIFA-MYTHRIL_CLAWS.flavor": "",
+  "TIFA-MYTHRIL_CLAWS.title": "秘银爪"
+}

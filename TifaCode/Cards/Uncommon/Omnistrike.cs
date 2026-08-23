@@ -31,9 +31,16 @@ public class Omnistrike() : TifaCard(2, CardType.Attack,
         PlayerChoiceContext choiceContext,
         CardPlay play)
     {
+        bool haveChi = false;
+            
+        if (base.Owner.Creature.GetPowerAmount<ChiPower>() >= 2)
+            haveChi = true;
+        
         var ownerCreature = Owner?.Creature;
         var tifa = Owner?.Character as Character.Tifa;
-        decimal bonusDamage = play.Target.CurrentHp * (DynamicVars["HpPercent"].BaseValue / 100m);
+        decimal bonusDamage = 0;
+        if (haveChi)
+            bonusDamage = play.Target.CurrentHp * (DynamicVars["HpPercent"].BaseValue / 100m);
         decimal damageAmount = DynamicVars.Damage.BaseValue + bonusDamage;
         
         if (ownerCreature != null && tifa != null)

@@ -34,6 +34,11 @@ public class Headlock() : TifaCard(0, CardType.Skill,
         PlayerChoiceContext choiceContext,
         CardPlay play)
     {
+        bool haveChi = false;
+            
+        if (base.Owner.Creature.GetPowerAmount<ChiPower>() >= 2)
+            haveChi = true;
+        
         var ownerCreature = Owner?.Creature;
         var tifa = Owner?.Character as Character.Tifa;
         
@@ -43,7 +48,7 @@ public class Headlock() : TifaCard(0, CardType.Skill,
         }
 
         decimal powerAmount = 1m;
-        if (base.Owner.Creature.GetPowerAmount<ChiPower>() >= 2)
+        if (haveChi)
             powerAmount = 2m;
         
         await PowerCmd.Apply<WeakPower>(choiceContext, play.Target, powerAmount, base.Owner.Creature, this);

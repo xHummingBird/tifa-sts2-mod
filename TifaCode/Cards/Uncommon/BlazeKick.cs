@@ -33,6 +33,11 @@ public class BlazeKick() : TifaCard(1, CardType.Attack,
         PlayerChoiceContext choiceContext,
         CardPlay play)
     {
+        bool haveChi = false;
+            
+        if (base.Owner.Creature.HasPower<ChiPower>())
+            haveChi = true;
+        
         var ownerCreature = Owner?.Creature;
         var tifa = Owner?.Character as Character.Tifa;
         
@@ -77,7 +82,7 @@ public class BlazeKick() : TifaCard(1, CardType.Attack,
         if (damageResult == null)
             return;
 
-        if (base.Owner.HasPower<ChiPower>())
+        if (haveChi)
         {
             List<Creature> otherEnemies = base.CombatState
                 .GetTeammatesOf(damageResult.Receiver)

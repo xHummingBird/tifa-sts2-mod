@@ -21,7 +21,7 @@ public class Chakra() : TifaCard(
     
     protected override IEnumerable<DynamicVar> CanonicalVars =>
     [
-        new CardsVar(2),
+        new CardsVar(1),
         new EnergyVar(1)
     ];
     
@@ -51,6 +51,6 @@ public class Chakra() : TifaCard(
     
     protected override void OnUpgrade()
     {
-        RemoveKeyword(CardKeyword.Exhaust);
+        DynamicVars.Cards.UpgradeValueBy(1);
     }
 }

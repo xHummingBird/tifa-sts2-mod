@@ -30,6 +30,11 @@ public class Overpower() : TifaCard(2, CardType.Attack,
 
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay play)
     {
+        bool haveChi = false;
+            
+        if (base.Owner.Creature.GetPowerAmount<ChiPower>() >= 2)
+            haveChi = true;
+        
         var ownerCreature = Owner?.Creature;
 
         if (ownerCreature != null && Owner?.Character is Character.Tifa tifa)
@@ -67,7 +72,7 @@ public class Overpower() : TifaCard(2, CardType.Attack,
             await CommonActions.CardAttack(this, play.Target, hitCount: DynamicVars.Repeat.IntValue)
                 .WithHitFx("null", "res://Tifa/sfx/punch_hit_1.wav")
                 .Execute(choiceContext);
-        if (base.Owner.Creature.GetPowerAmount<ChiPower>() >= 2)
+        if (haveChi)
             await PowerCmd.Apply<FreeAttackPower>(choiceContext, base.Owner.Creature, 1m, base.Owner.Creature, this);
     }
 

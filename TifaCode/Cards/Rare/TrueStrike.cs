@@ -31,10 +31,15 @@ public class TrueStrike() : TifaCard(2, CardType.Attack,
         PlayerChoiceContext choiceContext,
         CardPlay play)
     {
+        bool haveChi = false;
+            
+        if (base.Owner.Creature.GetPowerAmount<ChiPower>() >= 3)
+            haveChi = true;
+        
         var ownerCreature = Owner?.Creature;
         var tifa = Owner?.Character as Character.Tifa;
         decimal damageAmount = DynamicVars.Damage.BaseValue;
-        if (ownerCreature.GetPowerAmount<ChiPower>() >= 3)
+        if (haveChi)
             damageAmount *= 2;
         
         if (ownerCreature != null && tifa != null)

@@ -5,6 +5,7 @@ using MegaCrit.Sts2.Core.HoverTips;
 using MegaCrit.Sts2.Core.Localization.DynamicVars;
 using MegaCrit.Sts2.Core.Models.Powers;
 using Tifa.TifaCode.Extensions;
+using Tifa.TifaCode.Relics;
 
 namespace Tifa.TifaCode.Cards.Uncommon;
 
@@ -35,6 +36,9 @@ public class Counter() : TifaCard(1, CardType.Skill,
         
         AudioHelper.PlayRandomDefend();
         await PowerCmd.Apply<ThornsPower>(choiceContext, base.Owner.Creature, DynamicVars["ThornsPower"].BaseValue, base.Owner.Creature, this);
+        var comboRelic =
+            Owner.GetRelic<ComboRelicBase>();
+        comboRelic?.GainCombo(DynamicVars["Combo"].IntValue);
     }
 
     protected override void OnUpgrade()
