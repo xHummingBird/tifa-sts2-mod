@@ -73,6 +73,7 @@ public class Waterkick() : TifaCard(1, CardType.Attack,
     
     protected override void OnUpgrade()
     {
-        DynamicVars.Damage.UpgradeValueBy(1);
+        DynamicVars.Damage.UpgradeValueBy(3);
+        DynamicVars.Weak.UpgradeValueBy(1);
     }
 }

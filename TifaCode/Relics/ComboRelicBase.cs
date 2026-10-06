@@ -430,9 +430,9 @@ public abstract class ComboRelicBase : TifaRelic
                 targetChi - currentChi,
                 source,
                 card);
-            if (creature.HasPower<FightingSpiritPower>() && _fightingSpiritEnergy == false)
+            if (creature.HasPower<PerfectBalancePower>() && _fightingSpiritEnergy == false)
             {
-                PlayerCmd.GainEnergy(creature.GetPowerAmount<FightingSpiritPower>(), base.Owner);
+                PlayerCmd.GainEnergy(creature.GetPowerAmount<PerfectBalancePower>(), base.Owner);
                 _fightingSpiritEnergy = true;
             }
 

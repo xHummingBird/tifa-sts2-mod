@@ -30,7 +30,7 @@ public class EnergyWave() : TifaCard(1, CardType.Attack,
     
     protected override IEnumerable<DynamicVar> CanonicalVars => 
     [
-        new DamageVar(11m, ValueProp.Move)
+        new DamageVar(14m, ValueProp.Move)
     ];
 
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
@@ -68,6 +68,6 @@ public class EnergyWave() : TifaCard(1, CardType.Attack,
 
     protected override void OnUpgrade()
     {
-        base.DynamicVars.Damage.UpgradeValueBy(4m);
+        base.DynamicVars.Damage.UpgradeValueBy(5m);
     }
 }

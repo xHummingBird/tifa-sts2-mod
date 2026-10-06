@@ -1,5 +1,6 @@
 ﻿using BaseLib.Extensions;
 using BaseLib.Utils;
+using Godot;
 using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
@@ -37,13 +38,11 @@ public class StrikeTifa() : TifaCard(1, CardType.Attack,
                 "res://Tifa/scenes/vfx/hit_yellow.tscn",
                 "hit"
             );
-            DamageCmd.Attack(damage).FromCard(this, play).Targeting(play.Target)
+            await DamageCmd.Attack(damage).FromCard(this, play).Targeting(play.Target)
                 .WithValueProp(ValueProp.Unpowered)
                 .WithHitFx(null, "res://Tifa/sfx/punch_hit_1.wav")
                 .Execute(choiceContext);
-            await Task.Delay((int)(0.134f * 1000f));
             SfxCmd.Play("res://Tifa/sfx/punch_swing_2.wav");
-            await Task.Delay((int)(0.033f * 1000f));
             tifa.PlayVfxOnTarget(
                 play.Target,
                 "res://Tifa/scenes/vfx/hit_yellow.tscn",

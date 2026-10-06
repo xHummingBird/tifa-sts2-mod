@@ -64,6 +64,6 @@ public class WhirlingUppercut() : TifaCard(0, CardType.Attack,
     
     protected override void OnUpgrade()
     {
-        DynamicVars.Damage.UpgradeValueBy(1);
+        DynamicVars.Damage.UpgradeValueBy(2);
     }
 }

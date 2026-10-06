@@ -7,14 +7,14 @@ using Tifa.TifaCode.Powers;
 namespace Tifa.TifaCode.Cards.Uncommon;
 
 public class ZanganStyle() : TifaCard(
-    2,
+    1,
     CardType.Power,
     CardRarity.Uncommon,
     TargetType.Self)
 {
     protected override IEnumerable<DynamicVar> CanonicalVars =>
     [
-        new PowerVar<ZanganStylePower>(5m),
+        new PowerVar<ZanganStylePower>(6m),
     ];
 
     protected override async Task OnPlay(
@@ -31,6 +31,6 @@ public class ZanganStyle() : TifaCard(
 
     protected override void OnUpgrade()
     {
-        DynamicVars["ZanganStylePower"].UpgradeValueBy(2);
+        AddKeyword(CardKeyword.Innate);
     }
 }

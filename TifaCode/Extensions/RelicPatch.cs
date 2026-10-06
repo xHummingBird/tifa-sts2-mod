@@ -1,4 +1,5 @@
 ﻿using HarmonyLib;
+using MegaCrit.Sts2.Core.Entities.Players;
 using MegaCrit.Sts2.Core.Models;
 using MegaCrit.Sts2.Core.Models.Relics;
 using Tifa.TifaCode.Cards.Ancient;
@@ -28,6 +29,19 @@ internal static class SquallArchaicToothTranscendencePatch
     private static void Postfix(ref Dictionary<ModelId, CardModel> __result)
     {
         __result[ModelDb.Card<Divekick>().Id] = ModelDb.Card<Meteodrive>();
+    }
+}
+
+[HarmonyPatch(typeof(DustyTome), nameof(DustyTome.SetupForPlayer))]
+public static class DustyTomeSetupPatch
+{
+    [HarmonyPostfix]
+    public static void Postfix(DustyTome __instance, Player player)
+    {
+        if (player.Character is not Character.Tifa)
+            return;
+
+        __instance.AncientCard = ModelDb.Card<SynchroCyclone>().Id;
     }
 }
 

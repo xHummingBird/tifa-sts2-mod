@@ -1,0 +1,8 @@
+{
+  "TIFA_CHI.description": "Gagnez 1 [gold]Chi[/gold] tous les 5 [gold]Combo[/gold]. Gagnez des bonus cumulés selon votre niveau de [gold]Chi[/gold] actuel. \n\n1 : Gagnez 1 [gold]Combo[/gold] en jouant des cartes d'attaque.\n2 : Gagnez 2 [gold]Limite[/gold] au début de votre tour.\n3 : Gagnez 1 Force.\n4 : Gagnez 1 Dextérité. \n5 : Piochez 1 carte supplémentaire au début de votre tour.\n6 : Gagnez 1 Force et 1 Dextérité.\n7 : Gagnez 1 Énergie supplémentaire chaque tour.\n8 : Gagnez 1 Force et 1 Dextérité. \n9+ : Gagnez 1 Force et 1 Dextérité par niveau.",
+  "TIFA_CHI.title": "Niveau de Chi (%CHI%/%MAXCHI%)",
+  "TIFA_COMBO.description": "Gagnez du Combo grâce aux Attaques. Tous les 5 Combo, votre niveau de [gold]Chi[/gold] augmente de 1. Perdez 1 [gold]Combo[/gold] chaque fois que vous subissez des dégâts non bloqués. \n\nLes [gold]Éclatements de Limite[/gold] n'augmentent pas le [gold]Combo[/gold]. \nSi le Combo n'augmente pas pendant votre tour, [gold]20%[/gold] décroît à la fin du tour. \n\nLe Combo restant à la fin du combat est converti en [gold]Limite[/gold].",
+  "TIFA_COMBO.title": "Compteur de Combo",
+  "TIFA_LIMIT.description": "À 100 [gold]Limite[/gold], Tifa peut déclencher un [gold]Éclatement de Limite[/gold]. \nDébloquez plus de [gold]Limite[/gold] en augmentant votre niveau de [gold]Chi[/gold]. \n\nGagnez 5 Limite au début de chaque tour. \nGagnez 3 Limite par coup d'attaque. \n\nLe Combo restant à la fin du combat est converti en Limite.",
+  "TIFA_LIMIT.title": "Éclatement de Limite"
+}

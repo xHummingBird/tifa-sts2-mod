@@ -1,0 +1,23 @@
+{
+  "TIFA-LEATHER_GLOVE.description": "Gagnez du [gold]Combo[/gold] pour chaque coup d'attaque. Active le [gold]Chi[/gold] jusqu'au niveau 6.",
+  "TIFA-LEATHER_GLOVE.flavor": "",
+  "TIFA-LEATHER_GLOVE.title": "Gants de cuir",
+  "TIFA-METAL_KNUCKLE.description": "Chaque fois que vous gagnez du [gold]Chi[/gold], gagnez 3 [gold]Vigueur[/gold].",
+  "TIFA-METAL_KNUCKLE.flavor": "",
+  "TIFA-METAL_KNUCKLE.title": "Poing de métal",
+  "TIFA-MYTHRIL_CLAWS.description": "Chaque fois que vous gagnez du [gold]Chi[/gold], gagnez 3 [gold]Armure[/gold].",
+  "TIFA-MYTHRIL_CLAWS.flavor": "",
+  "TIFA-MYTHRIL_CLAWS.title": "Griffes de mythril",
+  "TIFA-POWERSOUL.description": "Commencez le combat avec 20 [gold]Limite[/gold] supplémentaires.",
+  "TIFA-POWERSOUL.flavor": "",
+  "TIFA-POWERSOUL.title": "Âme de puissance",
+  "TIFA-PREMIUM_HEART.description": "Gagnez du [gold]Combo[/gold] pour chaque coup d'attaque et 1 [gold]Combo[/gold] supplémentaire en jouant des cartes d'attaque. Active le [gold]Chi[/gold] jusqu'au niveau 8.",
+  "TIFA-PREMIUM_HEART.flavor": "",
+  "TIFA-PREMIUM_HEART.title": "Cœur Premium",
+  "TIFA-PURPLE_PAIN.description": "Commencez le combat avec 1 [gold]Chi[/gold].",
+  "TIFA-PURPLE_PAIN.flavor": "",
+  "TIFA-PURPLE_PAIN.title": "Douleur violette",
+  "TIFA-SONIC_STRIKERS.description": "Améliore votre [gold]Éclatement de Limite[/gold].",
+  "TIFA-SONIC_STRIKERS.flavor": "",
+  "TIFA-SONIC_STRIKERS.title": "Frappeurs soniques"
+}

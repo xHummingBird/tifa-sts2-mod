@@ -31,6 +31,6 @@ public class PerfectBalance() : TifaCard(
     
     protected override void OnUpgrade()
     {
-        base.DynamicVars.Energy.UpgradeValueBy(1m);
+        base.EnergyCost.UpgradeBy(-1);
     }
 }

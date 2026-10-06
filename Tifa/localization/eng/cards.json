@@ -71,7 +71,7 @@
   "TIFA-CHI_BARRIER.description": "Gain {Block:diff()} [gold]Block[/gold]. \nGain {BlockMultiplier:diff()} additional [gold]Block[/gold] for each {ChiIcon}.",
   "TIFA-CHI_BARRIER.title": "Chi Barrier",
 
-  "TIFA-FIGHTING_SPIRIT.description": "The first time you gain {ChiIcon} during your turn, gain {Energy:energyIcons()}.",
+  "TIFA-FIGHTING_SPIRIT.description": "At the start of your turn, put a random [gold]Attack[/gold] from your [blue]Discard Pile[/blue] into your [blue]Hand[/blue] and [blue]Upgrade[/blue] it.",
   "TIFA-FIGHTING_SPIRIT.title": "Fighting Spirit",
 
   "TIFA-GLACIER_KICK.description": "Deal {Damage:diff()} damage. \n{ChiIcon} [gold]1[/gold]: Gain block equal to damage dealt.",
@@ -170,7 +170,7 @@
   "TIFA-HEEL_CRUSH.description": "Deal {Damage:diff()} damage. \nGain {Block:diff()} [gold]Block[/gold].",
   "TIFA-HEEL_CRUSH.title": "Heel Crush",
   
-  "TIFA-ROLLING_BLAZE.description": "Deal {Damage:diff()} damage. \n{ChiIcon} [gold]3[/gold]: Gain [gold]Block[/gold] equal to damage dealt.",
+  "TIFA-ROLLING_BLAZE.description": "Deal {Damage:diff()} damage. \n{ChiIcon} [gold]1[/gold]: Apply any debuffs on the enemy to ALL other enemies.",
   "TIFA-ROLLING_BLAZE.title": "Rolling Blaze",
   
   "TIFA-FOCUS.description": "Gain {Block:diff()} [gold]Block[/gold]. \nGain 1 {ChiIcon}.",
@@ -188,7 +188,7 @@
   "TIFA-DEATHBLOW.description": "Deal {Damage:diff()} damage. \n{ChiIcon} [gold]3[/gold]: Kill the enemy if it has [gold]{hpPercent:diff()}%[/gold] HP or less.",
   "TIFA-DEATHBLOW.title": "Deathblow",
   
-  "TIFA-PERFECT_BALANCE.description": "Gain {Energy:energyIcons()} at the start of each turn.",
+  "TIFA-PERFECT_BALANCE.description": "The first time you gain {ChiIcon} during your turn, gain {Energy:energyIcons()}.",
   "TIFA-PERFECT_BALANCE.title": "Perfect Balance",
 
   "TIFA-SHIFT_MOMENTUM.description": "Consume all [gold]Limit[/gold]. \nGain [gold]Combo[/gold] equal to [gold]Limit[/gold] consumed.",

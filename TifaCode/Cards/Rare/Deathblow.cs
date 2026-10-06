@@ -20,7 +20,7 @@ public class Deathblow() : TifaCard(2, CardType.Attack,
     
     protected override IEnumerable<DynamicVar> CanonicalVars => [
         new DamageVar(18, ValueProp.Move),
-        new DynamicVar("hpPercent", 15)
+        new DynamicVar("hpPercent", 10)
     ];
     
     protected override IEnumerable<IHoverTip> ExtraHoverTips =>

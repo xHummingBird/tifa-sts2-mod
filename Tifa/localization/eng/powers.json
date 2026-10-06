@@ -11,8 +11,8 @@
   "TIFA-BATTLE_TRANCE_POWER.smartDescription": "Gaining {Amount} [gold]Chi[/gold] and max [gold]Chi[/gold] until the end of the turn.",
   "TIFA-BATTLE_TRANCE_POWER.title": "Battle Trance",
 
-  "TIFA-FIGHTING_SPIRIT_POWER.description": "The first time you gain [gold]Chi[/gold] during your turn, gain {Energy:energyIcons()}.",
-  "TIFA-FIGHTING_SPIRIT_POWER.smartDescription": "Gain {Amount} {Energy:energyIcons()} the first time you gain [gold]Chi[/gold] during your turn.",
+  "TIFA-FIGHTING_SPIRIT_POWER.description": "At the start of your turn, put a random [gold]Attack[/gold] from your [blue]Discard Pile[/blue] into your [blue]Hand[/blue] and [blue]Upgrade[/blue] it.",
+  "TIFA-FIGHTING_SPIRIT_POWER.smartDescription": "At the start of your turn, put [blue]{Amount}[/blue] random {Amount:plural:Attack|Attacks} from your [gold]Discard Pile[/gold] into your [gold]Hand[/gold] and [gold]Upgrade[/gold] {Amount:plural:it|them} for the rest of combat.",
   "TIFA-FIGHTING_SPIRIT_POWER.title": "Fighting Spirit",
 
   "TIFA-ZANGAN_STYLE_POWER.description": "Whenever you gain [gold]Chi[/gold], deal 5 damage to ALL enemies.",
@@ -35,7 +35,7 @@
   "TIFA-FIGHTERS_INSTINCT_POWER.smartDescription": "Whenever you gain [gold]Chi[/gold], draw {Amount} {Amount:plural:card|cards}.",
   "TIFA-FIGHTERS_INSTINCT_POWER.title": "Fighter's Instinct",
 
-  "TIFA-PERFECT_BALANCE_POWER.description": "Gain [blue]1[/blue] [gold]Energy[/gold] at the start of each turn.",
-  "TIFA-PERFECT_BALANCE_POWER.smartDescription": "Gain {Amount:energyIcons()} at the start of each turn.",
+  "TIFA-PERFECT_BALANCE_POWER.description": "The first time you gain [gold]Chi[/gold] during your turn, gain {Energy:energyIcons()}",
+  "TIFA-PERFECT_BALANCE_POWER.smartDescription": "Gain {Amount} {Energy:energyIcons()} the first time you gain [gold]Chi[/gold] during your turn.",
   "TIFA-PERFECT_BALANCE_POWER.title": "Perfect Balance"
 }

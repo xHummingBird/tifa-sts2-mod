@@ -7,16 +7,11 @@ using Tifa.TifaCode.Powers;
 namespace Tifa.TifaCode.Cards.Rare;
 
 public class FightingSpirit() : TifaCard(
-    2,
+    1,
     CardType.Power,
     CardRarity.Rare,
     TargetType.Self)
 {
-    protected override IEnumerable<DynamicVar> CanonicalVars => 
-    [
-        new EnergyVar(1),
-    ];
-    
     protected override async Task OnPlay(
         PlayerChoiceContext choiceContext,
         CardPlay cardPlay)
@@ -31,6 +26,6 @@ public class FightingSpirit() : TifaCard(
 
     protected override void OnUpgrade()
     {
-        base.EnergyCost.UpgradeBy(-1);
+        AddKeyword(CardKeyword.Innate);
     }
 }

@@ -21,23 +21,13 @@ public class MoonsaultKick() : TifaCard(1, CardType.Attack,
     
     protected override IEnumerable<DynamicVar> CanonicalVars => [
         new DamageVar(10, ValueProp.Move),
-        new DynamicVar("Limit", 10)
+        new DynamicVar("Limit", 12)
     ];
     
-    protected override IEnumerable<IHoverTip> ExtraHoverTips =>
-    [
-        HoverTipFactory.FromPower<ChiPower>(),
-    ];
-
     protected override async Task OnPlay(
         PlayerChoiceContext choiceContext,
         CardPlay play)
     {
-        bool haveChi = false;
-            
-        if (base.Owner.Creature.HasPower<ChiPower>())
-            haveChi = true;
-        
         var ownerCreature = Owner?.Creature;
         var tifa = Owner?.Character as Character.Tifa;
         var comboRelic = Owner.GetRelic<ComboRelicBase>();
@@ -65,13 +55,12 @@ public class MoonsaultKick() : TifaCard(1, CardType.Attack,
             await CommonActions.CardAttack(this, play.Target)
                 .WithHitFx(null, "res://Tifa/sfx/kick_hit_hard.wav")
                 .Execute(choiceContext);
-        if (haveChi)
-            LimitManager.GainLimit(Owner, DynamicVars["Limit"].IntValue);
+        LimitManager.GainLimit(Owner, DynamicVars["Limit"].IntValue);
     }
     
     protected override void OnUpgrade()
     {
         DynamicVars.Damage.UpgradeValueBy(3);
-        DynamicVars["Limit"].UpgradeValueBy(3);
+        DynamicVars["Limit"].UpgradeValueBy(4);
     }
 }

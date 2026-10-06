@@ -12,7 +12,7 @@ using Tifa.TifaCode.Relics;
 
 namespace Tifa.TifaCode.Cards.Common;
 
-public class Concentration() : TifaCard(1, CardType.Skill,
+public class Concentration() : TifaCard(0, CardType.Skill,
     CardRarity.Common, TargetType.Self)
 {
     protected override IEnumerable<DynamicVar> CanonicalVars => [

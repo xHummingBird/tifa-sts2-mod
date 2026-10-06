@@ -4,22 +4,21 @@ using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.HoverTips;
 using MegaCrit.Sts2.Core.Localization.DynamicVars;
-using MegaCrit.Sts2.Core.Models.Powers;
 using MegaCrit.Sts2.Core.Runs;
 using MegaCrit.Sts2.Core.ValueProps;
 using Tifa.TifaCode.Extensions;
 using Tifa.TifaCode.Powers;
 
-namespace Tifa.TifaCode.Cards.Uncommon;
+namespace Tifa.TifaCode.Cards.Rare;
 
 public class Omnistrike() : TifaCard(2, CardType.Attack,
-    CardRarity.Uncommon, TargetType.AnyEnemy)
+    CardRarity.Rare, TargetType.AnyEnemy)
 {
     protected override bool ShouldGlowGoldInternal => base.Owner.Creature.GetPowerAmount<ChiPower>() >= 2;
     
     protected override IEnumerable<DynamicVar> CanonicalVars => [
         new DamageVar(18, ValueProp.Move),
-        new DynamicVar("HpPercent", 10)
+        new DynamicVar("HpPercent", 8)
     ];
     
     protected override IEnumerable<IHoverTip> ExtraHoverTips =>
@@ -68,6 +67,6 @@ public class Omnistrike() : TifaCard(2, CardType.Attack,
     
     protected override void OnUpgrade()
     {
-        DynamicVars["HpPercent"].UpgradeValueBy(5m);
+        DynamicVars["HpPercent"].UpgradeValueBy(4m);
     }
 }
